@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="itemlists.js" type="text/javascript"></script>
+<script src="explorations.js" type="text/javascript"></script>
+<title>Roller:Exploration v1.0b</title>
+</head>
+<body>
+<form>
+	Roll Class:
+	<select id="type" onchange="updateList();">
+		<option value="explo">Exploration</option>
+		<option value="hunt">Hunting</option>
+		<option value="mining">Mining</option>
+		<option value="combat">Combat</option>
+	</select>
+	<select id="world">
+		<option value="sxriix">Sxriix</option>
+		<option value="nskanetis">Nskanetis</option>
+		<option value="earth">Earth</option>
+		<option value="chasm">The Chasm</option>
+	<select>
+	Attack:
+	<input type="text" name="atk" id="atk" size="4">
+	Defense:
+	<input type="text" name="def" id="def" size="4">
+	Speed:
+	<input type="text" name="spd" id="spd" size="4">
+	Special:
+	<input type="text" name="spc" id="spc" size="4">
+</form>
+<p class="head">Bonuses: Companions</p>
+<form>
+	<input type="checkbox" name="packcat" id="packcat">
+	Pack Cat
+	<input type="checkbox" name="raven" id="raven">
+	Kaurphyt Raven
+	<input type="checkbox" name="drake" id="drake">
+	Tunneldrake
+</form>
+<p class="head">Bonuses: NPCs</p>
+<form>
+	<input type="checkbox" name="swc" id="swc">
+	Streetwise Companion
+	<input type="checkbox" name="yvanon" id="yvanon">
+	Party Favored
+	<input type="checkbox" name="myrk" id="myrk">
+	Merchant's Eye
+</form>
+<p class="head">Bonuses: Items</p>
+<form>
+	<input type="checkbox" name="nom" id="nom">
+	Festival currency
+	<input type="checkbox" name="tbags" id="tbags">
+	Tail Bags
+	<input type="checkbox" name="coffee" id="coffee">
+	Coffee
+	<input type="checkbox" name="windrink" id="windrink">
+	Deepearth Brew
+	<input type="checkbox" name="sumdrink" id="sumdrink">
+	Blue Raspberry Lemonade
+</form>
+<p class="head">Bonuses: Skills and Misc</p>
+<form>
+	<input type="checkbox" name="sw" id="sw">
+	Streetwise
+	<input type="checkbox" name="minboost" id="minboost">
+	2 Item Minimum
+	<input type="checkbox" name="rumorbonus" id="rumorbonus">
+	Investigate/Waste Nothing
+	<input type="checkbox" name="miscbonus" id="miscbonus">
+	Other Bonus Item
+	<input type="checkbox" name="pathway" id="pathway">
+	Teleportation:Pathway
+	<input type="checkbox" name="parsec" id="parsec">
+	Teleportation:Parsec
+</form>
+<form>
+	<input type="button" onclick="setUp();" value="Roll!">
+	<input type="button" onclick="rollSingleItem();" value="Roll (one item)">
+</form>
+<textarea rows="20" cols="100" id="output">
+</textarea>
+<br>
+<p id="builddate">
+<strong>Roller:Exploration</strong> build 1.0b date 8/3/18
+</p>
+<p id="credit">
+Programmed and maintained by @pawstepsinthesnow/Suzuran exclusively for @Rixixi.
+</p>
+</body>
+</html>
