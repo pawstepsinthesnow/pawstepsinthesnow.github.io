@@ -54,7 +54,7 @@ function qlow(q) {
 function rng(min, max) {
 	return Math.floor((Math.random() * ((max + 1)-min)) + min);
 }
-function setUp() {
+function setUp(mode) {
 	rolldata.rolltype = document.getElementById("type").value;
 	var world = document.getElementById("world").value;
 	switch(world) {
@@ -69,6 +69,27 @@ function setUp() {
 			break;
 		case ("chasm"):
 			rolldata.world = chasm;
+			break;
+		case ("livestock"):
+			rolldata.world = livestock;
+			break;
+		case ("land"):
+			rolldata.world = land;
+			break;
+		case ("sea"):
+			rolldata.world = sea;
+			break;
+		case ("plant"):
+			rolldata.world = plant;
+			break;
+		case ("ungulate"):
+			rolldata.world = ungulate;
+			break;
+		case ("mine"):
+			rolldata.world = mining;
+			break;
+		case ("fightclub"):
+			rolldata.world = combat;
 			break;
 		default:
 			rolldata.world = nskanetis;
@@ -131,8 +152,11 @@ function setUp() {
 		document.getElementById("parsec").checked == false) {
 		rolldata.chasmjump = ("none");
 	}
-	
-	document.getElementById("output").value = createOutput();
+	if (mode == "single") {
+		rollSingleItem();
+	} else {
+		document.getElementById("output").value = createOutput();
+	}
 }
 
 function createOutput() {
@@ -208,6 +232,11 @@ function createOutput() {
 		a = roll(0, rolldata.streetwise, true);
 		out = out + "\nGeneric bonus item returns:\n"
 		out = out + formatLinks(a);
+	}
+	
+	if(document.getElementById("treats").checked == true) {
+		a = petTreats();
+		out = out + "\n" + a;
 	}
 	
 	return out;
@@ -353,6 +382,26 @@ function formatLinks(items) {
 	}
 	return out;
 }
+
+function crackGeode() {
+	rolldata.world = geode; //override item list
+	var first = roll(0, true, true); //roll two items on bonus mode
+	var second = roll(0, true, true); //output their thumbs only
+	out = first[0][0].dathumb + second[0][0].dathumb;
+	document.getElementById("output").value = out;
+}
+
+function petTreats() {
+	var r = rng(1,100);
+	if (r <= 35) {
+		a = rng(1,companions.length);
+		a--;
+		return "Pet treats lured a: " + "<a href=\"https://www.deviantart.com/magmatixi/art/" +
+		companions[a].url + "\">" + companions[a].name + "</a>!";
+	} else {
+		return "Pet treats failed!";
+	}
+}	
 
 function updateList() {
 	var type = document.getElementById("type").value;

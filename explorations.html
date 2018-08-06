@@ -51,6 +51,8 @@
 <form>
 	<input type="checkbox" name="nom" id="nom">
 	Festival currency
+	<input type="checkbox" name="treats" id="treats">
+	Pet Treats
 	<input type="checkbox" name="tbags" id="tbags">
 	Tail Bags
 	<input type="checkbox" name="coffee" id="coffee">
@@ -76,14 +78,15 @@
 	Teleportation:Parsec
 </form>
 <form>
-	<input type="button" onclick="setUp();" value="Roll!">
-	<input type="button" onclick="rollSingleItem();" value="Roll (one item)">
+	<input type="button" onclick="setUp('full');" value="Roll!">
+	<input type="button" onclick="setUp('single');" value="Roll (one item)">
+	<input type="button" onclick="crackGeode();" value="Crack Geode">
 </form>
 <textarea rows="20" cols="100" id="output">
 </textarea>
 <br>
 <p id="builddate">
-<strong>Roller:Exploration</strong> build 1.0b date 8/3/18
+<strong>Roller:Exploration</strong> build 1.1b date 8/5/18
 </p>
 <p id="credit">
 Programmed and maintained by @pawstepsinthesnow/Suzuran exclusively for @Rixixi.
