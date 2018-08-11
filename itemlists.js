@@ -32,7 +32,9 @@ var nskanetis = {
 		{name: "Sand", dathumb: ":thumb745611540:", url: "Sand-745611540", quantity: "high", contraband: false},
 		{name: "Fish Meat", dathumb: ":thumb753322990:", url: "Fish-Meat-753322990", quantity: "high", contraband: false},
 		{name: "Avocado", dathumb: ":thumb756348390:", url: "Avocado-756348390", quantity: "low", contraband: false},
+		{name: "Leafy Greens", dathumb: ":thumb758899310:", url: "Leafy-Greens-758899310", quantity: "high", contraband: false},
 		{name: "Stone", dathumb: ":thumb756350686:", url: "Stone-756350686", quantity: "high", contraband: false},
+		{name: "Citrus Fruit", dathumb: ":thumb758899247:", url: "Citrus-Fruit-758899247", quantity: "high", contraband: false},
 		//monthly birthstone
 		{name: "Peridot", dathumb: ":thumb756352472:", url: "Peridot-756352472", quantity: "high", contraband: false}
 	],
@@ -99,6 +101,7 @@ var sxriix = {
 		{name: "Paper", dathumb: ":thumb744570468:", url: "Paper-744570468", quantity: "high", contraband: false},
 		{name: "Ruby", dathumb: ":thumb746350610:", url: "Ruby-746350610", quantity: "high", contraband: false},
 		{name: "Peridot", dathumb: ":thumb756352472:", url: "Peridot-756352472", quantity: "high", contraband: false},
+		{name: "Leafy Greens", dathumb: ":thumb758899310:", url: "Leafy-Greens-758899310", quantity: "high", contraband: false},
 		{name: "Clay", dathumb: ":thumb756976397:", url: "Clay-756976397", quantity: "high", contraband: false}
 	],
 	rare: [
@@ -133,6 +136,7 @@ var earth = {
 		{name: "Fish Meat", dathumb: ":thumb753322990:", url: "Fish-Meat-753322990", quantity: "high", contraband: false},
 		{name: "Avocado", dathumb: ":thumb756348390:", url: "Avocado-756348390", quantity: "low", contraband: false},
 		{name: "Stone", dathumb: ":thumb756350686:", url: "Stone-756350686", quantity: "high", contraband: false},
+		{name: "Leafy Greens", dathumb: ":thumb758899310:", url: "Leafy-Greens-758899310", quantity: "high", contraband: false},
 		//monthly birthstone
 		{name: "Peridot", dathumb: ":thumb756352472:", url: "Peridot-756352472", quantity: "high", contraband: false}
 	],
@@ -153,7 +157,8 @@ var earth = {
 		{name: "Paper", dathumb: ":thumb744570468:", url: "Paper-744570468", quantity: "high", contraband: false},
 		{name: "Pearl", dathumb: ":thumb745452009:", url: "Pearl-745452009", quantity: "high", contraband: false},
 		{name: "Seaweed", dathumb: ":thumb745411718:", url: "Seaweed-745411718", quantity: "low", contraband: false},
-		{name: "Clay", dathumb: ":thumb756976397:", url: "Clay-756976397", quantity: "high", contraband: false}
+		{name: "Clay", dathumb: ":thumb756976397:", url: "Clay-756976397", quantity: "high", contraband: false},
+		{name: "Citrus Fruit", dathumb: ":thumb758899247:", url: "Citrus-Fruit-758899247", quantity: "high", contraband: false}
 	],
 	rare: [
 		{name: "Fond Memories: Earth", dathumb: ":thumb711859788:", url: "Fond-Memories-Earth-711859788", quantity: "low", contraband: false},
@@ -279,7 +284,8 @@ var plant = {
 		{name: "Tomato", dathumb: ":thumb741516583:", url: "Tomato-741516583", quantity: "high", contraband: false},
 		{name: "Mushroom", dathumb: ":thumb742283997:", url: "Mushroom-742283997", quantity: "high", contraband: false},
 		{name: "Wood", dathumb: ":thumb744570100:", url: "Wood-744570100", quantity: "high", contraband: false},
-		{name: "Apple", dathumb: ":thumb745411757:", url: "Apple-745411757", quantity: "high", contraband: false}
+		{name: "Apple", dathumb: ":thumb745411757:", url: "Apple-745411757", quantity: "high", contraband: false},
+		{name: "Citrus Fruit", dathumb: ":thumb758899247:", url: "Citrus-Fruit-758899247", quantity: "high", contraband: false}
 	],
 	uncommon: [
 		{name: "Herbs", dathumb: ":thumb705237203:", url: "Herbs-705237203", quantity: "high", contraband: false},
