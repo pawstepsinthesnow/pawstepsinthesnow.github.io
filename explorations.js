@@ -113,7 +113,7 @@ function setUp(mode) {
 	} else if (rolldata.rolltype == "mining") {
 		rolldata.qr = Math.floor(defense / 50) + Math.floor(speed / 50);
 	} else if (rolldata.rolltype == "combat") {
-		rolldata.qr = 0;
+		rolldata.qr = Math.floor(attack / 50) + Math.floor(special / 50);
 	}
 	if (document.getElementById("nom").checked == true) {
 		rolldata.seasonal = true;
