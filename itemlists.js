@@ -35,6 +35,8 @@ var nskanetis = {
 		{name: "Leafy Greens", dathumb: ":thumb758899310:", url: "Leafy-Greens-758899310", quantity: "high", contraband: false},
 		{name: "Stone", dathumb: ":thumb756350686:", url: "Stone-756350686", quantity: "high", contraband: false},
 		{name: "Citrus Fruit", dathumb: ":thumb758899247:", url: "Citrus-Fruit-758899247", quantity: "high", contraband: false},
+		{name: "Peppers", dathumb: ":thumb759631082:", url: "Peppers-759631082", quantity: "high", contraband: false},
+		{name: "Southern Vyldes Shovelnose Prawn", dathumb: ":thumb759505729:", url: "Southern-Vyldes-Shovelnose-Prawn-759505729", quantity: "low", contraband: false},
 		//monthly birthstone
 		{name: "Peridot", dathumb: ":thumb756352472:", url: "Peridot-756352472", quantity: "high", contraband: false}
 	],
@@ -85,6 +87,7 @@ var sxriix = {
 		{name: "Apple", dathumb: ":thumb745411757:", url: "Apple-745411757", quantity: "high", contraband: false},
 		{name: "Stone", dathumb: ":thumb756350686:", url: "Stone-756350686", quantity: "high", contraband: false},
 		{name: "Sand", dathumb: ":thumb745611540:", url: "Sand-745611540", quantity: "high", contraband: false},
+		{name: "Peppers", dathumb: ":thumb759631082:", url: "Peppers-759631082", quantity: "high", contraband: false},
 		//monthly birthstone
 		{name: "Peridot", dathumb: ":thumb756352472:", url: "Peridot-756352472", quantity: "high", contraband: false}
 	],
@@ -137,6 +140,8 @@ var earth = {
 		{name: "Avocado", dathumb: ":thumb756348390:", url: "Avocado-756348390", quantity: "low", contraband: false},
 		{name: "Stone", dathumb: ":thumb756350686:", url: "Stone-756350686", quantity: "high", contraband: false},
 		{name: "Leafy Greens", dathumb: ":thumb758899310:", url: "Leafy-Greens-758899310", quantity: "high", contraband: false},
+		{name: "Peppers", dathumb: ":thumb759631082:", url: "Peppers-759631082", quantity: "high", contraband: false},
+		{name: "Shrimp", dathumb: ":thumb759505741:", url: "Shrimp-759505741", quantity: "low", contraband: false},
 		//monthly birthstone
 		{name: "Peridot", dathumb: ":thumb756352472:", url: "Peridot-756352472", quantity: "high", contraband: false}
 	],
@@ -179,6 +184,7 @@ var chasm = {
 		{name: "Corecracker Lodestone", dathumb: ":thumb732962520:", url: "Corecracker-Lodestone-732962520", quantity: "high", contraband: false},
 		{name: "Twine", dathumb: ":thumb706195251:", url: "Twine-706195251", quantity: "high", contraband: false},
 		{name: "Fish Meat", dathumb: ":thumb753322990:", url: "Fish-Meat-753322990", quantity: "high", contraband: false},
+		{name: "Shrimp", dathumb: ":thumb759505741:", url: "Shrimp-759505741", quantity: "low", contraband: false},
 		//monthly birthstone
 		{name: "Peridot", dathumb: ":thumb756352472:", url: "Peridot-756352472", quantity: "high", contraband: false}
 	],
@@ -191,6 +197,7 @@ var chasm = {
 		{name: "Geode", dathumb: ":thumb732979097:", url: "Geode-732979097", quantity: "low", contraband: false},
 		{name: "Pearl", dathumb: ":thumb745452009:", url: "Pearl-745452009", quantity: "high", contraband: false},
 		{name: "Clay", dathumb: ":thumb756976397:", url: "Clay-756976397", quantity: "high", contraband: false},
+		{name: "Southern Vyldes Shovelnose Prawn", dathumb: ":thumb759505729:", url: "Southern-Vyldes-Shovelnose-Prawn-759505729", quantity: "low", contraband: false},
 		{name: "Stone", dathumb: ":thumb756350686:", url: "Stone-756350686", quantity: "high", contraband: false}
 	],
 	rare: [
@@ -285,6 +292,7 @@ var plant = {
 		{name: "Mushroom", dathumb: ":thumb742283997:", url: "Mushroom-742283997", quantity: "high", contraband: false},
 		{name: "Wood", dathumb: ":thumb744570100:", url: "Wood-744570100", quantity: "high", contraband: false},
 		{name: "Apple", dathumb: ":thumb745411757:", url: "Apple-745411757", quantity: "high", contraband: false},
+		{name: "Peppers", dathumb: ":thumb759631082:", url: "Peppers-759631082", quantity: "high", contraband: false},
 		{name: "Citrus Fruit", dathumb: ":thumb758899247:", url: "Citrus-Fruit-758899247", quantity: "high", contraband: false}
 	],
 	uncommon: [
@@ -312,6 +320,7 @@ var sea = {
 		{name: "Seascale Pebble", dathumb: ":thumb732962807:", url: "Seascale-Pebble-732962807", quantity: "high", contraband: false},
 		{name: "Seaweed", dathumb: ":thumb745411718:", url: "Seaweed-745411718", quantity: "low", contraband: false},
 		{name: "Teeth and Claws", dathumb: ":thumb756971959:", url: "Teeth-and-Claws-756971959", quantity: "high", contraband: false},
+		{name: "Shrimp", dathumb: ":thumb759505741:", url: "Shrimp-759505741", quantity: "low", contraband: false},
 		{name: "Fish Meat", dathumb: ":thumb753322990:", url: "Fish-Meat-753322990", quantity: "high", contraband: false}
 	],
 	uncommon: [
@@ -319,6 +328,7 @@ var sea = {
 		{name: "Ice", dathumb: ":thumb731696229:", url: "Ice-731696229", quantity: "high", contraband: false},
 		{name: "Squid", dathumb: ":thumb739760540:", url: "Squid-739760540", quantity: "low", contraband: false},
 		{name: "Aquamarine", dathumb: ":thumb732965498:", url: "Aquamarine-732965498", quantity: "high", contraband: false},
+		{name: "Southern Vyldes Shovelnose Prawn", dathumb: ":thumb759505729:", url: "Southern-Vyldes-Shovelnose-Prawn-759505729", quantity: "low", contraband: false},
 		{name: "Pearl", dathumb: ":thumb745452009:", url: "Pearl-745452009", quantity: "high", contraband: false}
 	],
 	rare: [
