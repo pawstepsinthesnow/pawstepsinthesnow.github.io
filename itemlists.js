@@ -413,6 +413,8 @@ var combat = {
 	
 var geode = {
 	common: [
+		{name: "Everburn Coal", dathumb: ":thumb760528138:", url: "Everburn-Coal-760528138", quantity: "high", contraband: false},
+		{name: "Malachite", dathumb: ":thumb760521371:", url: "Malachite-760521371", quantity: "high", contraband: false},
 		{name: "Hematite", dathumb: ":thumb732962142:", url: "Hematite-732962142", quantity: "high", contraband: false},
 		{name: "Corecracker Lodestone", dathumb: ":thumb732962520:", url: "Corecracker-Lodestone-732962520", quantity: "high", contraband: false},
 		{name: "Seascale Pebble", dathumb: ":thumb732962807:", url: "Seascale-Pebble-732962807", quantity: "high", contraband: false}
@@ -424,6 +426,8 @@ var geode = {
 		{name: "Pearl", dathumb: ":thumb745452009:", url: "Pearl-745452009", quantity: "high", contraband: false},
 		{name: "Emerald", dathumb: ":thumb741520567:", url: "Emerald-741520567", quantity: "high", contraband: false},
 		{name: "Ruby", dathumb: ":thumb746350610:", url: "Ruby-746350610", quantity: "high", contraband: false},
+		{name: "Opal", dathumb: ":thumb760543398:", url: "Opal-760543398", quantity: "high", contraband: false},
+		{name: "Sapphire", dathumb: ":thumb760543353:", url: "Sapphire-760543353", quantity: "high", contraband: false},
 		{name: "Peridot", dathumb: ":thumb756352472:", url: "Peridot-756352472", quantity: "high", contraband: false}
 	],
 	rare: [
