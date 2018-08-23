@@ -12,6 +12,9 @@ var companions = [
 
 var nskanetis = {
 	common: [
+		{name: "Everburn Coal", dathumb: ":thumb760528138:", url: "Everburn-Coal-760528138", quantity: "high", contraband: false},
+		{name: "Malachite", dathumb: ":thumb760521371:", url: "Malachite-760521371", quantity: "high", contraband: false},
+		{name: "Poultry", dathumb: ":thumb760273419:", url: "Poultry-760273419", quantity: "high", contraband: false},
 		{name: "Berries", dathumb: ":thumb705018877:", url: "Berries-705018877", quantity: "high", contraband: false},
 		{name: "Grains", dathumb: ":thumb704828305:", url: "Grains-704828305", quantity: "high", contraband: false},
 		{name: "Ink", dathumb: ":thumb706195655:", url: "Ink-706195655", quantity: "low", contraband: false},
@@ -41,7 +44,10 @@ var nskanetis = {
 		{name: "Peridot", dathumb: ":thumb756352472:", url: "Peridot-756352472", quantity: "high", contraband: false}
 	],
 	uncommon: [
+		{name: "Opal", dathumb: ":thumb760543398:", url: "Opal-760543398", quantity: "high", contraband: false},
+		{name: "Sapphire", dathumb: ":thumb760543353:", url: "Sapphire-760543353", quantity: "high", contraband: false},
 		{name: "Glass", dathumb: ":thumb705332826:", url: "Glass-705332826", quantity: "high", contraband: false},
+		{name: "Honey", dathumb: ":thumb760276379:", url: "Honey-760276379", quantity: "low", contraband: false},
 		{name: "Iron", dathumb: ":thumb705355370:", url: "Iron-705355370", quantity: "high", contraband: false},
 		{name: "Leather", dathumb: ":thumb706194672:", url: "Leather-706194672", quantity: "high", contraband: false},
 		{name: "Science Kit", dathumb: ":thumb705348253:", url: "Science-Kit-705348253", quantity: "low", contraband: false},
@@ -71,6 +77,7 @@ var nskanetis = {
 };
 var sxriix = {
 	common: [
+		{name: "Poultry", dathumb: ":thumb760273419:", url: "Poultry-760273419", quantity: "high", contraband: false},
 		{name: "Dairy", dathumb: ":thumb705236115:", url: "Dairy-705236115", quantity: "low", contraband: false},
 		{name: "Ice", dathumb: ":thumb731696229:", url: "Ice-731696229", quantity: "high", contraband: false},
 		{name: "Iron", dathumb: ":thumb705355370:", url: "Iron-705355370", quantity: "high", contraband: false},
@@ -87,6 +94,7 @@ var sxriix = {
 		{name: "Apple", dathumb: ":thumb745411757:", url: "Apple-745411757", quantity: "high", contraband: false},
 		{name: "Stone", dathumb: ":thumb756350686:", url: "Stone-756350686", quantity: "high", contraband: false},
 		{name: "Sand", dathumb: ":thumb745611540:", url: "Sand-745611540", quantity: "high", contraband: false},
+		{name: "Prickly Fruit", dathumb: ":thumb760279504:", url: "Prickly-Fruit-760279504", quantity: "high", contraband: false},
 		{name: "Peppers", dathumb: ":thumb759631082:", url: "Peppers-759631082", quantity: "high", contraband: false},
 		//monthly birthstone
 		{name: "Peridot", dathumb: ":thumb756352472:", url: "Peridot-756352472", quantity: "high", contraband: false}
@@ -96,6 +104,7 @@ var sxriix = {
 		{name: "Grains", dathumb: ":thumb704828305:", url: "Grains-704828305", quantity: "high", contraband: false},
 		{name: "Twine", dathumb: ":thumb706195251:", url: "Twine-706195251", quantity: "high", contraband: false},
 		{name: "Water", dathumb: ":thumb705337799:", url: "Water-705337799", quantity: "low", contraband: false},
+		{name: "Opal", dathumb: ":thumb760543398:", url: "Opal-760543398", quantity: "high", contraband: false},
 		{name: "Aquamarine", dathumb: ":thumb732965498:", url: "Aquamarine-732965498", quantity: "high", contraband: false},
 		{name: "Geode", dathumb: ":thumb732979097:", url: "Geode-732979097", quantity: "low", contraband: false},
 		{name: "Emerald", dathumb: ":thumb741520567:", url: "Emerald-741520567", quantity: "high", contraband: false},
@@ -118,6 +127,8 @@ var sxriix = {
 };
 var earth = {
 	common: [
+		{name: "Malachite", dathumb: ":thumb760521371:", url: "Malachite-760521371", quantity: "high", contraband: false},
+		{name: "Poultry", dathumb: ":thumb760273419:", url: "Poultry-760273419", quantity: "high", contraband: false},
 		{name: "Berries", dathumb: ":thumb705018877:", url: "Berries-705018877", quantity: "high", contraband: false},
 		{name: "Grains", dathumb: ":thumb704828305:", url: "Grains-704828305", quantity: "high", contraband: false},
 		{name: "Corn", dathumb: ":thumb705235401:", url: "Corn-705235401", quantity: "high", contraband: false},
@@ -146,6 +157,9 @@ var earth = {
 		{name: "Peridot", dathumb: ":thumb756352472:", url: "Peridot-756352472", quantity: "high", contraband: false}
 	],
 	uncommon: [
+		{name: "Sapphire", dathumb: ":thumb760543353:", url: "Sapphire-760543353", quantity: "high", contraband: false},
+		{name: "Prickly Fruit", dathumb: ":thumb760279504:", url: "Prickly-Fruit-760279504", quantity: "high", contraband: false},
+		{name: "Honey", dathumb: ":thumb760276379:", url: "Honey-760276379", quantity: "low", contraband: false},
 		{name: "Glass", dathumb: ":thumb705332826:", url: "Glass-705332826", quantity: "high", contraband: false},
 		{name: "Iron", dathumb: ":thumb705355370:", url: "Iron-705355370", quantity: "high", contraband: false},
 		{name: "Ink", dathumb: ":thumb706195655:", url: "Ink-706195655", quantity: "low", contraband: false},
@@ -175,6 +189,8 @@ var earth = {
 };
 var chasm = {
 	common: [
+		{name: "Everburn Coal", dathumb: ":thumb760528138:", url: "Everburn-Coal-760528138", quantity: "high", contraband: false},
+		{name: "Malachite", dathumb: ":thumb760521371:", url: "Malachite-760521371", quantity: "high", contraband: false},
 		{name: "Flesh Slab", dathumb: ":thumb756159680:", url: "Flesh-Slab-756159680", quantity: "high", contraband: false},
 		{name: "Chasm Brick", dathumb: ":thumb756350707:", url: "Chasm-Brick-756350707", quantity: "high", contraband: false},
 		{name: "Colorpitch", dathumb: ":thumb755255159:", url: "Colorpitch-755255159", quantity: "low", contraband: false},
@@ -189,6 +205,9 @@ var chasm = {
 		{name: "Peridot", dathumb: ":thumb756352472:", url: "Peridot-756352472", quantity: "high", contraband: false}
 	],
 	uncommon: [
+		{name: "Opal", dathumb: ":thumb760543398:", url: "Opal-760543398", quantity: "high", contraband: false},
+		{name: "Poultry", dathumb: ":thumb760273419:", url: "Poultry-760273419", quantity: "high", contraband: false},
+		{name: "Prickly Fruit", dathumb: ":thumb760279504:", url: "Prickly-Fruit-760279504", quantity: "high", contraband: false},
 		{name: "Sanguine Snare", dathumb: ":thumb756969308:", url: "Sanguine-Snare-756969308", quantity: "low", contraband: false},
 		{name: "Slab of Raw Meat", dathumb: ":thumb704794080:", url: "Slab-of-Raw-Meat-704794080", quantity: "high", contraband: false},
 		{name: "Squid", dathumb: ":thumb739760540:", url: "Squid-739760540", quantity: "low", contraband: false},
@@ -209,6 +228,8 @@ var chasm = {
 
 var mining = {
 	common: [
+		{name: "Everburn Coal", dathumb: ":thumb760528138:", url: "Everburn-Coal-760528138", quantity: "high", contraband: false},
+		{name: "Malachite", dathumb: ":thumb760521371:", url: "Malachite-760521371", quantity: "high", contraband: false},
 		{name: "Iron", dathumb: ":thumb705355370:", url: "Iron-705355370", quantity: "high", contraband: false},
 		{name: "Hematite", dathumb: ":thumb732962142:", url: "Hematite-732962142", quantity: "high", contraband: false},
 		{name: "Corecracker Lodestone", dathumb: ":thumb732962520:", url: "Corecracker-Lodestone-732962520", quantity: "high", contraband: false},
@@ -220,6 +241,8 @@ var mining = {
 		{name: "Stone", dathumb: ":thumb756350686:", url: "Stone-756350686", quantity: "high", contraband: false}
 	],
 	uncommon: [
+		{name: "Opal", dathumb: ":thumb760543398:", url: "Opal-760543398", quantity: "high", contraband: false},
+		{name: "Sapphire", dathumb: ":thumb760543353:", url: "Sapphire-760543353", quantity: "high", contraband: false},
 		{name: "Water", dathumb: ":thumb705337799:", url: "Water-705337799", quantity: "low", contraband: false},
 		{name: "Geode", dathumb: ":thumb732979097:", url: "Geode-732979097", quantity: "low", contraband: false},
 		{name: "Amethyst", dathumb: ":thumb732963019:", url: "Amethyst-732963019", quantity: "high", contraband: false},
@@ -248,6 +271,7 @@ var livestock = {
 		{name: "Teeth and Claws", dathumb: ":thumb756971959:", url: "Teeth-and-Claws-756971959", quantity: "high", contraband: false},
 		{name: "Leather", dathumb: ":thumb706194672:", url: "Leather-706194672", quantity: "high", contraband: false},
 		{name: "Egg", dathumb: ":thumb731515502:", url: "Egg-731515502", quantity: "high", contraband: false},
+		{name: "Poultry", dathumb: ":thumb760273419:", url: "Poultry-760273419", quantity: "high", contraband: false},
 		{name: "Corn", dathumb: ":thumb705235401:", url: "Corn-705235401", quantity: "high", contraband: false}
 	],
 	uncommon: [
@@ -267,6 +291,7 @@ var land = {
 		{name: "Slab of Raw Meat", dathumb: ":thumb704794080:", url: "Slab-of-Raw-Meat-704794080", quantity: "high", contraband: false},
 		{name: "Teeth and Claws", dathumb: ":thumb756971959:", url: "Teeth-and-Claws-756971959", quantity: "high", contraband: false},
 		{name: "Leather", dathumb: ":thumb706194672:", url: "Leather-706194672", quantity: "high", contraband: false},
+		{name: "Poultry", dathumb: ":thumb760273419:", url: "Poultry-760273419", quantity: "high", contraband: false},
 		{name: "Grains", dathumb: ":thumb704828305:", url: "Grains-704828305", quantity: "high", contraband: false}
 	],
 	uncommon: [
@@ -303,6 +328,7 @@ var plant = {
 		{name: "Coffee Beans", dathumb: ":thumb742284457:", url: "Coffee-Beans-742284457", quantity: "low", contraband: false},
 		{name: "Seaweed", dathumb: ":thumb745411718:", url: "Seaweed-745411718", quantity: "low", contraband: false},
 		{name: "Avocado", dathumb: ":thumb756348390:", url: "Avocado-756348390", quantity: "low", contraband: false},
+		{name: "Prickly Fruit", dathumb: ":thumb760279504:", url: "Prickly-Fruit-760279504", quantity: "high", contraband: false},
 		{name: "Sanguine Snare", dathumb: ":thumb756969308:", url: "Sanguine-Snare-756969308", quantity: "low", contraband: false}
 	],
 	rare: [
