@@ -41,11 +41,13 @@ var nskanetis = {
 		{name: "Peppers", dathumb: ":thumb759631082:", url: "Peppers-759631082", quantity: "high", contraband: false},
 		{name: "Southern Vyldes Shovelnose Prawn", dathumb: ":thumb759505729:", url: "Southern-Vyldes-Shovelnose-Prawn-759505729", quantity: "low", contraband: false},
 		//monthly birthstone
-		{name: "Peridot", dathumb: ":thumb756352472:", url: "Peridot-756352472", quantity: "high", contraband: false}
+		{name: "Sapphire", dathumb: ":thumb760543353:", url: "Sapphire-760543353", quantity: "high", contraband: false}
 	],
 	uncommon: [
 		{name: "Opal", dathumb: ":thumb760543398:", url: "Opal-760543398", quantity: "high", contraband: false},
 		{name: "Sapphire", dathumb: ":thumb760543353:", url: "Sapphire-760543353", quantity: "high", contraband: false},
+		{name: "Turquoise", dathumb: ":thumb762538376:", url: "Turquoise-762538376", quantity: "high", contraband: false},
+		{name: "Garnet", dathumb: ":thumb762541975:", url: "Garnet-762541975", quantity: "high", contraband: false},
 		{name: "Glass", dathumb: ":thumb705332826:", url: "Glass-705332826", quantity: "high", contraband: false},
 		{name: "Honey", dathumb: ":thumb760276379:", url: "Honey-760276379", quantity: "low", contraband: false},
 		{name: "Iron", dathumb: ":thumb705355370:", url: "Iron-705355370", quantity: "high", contraband: false},
@@ -72,7 +74,7 @@ var nskanetis = {
 		{name: "Fond Memories: the Chasm", dathumb: ":thumb731707119:", url: "Fond-Memories-the-Chasm-731707119", quantity: "low", contraband: false},
 		{name: "Pack Cat Companion", dathumb: ":thumb734153299:", url: "Pack-Cat-Companion-734153299", quantity: "low", contraband: false},
 		{name: "Kaurphyt Raven Companion", dathumb: ":thumb751507214:", url: "Kaurphyt-Raven-Companion-751507214", quantity: "low", contraband: false},
-		{name: "Unrefined Liquid Diamond", dathumb: ":thumb726736815:", url: "Unrefined-Liquid-Diamond-726736815", quantity: "low", contraband: true}
+		{name: "Unrefined Liquid Diamond", dathumb: ":thumb726736815:", url: "Unrefined-Liquid-Diamond-726736815", quantity: "low", contraband: true},
 	]
 };
 var sxriix = {
@@ -97,7 +99,7 @@ var sxriix = {
 		{name: "Prickly Fruit", dathumb: ":thumb760279504:", url: "Prickly-Fruit-760279504", quantity: "high", contraband: false},
 		{name: "Peppers", dathumb: ":thumb759631082:", url: "Peppers-759631082", quantity: "high", contraband: false},
 		//monthly birthstone
-		{name: "Peridot", dathumb: ":thumb756352472:", url: "Peridot-756352472", quantity: "high", contraband: false}
+		{name: "Sapphire", dathumb: ":thumb760543353:", url: "Sapphire-760543353", quantity: "high", contraband: false}
 	],
 	uncommon: [
 		{name: "Berries", dathumb: ":thumb705018877:", url: "Berries-705018877", quantity: "high", contraband: false},
@@ -114,6 +116,7 @@ var sxriix = {
 		{name: "Ruby", dathumb: ":thumb746350610:", url: "Ruby-746350610", quantity: "high", contraband: false},
 		{name: "Peridot", dathumb: ":thumb756352472:", url: "Peridot-756352472", quantity: "high", contraband: false},
 		{name: "Leafy Greens", dathumb: ":thumb758899310:", url: "Leafy-Greens-758899310", quantity: "high", contraband: false},
+		{name: "Topaz", dathumb: ":thumb762536432:", url: "Topaz-762536432", quantity: "high", contraband: false},
 		{name: "Clay", dathumb: ":thumb756976397:", url: "Clay-756976397", quantity: "high", contraband: false}
 	],
 	rare: [
@@ -154,10 +157,12 @@ var earth = {
 		{name: "Peppers", dathumb: ":thumb759631082:", url: "Peppers-759631082", quantity: "high", contraband: false},
 		{name: "Shrimp", dathumb: ":thumb759505741:", url: "Shrimp-759505741", quantity: "low", contraband: false},
 		//monthly birthstone
-		{name: "Peridot", dathumb: ":thumb756352472:", url: "Peridot-756352472", quantity: "high", contraband: false}
+		{name: "Sapphire", dathumb: ":thumb760543353:", url: "Sapphire-760543353", quantity: "high", contraband: false},
 	],
 	uncommon: [
 		{name: "Sapphire", dathumb: ":thumb760543353:", url: "Sapphire-760543353", quantity: "high", contraband: false},
+		{name: "Turquoise", dathumb: ":thumb762538376:", url: "Turquoise-762538376", quantity: "high", contraband: false},
+		{name: "Garnet", dathumb: ":thumb762541975:", url: "Garnet-762541975", quantity: "high", contraband: false},
 		{name: "Prickly Fruit", dathumb: ":thumb760279504:", url: "Prickly-Fruit-760279504", quantity: "high", contraband: false},
 		{name: "Honey", dathumb: ":thumb760276379:", url: "Honey-760276379", quantity: "low", contraband: false},
 		{name: "Glass", dathumb: ":thumb705332826:", url: "Glass-705332826", quantity: "high", contraband: false},
@@ -177,6 +182,7 @@ var earth = {
 		{name: "Pearl", dathumb: ":thumb745452009:", url: "Pearl-745452009", quantity: "high", contraband: false},
 		{name: "Seaweed", dathumb: ":thumb745411718:", url: "Seaweed-745411718", quantity: "low", contraband: false},
 		{name: "Clay", dathumb: ":thumb756976397:", url: "Clay-756976397", quantity: "high", contraband: false},
+		{name: "Topaz", dathumb: ":thumb762536432:", url: "Topaz-762536432", quantity: "high", contraband: false},
 		{name: "Citrus Fruit", dathumb: ":thumb758899247:", url: "Citrus-Fruit-758899247", quantity: "high", contraband: false}
 	],
 	rare: [
@@ -184,6 +190,7 @@ var earth = {
 		{name: "Fond Memories: B-NOMALY Labs", dathumb: ":thumb730488748:", url: "Fond-Memories-B-NOMALY-Labs-730488748", quantity: "low", contraband: false},
 		{name: "Fond Memories: the Chasm", dathumb: ":thumb731707119:", url: "Fond-Memories-the-Chasm-731707119", quantity: "low", contraband: false},
 		{name: "Pack Cat Companion", dathumb: ":thumb734153299:", url: "Pack-Cat-Companion-734153299", quantity: "low", contraband: false},
+		{name: "Philosophic Mercury", dathumb: ":thumb762066479:", url: "Philosophic-Mercury-762066479", quantity: "low", contraband: true},
 		{name: "B-NOMALY Greymatter Sample", dathumb: ":thumb728112339:", url: "B-NOMALY-Greymatter-Sample-728112339", quantity: "low", contraband: true}
 	]
 };
@@ -253,6 +260,10 @@ var mining = {
 		{name: "Ruby", dathumb: ":thumb746350610:", url: "Ruby-746350610", quantity: "high", contraband: false},
 		{name: "Peridot", dathumb: ":thumb756352472:", url: "Peridot-756352472", quantity: "high", contraband: false},
 		{name: "Clay", dathumb: ":thumb756976397:", url: "Clay-756976397", quantity: "high", contraband: false},
+		{name: "Gilded Broken Shard", dathumb: ":thumb761468490:", url: "Gilded-Broken-Shard-761468490", quantity: "high", contraband: false},
+		{name: "Topaz", dathumb: ":thumb762536432:", url: "Topaz-762536432", quantity: "high", contraband: false},
+		{name: "Turquoise", dathumb: ":thumb762538376:", url: "Turquoise-762538376", quantity: "high", contraband: false},
+		{name: "Garnet", dathumb: ":thumb762541975:", url: "Garnet-762541975", quantity: "high", contraband: false},
 		{name: "Chasm Brick", dathumb: ":thumb756350707:", url: "Chasm-Brick-756350707", quantity: "high", contraband: false}
 	],
 	rare: [
@@ -260,7 +271,10 @@ var mining = {
 		{name: "Supercharged Fogshard Piece - Chrono", dathumb: ":thumb719311917:", url: "Supercharged-Fogshard-Piece-Chrono-719311917", quantity: "low", contraband: false},
 		{name: "Charged Fogshard Piece - Swap", dathumb: ":thumb732690623:", url: "Charged-Fogshard-Piece-Swap-732690623", quantity: "low", contraband: false},
 		{name: "Supercharged Fogshard Piece - Swap", dathumb: ":thumb732691396:", url: "Supercharged-Fogshard-Piece-Swap-732691396", quantity: "low", contraband: false},
+		{name: "Charged Fogshard Piece - Alchemy", dathumb: ":thumb761464031:", url: "Charged-Fogshard-Piece-Alchemy-761464031", quantity: "low", contraband: false},
+		{name: "Supercharged Fogshard Piece - Alchemy", dathumb: ":thumb761464077:", url: "Supercharged-Fogshard-Piece-Alchemy-761464077", quantity: "low", contraband: false},
 		{name: "Death's Dust", dathumb: ":thumb726736769:", url: "Death-s-Dust-726736769", quantity: "low", contraband: true},
+		{name: "Philosophic Mercury", dathumb: ":thumb762066479:", url: "Philosophic-Mercury-762066479", quantity: "low", contraband: true},
 		{name: "Unrefined Liquid Diamond", dathumb: ":thumb726736815:", url: "Unrefined-Liquid-Diamond-726736815", quantity: "low", contraband: true}
 	]
 }
@@ -420,6 +434,9 @@ var geode = {
 		{name: "Seascale Pebble", dathumb: ":thumb732962807:", url: "Seascale-Pebble-732962807", quantity: "high", contraband: false}
 	],
 	uncommon: [
+		{name: "Topaz", dathumb: ":thumb762536432:", url: "Topaz-762536432", quantity: "high", contraband: false},
+		{name: "Turquoise", dathumb: ":thumb762538376:", url: "Turquoise-762538376", quantity: "high", contraband: false},
+		{name: "Garnet", dathumb: ":thumb762541975:", url: "Garnet-762541975", quantity: "high", contraband: false},
 		{name: "Amethyst", dathumb: ":thumb732963019:", url: "Amethyst-732963019", quantity: "high", contraband: false},
 		{name: "Aquamarine", dathumb: ":thumb732965498:", url: "Aquamarine-732965498", quantity: "high", contraband: false},
 		{name: "Diamond", dathumb: ":thumb736478165:", url: "Diamond-736478165", quantity: "high", contraband: false},
@@ -428,12 +445,16 @@ var geode = {
 		{name: "Ruby", dathumb: ":thumb746350610:", url: "Ruby-746350610", quantity: "high", contraband: false},
 		{name: "Opal", dathumb: ":thumb760543398:", url: "Opal-760543398", quantity: "high", contraband: false},
 		{name: "Sapphire", dathumb: ":thumb760543353:", url: "Sapphire-760543353", quantity: "high", contraband: false},
-		{name: "Peridot", dathumb: ":thumb756352472:", url: "Peridot-756352472", quantity: "high", contraband: false}
+		{name: "Peridot", dathumb: ":thumb756352472:", url: "Peridot-756352472", quantity: "low", contraband: false},
+		{name: "Gilded Broken Shard", dathumb: ":thumb761468490:", url: "Gilded-Broken-Shard-761468490", quantity: "high", contraband: false}
 	],
 	rare: [
 		{name: "Charged Fogshard Piece - Chrono", dathumb: ":thumb719305560:", url: "Charged-Fogshard-Piece-Chrono-719305560", quantity: "low", contraband: false},
 		{name: "Supercharged Fogshard Piece - Chrono", dathumb: ":thumb719311917:", url: "Supercharged-Fogshard-Piece-Chrono-719311917", quantity: "low", contraband: false},
 		{name: "Charged Fogshard Piece - Swap", dathumb: ":thumb732690623:", url: "Charged-Fogshard-Piece-Swap-732690623", quantity: "low", contraband: false},
-		{name: "Supercharged Fogshard Piece - Swap", dathumb: ":thumb732691396:", url: "Supercharged-Fogshard-Piece-Swap-732691396", quantity: "low", contraband: false}
+		{name: "Supercharged Fogshard Piece - Swap", dathumb: ":thumb732691396:", url: "Supercharged-Fogshard-Piece-Swap-732691396", quantity: "low", contraband: false},
+		{name: "Charged Fogshard Piece - Alchemy", dathumb: ":thumb761464031:", url: "Charged-Fogshard-Piece-Alchemy-761464031", quantity: "low", contraband: false},
+		{name: "Supercharged Fogshard Piece - Alchemy", dathumb: ":thumb761464077:", url: "Supercharged-Fogshard-Piece-Alchemy-761464077", quantity: "low", contraband: false},
+		{name: "Unbreakable Geode", dathumb: ":thumb762521286:", url: "Unbreakable-Geode-762521286", quantity: "low", contraband: false}
 	]
 }
