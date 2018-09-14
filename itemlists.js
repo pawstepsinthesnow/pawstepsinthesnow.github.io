@@ -75,6 +75,7 @@ var nskanetis = {
 		{name: "Pack Cat Companion", dathumb: ":thumb734153299:", url: "Pack-Cat-Companion-734153299", quantity: "low", contraband: false},
 		{name: "Kaurphyt Raven Companion", dathumb: ":thumb751507214:", url: "Kaurphyt-Raven-Companion-751507214", quantity: "low", contraband: false},
 		{name: "Unrefined Liquid Diamond", dathumb: ":thumb726736815:", url: "Unrefined-Liquid-Diamond-726736815", quantity: "low", contraband: true},
+		{name: "Inert Parasite", dathumb: ":thumb763775489:", url: "Inert-Parasite-763775489", quantity: "low", contraband: true},
 	]
 };
 var sxriix = {
