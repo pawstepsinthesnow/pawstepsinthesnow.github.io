@@ -210,7 +210,7 @@ var chasm = {
 		{name: "Fish Meat", dathumb: ":thumb753322990:", url: "Fish-Meat-753322990", quantity: "high", contraband: false},
 		{name: "Shrimp", dathumb: ":thumb759505741:", url: "Shrimp-759505741", quantity: "low", contraband: false},
 		//monthly birthstone
-		{name: "Peridot", dathumb: ":thumb756352472:", url: "Peridot-756352472", quantity: "high", contraband: false}
+		{name: "Sapphire", dathumb: ":thumb760543353:", url: "Sapphire-760543353", quantity: "high", contraband: false}
 	],
 	uncommon: [
 		{name: "Opal", dathumb: ":thumb760543398:", url: "Opal-760543398", quantity: "high", contraband: false},
