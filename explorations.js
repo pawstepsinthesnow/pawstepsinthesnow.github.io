@@ -7,6 +7,8 @@ var rolldata = {
 	streetwise: false,
 	minboost: false,
 	deepearth: false,
+	cider: false,
+	beans: "none",
 	chasmjump: "none",
 };
 
@@ -131,10 +133,29 @@ function setUp(mode) {
 	} else {
 		rolldata.yvanon = false;
 	}
+	if (document.getElementById("beans").checked == true) {
+		var n = rng(1,100);
+		console.log("Beans active!");
+		if (n <= 60) {
+			rolldata.beans = "zoom";
+			console.log("Zoom!");
+		} else {
+			rolldata.beans = "crash";
+			console.log("Crash.");
+		}
+	} else {
+		rolldata.beans = "none";
+	}
+		
 	if (document.getElementById("windrink").checked == true) {
 		rolldata.deepearth = true;
 	} else {
 		rolldata.deepearth = false;
+	}
+	if (document.getElementById("falldrink").checked == true) {
+		rolldata.cider = true;
+	} else {
+		rolldata.cider = false;
 	}
 	if (document.getElementById("minboost").checked == true ||
 		document.getElementById("drake").checked == true) {
@@ -161,11 +182,24 @@ function setUp(mode) {
 
 function createOutput() {
 	var out = "Main return:\n";
+	if(rolldata.beans != "none") {
+		rolldata.yvanon = true;
+		if(rolldata.beans == "zoom") {
+			out = out + "Express Speed active!\n";
+		} else {
+			out = out + "Caffiene Crash activated.\n";
+		}
+	} //extremely hacky but it works
+	//if express speed is active, turn yvanon on for the main roll only
 	var a = roll(rolldata.qr, rolldata.streetwise, false);
 	out = out + formatThumbs(a);
 	if (rolldata.chasmjump == "none") {
 		out = out + rollSeasonal();
 	}
+	if(document.getElementById("yvanon").checked == false) {
+		rolldata.yvanon = false;
+	} //unset yvanon if she's not meant to be active
+	rolldata.beans = "none"; //also hacky, unsetting beans so they don't affect the rest of the roll
 	
 	//Full roll returns (Pack Cat, Tail Bags, Streetwise Companion);
 	
@@ -264,6 +298,9 @@ function roll(qr, sw, bonus) {
 	if (rolldata.yvanon == true && bonus == false) {
 		itemCount = 4;
 	}
+	if (rolldata.beans == "crash") {
+		itemCount = 1;
+	}
 	items = [];
 	while (itemCount > 0) {
 		var rarity = rng(1, 100); //determine rarity
@@ -333,6 +370,9 @@ function rollSeasonal() {
 	if (rolldata.deepearth == true) {
 		q = q * 2;
 	}
+	if (rolldata.cider == true) {
+		q = q * 2;
+	}
 	var a = rng(1,100);
 	var extra = false;
 	if(a <= 25) {
@@ -342,8 +382,18 @@ function rollSeasonal() {
 	"<a href=\"https://www.deviantart.com/magmatixi/art/" + fest[0].url +
 	"\">" + fest[0].name + "</a>" + " x" + q;
 	if (extra == true) {
-		out = out + " and a <a href=\"https://www.deviantart.com/magmatixi/art/" +
-		fest[1].url + "\">" + fest[1].name + "</a>!\n";
+		if (rolldata.deepearth == true && rolldata.cider == true) {
+			out = out + " and <a href=\"https://www.deviantart.com/magmatixi/art/" +
+			fest[1].url + "\">" + fest[1].name + " x4</a>!\n"
+		}
+		else if (rolldata.deepearth == true || rolldata.cider == true) {
+			out = out + " and <a href=\"https://www.deviantart.com/magmatixi/art/" +
+			fest[1].url + "\">" + fest[1].name + " x2</a>!\n"
+		}
+		else {
+			out = out + " and a <a href=\"https://www.deviantart.com/magmatixi/art/" +
+			fest[1].url + "\">" + fest[1].name + "</a>!\n";
+		}
 	} else {
 		out = out + "!\n";
 	}
