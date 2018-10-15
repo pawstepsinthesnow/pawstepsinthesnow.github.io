@@ -8,6 +8,7 @@ var companions = [
 	{name: "Kaurphyt Raven Companion", dathumb: ":thumb751507214:", url: "Kaurphyt-Raven-Companion-751507214"},
 	{name: "Tunneldrake Companion", dathumb: ":thumb747809073:", url: "Tunneldrake-Companion-747809073"},
 	{name: "Mymber Companion", dathumb: ":thumb756147760:", url: "Mymber-Companion-756147760"},
+	{name: "Kellas Cat Companion", dathumb: ":thumb768254398:", url: "Kellas-Cat-Companion-768254398"},
 ];
 
 var nskanetis = {
@@ -193,6 +194,7 @@ var earth = {
 		{name: "Fond Memories: B-NOMALY Labs", dathumb: ":thumb730488748:", url: "Fond-Memories-B-NOMALY-Labs-730488748", quantity: "low", contraband: false},
 		{name: "Fond Memories: the Chasm", dathumb: ":thumb731707119:", url: "Fond-Memories-the-Chasm-731707119", quantity: "low", contraband: false},
 		{name: "Pack Cat Companion", dathumb: ":thumb734153299:", url: "Pack-Cat-Companion-734153299", quantity: "low", contraband: false},
+		{name: "Kellas Cat Companion", dathumb: ":thumb768254398:", url: "Kellas-Cat-Companion-768254398", quantity: "low", contraband: false},
 		{name: "Philosophic Mercury", dathumb: ":thumb762066479:", url: "Philosophic-Mercury-762066479", quantity: "low", contraband: true},
 		{name: "B-NOMALY Greymatter Sample", dathumb: ":thumb728112339:", url: "B-NOMALY-Greymatter-Sample-728112339", quantity: "low", contraband: true}
 	]

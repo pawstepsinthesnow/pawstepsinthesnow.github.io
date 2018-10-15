@@ -107,6 +107,12 @@ function setUp(mode) {
 			special = 400;
 		}
 	}
+	if (document.getElementById("kellas").checked == true) {
+		attack += 50;
+		if(attack > 400) {
+			attack = 400;
+		}
+	}
 		
 	if(rolldata.rolltype == "explo") {
 		rolldata.qr = Math.floor(speed / 50) + Math.floor(special / 50);
