@@ -425,9 +425,9 @@ var combat = {
 		{name: "Geode", dathumb: ":thumb732979097:", url: "Geode-732979097", quantity: "low", contraband: false},
 		{name: "Science Kit", dathumb: ":thumb705348253:", url: "Science-Kit-705348253", quantity: "low", contraband: false},
 		{name: "Jalapeno-Fried Steak", dathumb: ":thumb705050583:", url: "Jalapeno-Fried-Steak-705050583", quantity: "low", contraband: false},
-		{name: "Cornbread", dathumb: ":thumb705335253:", url: "Cornbread-705335253", quantity: "low", contraband: false}
-		{name: "Trinket Jar - Fossil Tooth", dathumb: ":thumb769989338:", url: "Trinket-Jar-Fossil-Tooth-769989338", quantity: "low", contraband: false}
-		{name: "Trinket Jar - Potpourri", dathumb: ":thumb769996643:", url: "Trinket-Jar-Potpourri-769996643", quantity: "low", contraband: false}
+		{name: "Cornbread", dathumb: ":thumb705335253:", url: "Cornbread-705335253", quantity: "low", contraband: false},
+		{name: "Trinket Jar - Fossil Tooth", dathumb: ":thumb769989338:", url: "Trinket-Jar-Fossil-Tooth-769989338", quantity: "low", contraband: false},
+		{name: "Trinket Jar - Potpourri", dathumb: ":thumb769996643:", url: "Trinket-Jar-Potpourri-769996643", quantity: "low", contraband: false},
 		{name: "Trinket Jar - Sand Art", dathumb: ":thumb769992005:", url: "Trinket-Jar-Sand-Art-769992005", quantity: "low", contraband: false}
 	],
 	rare: [
