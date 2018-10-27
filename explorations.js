@@ -113,7 +113,21 @@ function setUp(mode) {
 			attack = 400;
 		}
 	}
-		
+	if (document.getElementById("tooth").checked == true) {
+		attack += 50;
+		if(attack > 400) {
+			attack = 400;
+		}
+		if (rolldata.rolltype == "hunt") {
+			rolldata.minboost = true;
+		}
+	}
+	if (document.getElementById("potpourri").checked == true) {
+		defense += 50;
+		if(defense > 400) {
+			defense = 400;
+		}
+	}
 	if(rolldata.rolltype == "explo") {
 		rolldata.qr = Math.floor(speed / 50) + Math.floor(special / 50);
 	} else if (rolldata.rolltype == "hunt") {
@@ -209,14 +223,6 @@ function createOutput() {
 	
 	//Full roll returns (Pack Cat, Tail Bags, Streetwise Companion);
 	
-	if (document.getElementById("packcat").checked == true) {
-		a = roll(0, rolldata.streetwise, false);
-		out = out + "\nPack Cat returns:\n";
-		out = out + formatLinks(a);
-		if (rolldata.chasmjump == "none") {
-			out = out + rollSeasonal();
-		}
-	}
 	if (document.getElementById("tbags").checked == true) {
 		a = roll(0, rolldata.streetwise, false);
 		out = out + "\nTail Bags returns:\n";
@@ -225,8 +231,16 @@ function createOutput() {
 			out = out + rollSeasonal();
 		}
 	}
+	if (document.getElementById("packcat").checked == true) {
+		a = roll(0, rolldata.streetwise, false);
+		out = out + "\nPack Cat returns:\n";
+		out = out + formatLinks(a);
+		if (rolldata.chasmjump == "none") {
+			out = out + rollSeasonal();
+		}
+	}
 	if (document.getElementById("swc").checked == true) {
-		a = roll(0, true, false);
+		a = roll(rolldata.qr, true, false);
 		out = out + "\nStreetwise Companion returns:\n";
 		out = out + formatLinks(a);
 		if (rolldata.chasmjump == "none") {
