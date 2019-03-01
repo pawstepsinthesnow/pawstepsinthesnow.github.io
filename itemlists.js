@@ -43,7 +43,7 @@ var nskanetis = {
 		{name: "Southern Vyldes Shovelnose Prawn", dathumb: ":thumb759505729:", url: "Southern-Vyldes-Shovelnose-Prawn-759505729", quantity: "low", contraband: false},
 		{name: "Sugar Cane", dathumb: ":thumb769868508:", url: "Sugar-Cane-769868508", quantity: "high", contraband: false},
 		//monthly birthstone
-		{name: "Garnet", dathumb: ":thumb762541975:", url: "Garnet-762541975", quantity: "high", contraband: false}
+		{name: "Emerald", dathumb: ":thumb741520567:", url: "Emerald-741520567", quantity: "high", contraband: false}
 	],
 	uncommon: [
 		{name: "Opal", dathumb: ":thumb760543398:", url: "Opal-760543398", quantity: "high", contraband: false},
@@ -103,7 +103,7 @@ var sxriix = {
 		{name: "Prickly Fruit", dathumb: ":thumb760279504:", url: "Prickly-Fruit-760279504", quantity: "high", contraband: false},
 		{name: "Peppers", dathumb: ":thumb759631082:", url: "Peppers-759631082", quantity: "high", contraband: false},
 		//monthly birthstone
-		{name: "Garnet", dathumb: ":thumb762541975:", url: "Garnet-762541975", quantity: "high", contraband: false}
+		{name: "Emerald", dathumb: ":thumb741520567:", url: "Emerald-741520567", quantity: "high", contraband: false}
 	],
 	uncommon: [
 		{name: "Berries", dathumb: ":thumb705018877:", url: "Berries-705018877", quantity: "high", contraband: false},
@@ -165,7 +165,7 @@ var earth = {
 		{name: "Sugar Cane", dathumb: ":thumb769868508:", url: "Sugar-Cane-769868508", quantity: "high", contraband: false},
 		{name: "Cinnamon Bark", dathumb: ":thumb769868523:", url: "Cinnamon-Bark-769868523", quantity: "high", contraband: false},
 		//monthly birthstone
-		{name: "Garnet", dathumb: ":thumb762541975:", url: "Garnet-762541975", quantity: "high", contraband: false}
+		{name: "Emerald", dathumb: ":thumb741520567:", url: "Emerald-741520567", quantity: "high", contraband: false}
 	],
 	uncommon: [
 		{name: "Sapphire", dathumb: ":thumb760543353:", url: "Sapphire-760543353", quantity: "high", contraband: false},
@@ -218,7 +218,7 @@ var chasm = {
 		{name: "Fish Meat", dathumb: ":thumb753322990:", url: "Fish-Meat-753322990", quantity: "high", contraband: false},
 		{name: "Shrimp", dathumb: ":thumb759505741:", url: "Shrimp-759505741", quantity: "low", contraband: false},
 		//monthly birthstone
-		{name: "Garnet", dathumb: ":thumb762541975:", url: "Garnet-762541975", quantity: "high", contraband: false}
+		{name: "Emerald", dathumb: ":thumb741520567:", url: "Emerald-741520567", quantity: "high", contraband: false}
 	],
 	uncommon: [
 		{name: "Opal", dathumb: ":thumb760543398:", url: "Opal-760543398", quantity: "high", contraband: false},
@@ -418,7 +418,9 @@ var combat = {
 		{name: "Leather", dathumb: ":thumb706194672:", url: "Leather-706194672", quantity: "high", contraband: false},
 		{name: "Egg", dathumb: ":thumb731515502:", url: "Egg-731515502", quantity: "high", contraband: false},
 		{name: "Twine", dathumb: ":thumb706195251:", url: "Twine-706195251", quantity: "high", contraband: false},
-		{name: "Monx'tel", dathumb: ":thumb732691964:", url: "Monx-tel-732691964", quantity: "low", contraband: false}
+		{name: "Monx'tel", dathumb: ":thumb732691964:", url: "Monx-tel-732691964", quantity: "low", contraband: false},
+		{name: "Fruit Bread", dathumb: ":thumb740159442:", url: "Fruit-Bread-740159442", quantity: "low", contraband: false},
+		{name: "Garlic Bread", dathumb: ":thumb705237798:", url: "Garlic-Bread-705237798", quantity: "low", contraband: false}
 	],
 	uncommon: [
 		{name: "Pet Treats", dathumb: ":thumb736629035:", url: "Pet-Treats-736629035", quantity: "low", contraband: false},
@@ -428,7 +430,10 @@ var combat = {
 		{name: "Cornbread", dathumb: ":thumb705335253:", url: "Cornbread-705335253", quantity: "low", contraband: false},
 		{name: "Trinket Jar - Fossil Tooth", dathumb: ":thumb769989338:", url: "Trinket-Jar-Fossil-Tooth-769989338", quantity: "low", contraband: false},
 		{name: "Trinket Jar - Potpourri", dathumb: ":thumb769996643:", url: "Trinket-Jar-Potpourri-769996643", quantity: "low", contraband: false},
-		{name: "Trinket Jar - Sand Art", dathumb: ":thumb769992005:", url: "Trinket-Jar-Sand-Art-769992005", quantity: "low", contraband: false}
+		{name: "Trinket Jar - Sand Art", dathumb: ":thumb769992005:", url: "Trinket-Jar-Sand-Art-769992005", quantity: "low", contraband: false},
+		{name: "Berry-Melon Smoothie", dathumb: ":thumb758899335:", url: "Berry-Melon-Smoothie-758899335", quantity: "low", contraband: false},
+		{name: "VitAvella Smoothie", dathumb: ":thumb755255243:", url: "VitAvella-Smoothie-755255243", quantity: "low", contraband: false},
+		{name: "Shish-Kebab", dathumb: ":thumb758739855:", url: "Shish-Kebab-758739855", quantity: "low", contraband: false}
 	],
 	rare: [
 		{name: "Fond Memories: B-NOMALY Labs", dathumb: ":thumb730488748:", url: "Fond-Memories-B-NOMALY-Labs-730488748", quantity: "low", contraband: false},
