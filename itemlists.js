@@ -433,7 +433,8 @@ var combat = {
 		{name: "Trinket Jar - Sand Art", dathumb: ":thumb769992005:", url: "Trinket-Jar-Sand-Art-769992005", quantity: "low", contraband: false},
 		{name: "Berry-Melon Smoothie", dathumb: ":thumb758899335:", url: "Berry-Melon-Smoothie-758899335", quantity: "low", contraband: false},
 		{name: "VitAvella Smoothie", dathumb: ":thumb755255243:", url: "VitAvella-Smoothie-755255243", quantity: "low", contraband: false},
-		{name: "Shish-Kebab", dathumb: ":thumb758739855:", url: "Shish-Kebab-758739855", quantity: "low", contraband: false}
+		{name: "Shish-Kebab", dathumb: ":thumb758739855:", url: "Shish-Kebab-758739855", quantity: "low", contraband: false},
+		{name: "Battle Sword", dathumb: ":thumb787944014:", url: "Battle-Sword-787944014", quantity: "low", contraband: false}
 	],
 	rare: [
 		{name: "Fond Memories: B-NOMALY Labs", dathumb: ":thumb730488748:", url: "Fond-Memories-B-NOMALY-Labs-730488748", quantity: "low", contraband: false},
