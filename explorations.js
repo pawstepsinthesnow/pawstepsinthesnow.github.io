@@ -3,25 +3,28 @@ var rolldata = {
 	world: nskanetis,
 	yvanon: false,
 	qr: 0,
-	seasonal: false,
+	seasonmain: false,
+	seasoncompanion: false,
+	seasonnpc: false,
 	streetwise: false,
 	minboost: false,
 	deepearth: false,
 	cider: false,
 	beans: "none",
 	chasmjump: "none",
+	trophy: false
 };
 
-function qhigh(q) {
+function qhigh(q, boost) {
 	var first;
-	if (rolldata.yvanon == true) {
+	if (boost == true) {
 		first = 5;
 	} else {
 		first = rng(1,5);
 	}
 	var rolls = [first]
 	for (i = 0; i < q; i++) {
-		if (rolldata.yvanon == true) {
+		if (boost == true) {
 			var a = 5;
 		} else {
 			var a = rng(0,5);
@@ -35,11 +38,11 @@ function qhigh(q) {
 	return total;
 }
 
-function qlow(q) {
+function qlow(q, boost) {
 	var first = 1;
 	var rolls = [first]
 	for (i = 0; i < q; i++) {
-		if (rolldata.yvanon == true) {
+		if (boost == true) {
 			var a = 1;
 		} else {
 			var a = rng(0,1);
@@ -137,10 +140,32 @@ function setUp(mode) {
 	} else if (rolldata.rolltype == "combat") {
 		rolldata.qr = Math.floor(attack / 50) + Math.floor(special / 50);
 	}
-	if (document.getElementById("nom").checked == true) {
-		rolldata.seasonal = true;
-	} else {
-		rolldata.seasonal = false;
+	var seasonal = document.getElementById("nom").elements.namedItem("seasonal").value;
+	//man that one's a mouthful
+	rolldata.seasonmain = false;
+	rolldata.seasoncompanion = false;
+	rolldata.seasonnpc = false; //clear everything first, then set what we need
+	switch(seasonal) { //I like switch statements. they're so straightforward.
+		case("none"):
+			break;
+		case("main"):
+			rolldata.seasonmain = true;
+			break;
+		case("npc"):
+			rolldata.seasonmain = true;
+			rolldata.seasonnpc = true;
+			break;
+		case("companion"):
+			rolldata.seasonmain = true;
+			rolldata.seasoncompanion = true;
+			break;
+		case("all"):
+			rolldata.seasonmain = true;
+			rolldata.seasonnpc = true;
+			rolldata.seasoncompanion = true;
+			break;
+		default:
+			break;
 	}
 	if (document.getElementById("sw").checked == true) {
 		rolldata.streetwise = true;
@@ -177,8 +202,13 @@ function setUp(mode) {
 	} else {
 		rolldata.cider = false;
 	}
+	if (document.getElementById("luckycharm").checked == true && rolldata.rolltype == "hunt") {
+		rolldata.trophy = true;
+	} else {
+		rolldata.trophy = false;
+	}
 	if (document.getElementById("minboost").checked == true ||
-		document.getElementById("drake").checked == true) {
+		document.getElementById("drake").checked == true || (document.getElementById("luckycharm").checked == true && rolldata.rolltype == "explo")) {
 		rolldata.minboost = true;
 	} else {
 		rolldata.minboost = false;
@@ -194,7 +224,7 @@ function setUp(mode) {
 		rolldata.chasmjump = ("none");
 	}
 	if (mode == "single") {
-		rollSingleItem();
+		formatSingleItem();
 	} else {
 		document.getElementById("output").value = createOutput();
 	}
@@ -202,90 +232,94 @@ function setUp(mode) {
 
 function createOutput() {
 	var out = "Main return:\n";
-	if(rolldata.beans != "none") {
-		rolldata.yvanon = true;
-		if(rolldata.beans == "zoom") {
-			out = out + "Express Speed active!\n";
-		} else {
-			out = out + "Caffiene Crash activated.\n";
-		}
-	} //extremely hacky but it works
-	//if express speed is active, turn yvanon on for the main roll only
-	var a = roll(rolldata.qr, rolldata.streetwise, false);
+
+	var espresso = rolldata.yvanon; //get boost value for main roll
+	if (rolldata.beans != "none") {
+		espresso = true;
+	} //if yvanon is off but beans are on, main roll is boosted
+	
+	if (rolldata.trophy == true) {
+		var a = roll(rolldata.qr, rolldata.streetwise, espresso, 2);
+	} else {
+		var a = roll(rolldata.qr, rolldata.streetwise, espresso);
+	}
 	out = out + formatThumbs(a);
 	if (rolldata.chasmjump == "none") {
-		out = out + rollSeasonal();
+		out = out + rollSeasonal(rolldata.seasonmain, espresso);
 	}
-	if(document.getElementById("yvanon").checked == false) {
-		rolldata.yvanon = false;
-	} //unset yvanon if she's not meant to be active
-	rolldata.beans = "none"; //also hacky, unsetting beans so they don't affect the rest of the roll
-	
-	//Full roll returns (Pack Cat, Tail Bags, Streetwise Companion);
 	
 	if (document.getElementById("tbags").checked == true) {
-		a = roll(0, rolldata.streetwise, false);
+		a = roll(0);
 		out = out + "\nTail Bags returns:\n";
 		out = out + formatLinks(a);
 		if (rolldata.chasmjump == "none") {
-			out = out + rollSeasonal();
+			out = out + rollSeasonal(rolldata.seasonmain);
 		}
 	}
 	if (document.getElementById("packcat").checked == true) {
-		a = roll(0, rolldata.streetwise, false);
+		a = roll(0);
 		out = out + "\nPack Cat returns:\n";
 		out = out + formatLinks(a);
 		if (rolldata.chasmjump == "none") {
-			out = out + rollSeasonal();
+			out = out + rollSeasonal(rolldata.seasoncompanion);
+		}
+	}
+	if (document.getElementById("birb").checked == true) {
+		a = roll(0);
+		out = out + "\nSpring Messengerbird returns:\n";
+		out = out + formatLinks(a);
+		if (rolldata.chasmjump == "none") {
+			out = out + rollSeasonal(rolldata.seasoncompanion);
 		}
 	}
 	if (document.getElementById("swc").checked == true) {
-		a = roll(rolldata.qr, true, false);
+		a = roll(rolldata.qr, true); //override: streetwise
 		out = out + "\nStreetwise Companion returns:\n";
 		out = out + formatLinks(a);
 		if (rolldata.chasmjump == "none") {
-			out = out + rollSeasonal();
+			out = out + rollSeasonal(rolldata.seasonnpc);
 		}
 	}
 	
 	//Bonus item returns 
 	if(document.getElementById("myrk").checked == true) {
 		if(rng(1,100) % 2 == 1) {
-			a = roll(0, rolldata.streetwise, true);
+			a = rollSingleItem(0);
 			out = out + "\nMerchant's Eye returns:\n"
-			out = out + formatLinks(a);
+			out = out + formatBonusItem(a);
 		} else {
 			out = out + "\nMerchant's Eye fails.\n"
 		}
 	}
 	if(document.getElementById("coffee").checked == true) {
 		if(rng(1,100) % 2 == 1) {
-			a = roll(0, rolldata.streetwise, true);
+			a = rollSingleItem(0);
 			out = out + "\nCoffee returns:\n"
-			out = out + formatLinks(a);
+			out = out + formatBonusItem(a);
 		} else {
 			out = out + "\nCoffee fails.\n"
 		}
 	}
 	if(document.getElementById("drake").checked == true) {
-		a = roll(0, rolldata.streetwise, true);
+		a = rollSingleItem(0);
 		out = out + "\nTunneldrake returns:\n"
-		out = out + formatLinks(a);
+		out = out + formatBonusItem(a);
 	}
 	if(document.getElementById("sumdrink").checked == true) {
-		a = roll(0, rolldata.streetwise, true);
+		a = rollSingleItem(0);
 		out = out + "\nBlue Raspberry Lemonade returns:\n"
-		out = out + formatLinks(a);
+		out = out + formatBonusItem(a);
 	}
+	
 	if(document.getElementById("rumorbonus").checked == true) {
-		a = roll(rolldata.qr, rolldata.streetwise, true);
+		a = rollSingleItem(rolldata.qr);
 		out = out + "\nInvestigate/Waste Nothing returns:\n"
-		out = out + formatLinks(a);
+		out = out + formatBonusItem(a);
 	}
 	if(document.getElementById("miscbonus").checked == true) {
-		a = roll(0, rolldata.streetwise, true);
+		a = rollSingleItem(0);
 		out = out + "\nGeneric bonus item returns:\n"
-		out = out + formatLinks(a);
+		out = out + formatBonusItem(a);
 	}
 	
 	if(document.getElementById("treats").checked == true) {
@@ -293,21 +327,27 @@ function createOutput() {
 		out = out + "\n" + a;
 	}
 	
+	if(document.getElementById("luckycharm").checked == true && rolldata.rolltype == "mining") {
+		a = dowsing();
+		out = out + "\n" + a;
+	}
+	
 	return out;
 }	
 
-function roll(qr, sw, bonus) {
+function roll(qr, sw = rolldata.streetwise, boost = rolldata.yvanon, rare = 1) {
 	
 	var countRoll = rng(1, 20);
 	console.log("Item count roll:" + countRoll);
+	var done = false;
+	while (!done) { //force a reroll if at least one item of
+	                //specified rarity isn't rolled
 	var itemCount = 0; //roll total number of items
-	//piggybacking on this for bonus items: if the bonus item variable is true
-	//this function will always return one item
-	if (countRoll <= 3 || bonus == true) { 
+	if (countRoll <= 3) { 
 		itemCount = 1;
-		if (rolldata.minboost == true && bonus == false) {
+		if (rolldata.minboost == true) {
 			itemCount = 2;
-		} //if minimum is boosted to 2, set to 2, but not if we're in bonus item mode
+		} //if minimum is boosted to 2, set to 2
 	} else if (countRoll <= 13) {
 		itemCount = 2;
 	} else if (countRoll <= 17) {
@@ -315,13 +355,24 @@ function roll(qr, sw, bonus) {
 	} else {
 		itemCount = 4;
 	}
-	if (rolldata.yvanon == true && bonus == false) {
+	if (boost == true) {
 		itemCount = 4;
 	}
 	if (rolldata.beans == "crash") {
 		itemCount = 1;
 	}
-	items = [];
+	var toprarity = 1;
+	var r = 1; //temp variable to hold rarity
+	if (rare > 1 && rolldata.chasmjump != "none") {
+		if (rolldata.chasmjump == "pathway") {
+			rare = 1;
+		} else if (rolldata.chasmjump == "parsec") {
+			rare = 2;
+		}
+		//just a failsafe. don't force a rarity over what can roll.
+	} //end if
+	
+	var items = []; //if this loop repeats, reinitialize this variable
 	while (itemCount > 0) {
 		var rarity = rng(1, 100); //determine rarity
 		var list = rolldata.world;
@@ -329,22 +380,24 @@ function roll(qr, sw, bonus) {
 			list = list.common;
 		} else if (rarity <= 85) {
 			list = list.uncommon;
+			r = 2;
 		} else {
 			if (rolldata.chasmjump == "parsec") {
 				list = list.uncommon;
 			} else {
 				list = list.rare;
+				r = 3;
 			}			
 		}
 		var a = rng(1,list.length); //roll item
 		a = a - 1; //decrement to get the index
-		
+		console.log("Item genned: " + list[a].name);
 		var num = 0;
 		var q = list[a].quantity; //roll quantity
 		if (q == "high") {
-			num = qhigh(qr);
+			num = qhigh(qr, boost);
 		} else {
-			num = qlow(qr);
+			num = qlow(qr, boost);
 		}
 		if (rolldata.deepearth == true) {
 			num = num * 2;
@@ -363,27 +416,40 @@ function roll(qr, sw, bonus) {
 		//push the item and quantity to items as an array, and decrement count
 		//otherwise, do nothing and repeat the while loop
 		if (dupe == false && (list[a].contraband == false || sw == true)) {
+			console.log("Item pushed:" + list[a].name);
+			if(r > toprarity) {
+				toprarity = r;
+				console.log("Top rarity set to " + toprarity);
+			}
 			items.push([list[a], num]);
 			itemCount--
 		}
 	//roll returns are a two-dimensional array. 
-	//outer array index: each induvidual item.
+	//outer array index: each individual item.
 	//inner array index: [0] is the item object. [1] is the quantity.
 	} //end while
+	if (rare <= toprarity) {
+		console.log("Done!");
+		done = true;
+		//if the rarest item rolled is equal or greater in rarity to the
+		//specified rarity, we're good. otherwise repeat the inner while loop
+	} 
+	} //end second while
 	
 	return items;
 }	
 
-function rollSeasonal() {
+
+function rollSeasonal(si, boost = rolldata.yvanon) {
 	var q = 0;
-	if (rolldata.seasonal == true) {
+	if (si == true) {
 		q = rng(4,20);
-		if (rolldata.yvanon == true) {
+		if (boost == true) {
 			q = 20;
 		}
 	} else {
 		q = rng(2,10);
-		if (rolldata.yvanon == true) {
+		if (boost == true) {
 			q = 10;
 		}
 	}
@@ -404,11 +470,11 @@ function rollSeasonal() {
 	if (extra == true) {
 		if (rolldata.deepearth == true && rolldata.cider == true) {
 			out = out + " and <a href=\"https://www.deviantart.com/magmatixi/art/" +
-			fest[1].url + "\">" + fest[1].name + " x4</a>!\n"
+			fest[1].url + "\">" + fest[1].name + "</a> x4!\n"
 		}
 		else if (rolldata.deepearth == true || rolldata.cider == true) {
 			out = out + " and <a href=\"https://www.deviantart.com/magmatixi/art/" +
-			fest[1].url + "\">" + fest[1].name + " x2</a>!\n"
+			fest[1].url + "\">" + fest[1].name + "</a> x2!\n"
 		}
 		else {
 			out = out + " and a <a href=\"https://www.deviantart.com/magmatixi/art/" +
@@ -420,22 +486,54 @@ function rollSeasonal() {
 	return out;
 }
 
+function rollSingleItem(qr, sw = rolldata.streetwise, boost = rolldata.yvanon) {
+		var rarity = rng(1, 100); //determine rarity
+		var list = rolldata.world;
+		if (rarity <= 50 || rolldata.chasmjump == "pathway") {
+			list = list.common;
+		} else if (rarity <= 85) {
+			list = list.uncommon;
+		} else { 
+			if (rolldata.chasmjump == "parsec") {
+				list = list.uncommon;
+			} else {
+				list = list.rare;
+			}
+		}
+		
+		var a = rng(1,list.length); //roll item
+		a = a - 1; //decrement to get the index
+		
+		var num = 0;
+		var q = list[a].quantity; //roll quantity
+		if (q == "high") {
+			num = qhigh(qr, boost);
+		} else {
+			num = qlow(qr, boost);
+		}
+		if (rolldata.deepearth == true) {
+			num = num * 2;
+		}
+		
+		var item = [list[a], num];
+		return item;
+}
 
-function rollSingleItem() {
-	var item = roll(rolldata.qr, rolldata.streetwise, true);
-	//man these array references are ugly but.
-	//roll returns are a two-dimensional array. 
-	//outer array index: each induvidual item.
-	//inner array index: [0] is the item object. [1] is the quantity.
-	//here, only one item = index 0
-	var out = item[0][0].dathumb + "\n" + item[0][0].name + " x" + item[0][1] +
-		      "\n\n <a href=\"https://www.deviantart.com/magmatixi/art/" + item[0][0].url +
-			  "\"> " + item[0][0].name + "</a>" + " x" + item[0][1] + "\n";
+function formatSingleItem() {
+	//simplified the format here, so item shouldn't need double array refs anymore
+	var item = rollSingleItem(rolldata.qr, rolldata.streetwise);
+	var out = item[0].dathumb + "\n" + item[0].name + " x" + item[1] +
+		      "\n\n <a href=\"https://www.deviantart.com/magmatixi/art/" + item[0].url +
+			  "\"> " + item[0].name + "</a>" + " x" + item[1] + "\n";
 	document.getElementById("output").value = out;
 }
 
 function formatThumbs(items) {
 	var out = "";
+	//man these array references are ugly but.
+	//roll returns are a two-dimensional array. 
+	//outer array index: each induvidual item.
+	//inner array index: [0] is the item object. [1] is the quantity.
 	//ugly code ugly code formatting strings makes ugly coooode
 	for (i = 0; i < items.length; i++) {
 		out = out + items[i][0].dathumb + "\n" + items[i][0].name + " x" + items[i][1] + "\n\n";
@@ -453,24 +551,38 @@ function formatLinks(items) {
 	return out;
 }
 
+function formatBonusItem(item) {
+	var out = "";
+	out = out + "<a href=\"https://www.deviantart.com/magmatixi/art/" +
+		item[0].url + "\">" + item[0].name + "</a>" + " x" + item[1] + "\n";
+	return out;
+}
+	
+
 function crackGeode() {
 	rolldata.world = geode; //override item list
-	var first = roll(0, true, true); //roll two items on bonus mode
-	var second = roll(0, true, true); //output their thumbs only
-	out = first[0][0].dathumb + second[0][0].dathumb;
+	var first = rollSingleItem(0, true); //roll two single items
+	var second = rollSingleItem(0, true); //output their thumbs only
+	out = first[0].dathumb + second[0].dathumb;
 	document.getElementById("output").value = out;
 }
 
 function petTreats() {
 	var r = rng(1,100);
 	if (r <= 35) {
-		a = rng(1,companions.length);
+		var a = rng(1,companions.length);
 		a--;
 		return "Pet treats lured a: " + "<a href=\"https://www.deviantart.com/magmatixi/art/" +
 		companions[a].url + "\">" + companions[a].name + "</a>!";
 	} else {
 		return "Pet treats failed!";
 	}
+}
+function dowsing() { 
+	var a = rng(1,drinks.length);
+	a--;
+	return "Dowsing Rod returns: " + "<a href=\"https://www.deviantart.com/magmatixi/art/" +
+	drinks[a].url + "\">" + drinks[a].name + "</a>!";
 }	
 
 function updateList() {

@@ -3,7 +3,7 @@
 <head>
 <script src="itemlists.js" type="text/javascript"></script>
 <script src="explorations.js" type="text/javascript"></script>
-<title>Roller:Exploration v1.2b</title>
+<title>Roller:Exploration v2.0</title>
 </head>
 <body>
 <form>
@@ -29,6 +29,19 @@
 	Speed:
 	<input type="text" name="spd" id="spd" size="4" value="10">
 </form>
+<p class="head">Seasonal Item Boost</p>
+<form id="nom">
+	<input type="radio" name="seasonal" value="none" checked> 
+	None
+	<input type="radio" name="seasonal" value="main">
+	Main
+	<input type="radio" name="seasonal" value="npc"> 
+	Main + NPCs
+	<input type="radio" name="seasonal" value="companion"> 
+	Main + Companions
+	<input type="radio" name="seasonal" value="all">
+	All
+</form>
 <p class="head">Bonuses: Companions</p>
 <form>
 	<input type="checkbox" name="packcat" id="packcat">
@@ -39,6 +52,8 @@
 	Tunneldrake
 	<input type="checkbox" name="kellas" id="kellas">
 	Kellas Cat
+	<input type="checkbox" name="birb" id="birb">
+	Spring's Messengerbird
 </form>
 <p class="head">Bonuses: NPCs</p>
 <form>
@@ -51,8 +66,6 @@
 </form>
 <p class="head">Bonuses: Items</p>
 <form>
-	<input type="checkbox" name="nom" id="nom">
-	Festival currency
 	<input type="checkbox" name="treats" id="treats">
 	Pet Treats
 	<input type="checkbox" name="tbags" id="tbags">
@@ -71,6 +84,8 @@
 	Trinket Jar - Potpourri
 	<input type="checkbox" name="tooth" id="tooth">
 	Trinket Jar - Fossil Tooth
+	<input type="checkbox" name="luckycharm" id="luckycharm">
+	Lucky Charm
 </form>
 <p class="head">Bonuses: Skills and Misc</p>
 <form>
@@ -96,7 +111,7 @@
 </textarea>
 <br>
 <p id="builddate">
-<strong>Roller:Exploration</strong> build 1.2b date 10/26/18
+<strong>Roller:Exploration</strong> build 2.0 date 3/19/19
 </p>
 <p id="credit">
 Programmed and maintained by @pawstepsinthesnow/Suzuran exclusively for @Rixixi.

@@ -1,6 +1,6 @@
 var fest = [
-	{name: "Winter Sweets", dathumb: ":thumb718169327:", url: "Winter-Sweets-718169327"},
-	{name: "Snowball", dathumb: ":thumb719326937", url: "Snowball-719326937"}
+	{name: "Spring Shortcake", dathumb: ":thumb734910909:", url: "Spring-Shortcake-734910909"},
+	{name: "Cherry Blossom", dathumb: ":thumb734115289:", url: "Cherry-Blossom-734115289"}
 	];
 	
 var companions = [
@@ -8,8 +8,31 @@ var companions = [
 	{name: "Kaurphyt Raven Companion", dathumb: ":thumb751507214:", url: "Kaurphyt-Raven-Companion-751507214"},
 	{name: "Tunneldrake Companion", dathumb: ":thumb747809073:", url: "Tunneldrake-Companion-747809073"},
 	{name: "Mymber Companion", dathumb: ":thumb756147760:", url: "Mymber-Companion-756147760"},
-	{name: "Kellas Cat Companion", dathumb: ":thumb768254398:", url: "Kellas-Cat-Companion-768254398"},
+	{name: "Kellas Cat Companion", dathumb: ":thumb768254398:", url: "Kellas-Cat-Companion-768254398"}
 ];
+
+var drinks = [
+	{name: "Water", dathumb: ":thumb705337799:", url: "Water-705337799"},
+	{name: "Dairy", dathumb: ":thumb705236115:", url: "Dairy-705236115"},
+	{name: "Deepearth Brew", dathumb: ":thumb718170718:", url: "Deepearth-Brew-718170718"},
+	{name: "Floral Tea", dathumb: ":thumb734115326:", url: "Floral-Tea-734115326"},
+	{name: "Coffee", dathumb: ":thumb742284609:", url: "Coffee-742284609"},
+	{name: "Sake", dathumb: ":thumb744075094:", url: "Sake-744075094"},
+	{name: "Hot Chocolate", dathumb: ":thumb746694853:", url: "Hot-Chocolate-746694853"},
+	{name: "Pride Blend", dathumb: ":thumb747807943:", url: "Pride-Blend-747807943"},
+	{name: "Ale", dathumb: ":thumb748906477:", url: "Ale-748906477"},
+	{name: "Berry Smoothie", dathumb: ":thumb748906452:", url: "Berry-Smoothie-748906452"},
+	{name: "Blue Raspberry Lemonade", dathumb: ":thumb747809987:", url: "Blue-Raspberry-Lemonade-747809987"},
+	{name: "VitAvella Smoothie", dathumb: ":thumb755255243:", url: "VitAvella-Smoothie-755255243"},
+	{name: "Berry-Melon Smoothie", dathumb: ":thumb758899335:", url:"Berry-Melon-Smoothie-758899335"},
+	{name: "Watermelon Smoothie", dathumb: ":thumb758899321:", url: "Watermelon-Smoothie-758899321"},
+	{name: "Pumpkin Spice Apple Cider", dathumb: ":thumb764871260:", url: "Pumpkin-Spice-Apple-Cider-764871260"},
+	{name: "White Chocolate Cherry Mocha", dathumb: ":thumb767560667:", url: "White-Chocolate-Cherry-Mocha-767560667"},
+	{name: "Dark Chocolate Cinnamon Mocha", dathumb: ":thumb767560673:", url: "Dark-Chocolate-Cinnamon-Mocha-767560673"},
+	{name: "Choco-Mint Mocha", dathumb: ":thumb767560679:", url: "Choco-Mint-Mocha-767560679"},
+	{name: "Chocolate Strength Elixir", dathumb: ":thumb768102850:", url: "Chocolate-Strength-Elixir-768102850"}
+];
+		
 
 var nskanetis = {
 	common: [
@@ -43,7 +66,7 @@ var nskanetis = {
 		{name: "Southern Vyldes Shovelnose Prawn", dathumb: ":thumb759505729:", url: "Southern-Vyldes-Shovelnose-Prawn-759505729", quantity: "low", contraband: false},
 		{name: "Sugar Cane", dathumb: ":thumb769868508:", url: "Sugar-Cane-769868508", quantity: "high", contraband: false},
 		//monthly birthstone
-		{name: "Emerald", dathumb: ":thumb741520567:", url: "Emerald-741520567", quantity: "high", contraband: false}
+		{name: "Aquamarine", dathumb: ":thumb732965498:", url: "Aquamarine-732965498", quantity: "high", contraband: false}
 	],
 	uncommon: [
 		{name: "Opal", dathumb: ":thumb760543398:", url: "Opal-760543398", quantity: "high", contraband: false},
@@ -103,7 +126,7 @@ var sxriix = {
 		{name: "Prickly Fruit", dathumb: ":thumb760279504:", url: "Prickly-Fruit-760279504", quantity: "high", contraband: false},
 		{name: "Peppers", dathumb: ":thumb759631082:", url: "Peppers-759631082", quantity: "high", contraband: false},
 		//monthly birthstone
-		{name: "Emerald", dathumb: ":thumb741520567:", url: "Emerald-741520567", quantity: "high", contraband: false}
+		{name: "Aquamarine", dathumb: ":thumb732965498:", url: "Aquamarine-732965498", quantity: "high", contraband: false}
 	],
 	uncommon: [
 		{name: "Berries", dathumb: ":thumb705018877:", url: "Berries-705018877", quantity: "high", contraband: false},
@@ -165,7 +188,7 @@ var earth = {
 		{name: "Sugar Cane", dathumb: ":thumb769868508:", url: "Sugar-Cane-769868508", quantity: "high", contraband: false},
 		{name: "Cinnamon Bark", dathumb: ":thumb769868523:", url: "Cinnamon-Bark-769868523", quantity: "high", contraband: false},
 		//monthly birthstone
-		{name: "Emerald", dathumb: ":thumb741520567:", url: "Emerald-741520567", quantity: "high", contraband: false}
+		{name: "Aquamarine", dathumb: ":thumb732965498:", url: "Aquamarine-732965498", quantity: "high", contraband: false}
 	],
 	uncommon: [
 		{name: "Sapphire", dathumb: ":thumb760543353:", url: "Sapphire-760543353", quantity: "high", contraband: false},
@@ -218,7 +241,7 @@ var chasm = {
 		{name: "Fish Meat", dathumb: ":thumb753322990:", url: "Fish-Meat-753322990", quantity: "high", contraband: false},
 		{name: "Shrimp", dathumb: ":thumb759505741:", url: "Shrimp-759505741", quantity: "low", contraband: false},
 		//monthly birthstone
-		{name: "Emerald", dathumb: ":thumb741520567:", url: "Emerald-741520567", quantity: "high", contraband: false}
+		{name: "Aquamarine", dathumb: ":thumb732965498:", url: "Aquamarine-732965498", quantity: "high", contraband: false}
 	],
 	uncommon: [
 		{name: "Opal", dathumb: ":thumb760543398:", url: "Opal-760543398", quantity: "high", contraband: false},
