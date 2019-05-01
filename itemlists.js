@@ -11,6 +11,11 @@ var companions = [
 	{name: "Kellas Cat Companion", dathumb: ":thumb768254398:", url: "Kellas-Cat-Companion-768254398"}
 ];
 
+var cats = [
+	{name: "Pack Cat Companion", dathumb: ":thumb734153299:", url: "Pack-Cat-Companion-734153299"},
+	{name: "Kellas Cat Companion", dathumb: ":thumb768254398:", url: "Kellas-Cat-Companion-768254398"}
+];
+
 var drinks = [
 	{name: "Water", dathumb: ":thumb705337799:", url: "Water-705337799"},
 	{name: "Dairy", dathumb: ":thumb705236115:", url: "Dairy-705236115"},
@@ -66,7 +71,7 @@ var nskanetis = {
 		{name: "Southern Vyldes Shovelnose Prawn", dathumb: ":thumb759505729:", url: "Southern-Vyldes-Shovelnose-Prawn-759505729", quantity: "low", contraband: false},
 		{name: "Sugar Cane", dathumb: ":thumb769868508:", url: "Sugar-Cane-769868508", quantity: "high", contraband: false},
 		//monthly birthstone
-		{name: "Aquamarine", dathumb: ":thumb732965498:", url: "Aquamarine-732965498", quantity: "high", contraband: false}
+		{name: "Emerald", dathumb: ":thumb741520567:", url: "Emerald-741520567", quantity: "high", contraband: false}
 	],
 	uncommon: [
 		{name: "Opal", dathumb: ":thumb760543398:", url: "Opal-760543398", quantity: "high", contraband: false},
@@ -126,7 +131,7 @@ var sxriix = {
 		{name: "Prickly Fruit", dathumb: ":thumb760279504:", url: "Prickly-Fruit-760279504", quantity: "high", contraband: false},
 		{name: "Peppers", dathumb: ":thumb759631082:", url: "Peppers-759631082", quantity: "high", contraband: false},
 		//monthly birthstone
-		{name: "Aquamarine", dathumb: ":thumb732965498:", url: "Aquamarine-732965498", quantity: "high", contraband: false}
+		{name: "Emerald", dathumb: ":thumb741520567:", url: "Emerald-741520567", quantity: "high", contraband: false}
 	],
 	uncommon: [
 		{name: "Berries", dathumb: ":thumb705018877:", url: "Berries-705018877", quantity: "high", contraband: false},
@@ -153,7 +158,8 @@ var sxriix = {
 		{name: "Fond Memories: the Chasm", dathumb: ":thumb731707119:", url: "Fond-Memories-the-Chasm-731707119", quantity: "low", contraband: false},
 		{name: "Pack Cat Companion", dathumb: ":thumb734153299:", url: "Pack-Cat-Companion-734153299", quantity: "low", contraband: false},
 		{name: "Tunneldrake Companion", dathumb: ":thumb747809073:", url: "Tunneldrake-Companion-747809073", quantity: "low", contraband: false},
-		{name: "Death's Dust", dathumb: ":thumb726736769:", url: "Death-s-Dust-726736769", quantity: "low", contraband: true}
+		{name: "Death's Dust", dathumb: ":thumb726736769:", url: "Death-s-Dust-726736769", quantity: "low", contraband: true},
+		{name: "Sxriix'n Silvervine", dathumb: ":thumb793826445:", url: "Sxriix-n-Silvervine-793826445", quantity: "low", contraband: true}
 	]
 };
 var earth = {
@@ -188,7 +194,7 @@ var earth = {
 		{name: "Sugar Cane", dathumb: ":thumb769868508:", url: "Sugar-Cane-769868508", quantity: "high", contraband: false},
 		{name: "Cinnamon Bark", dathumb: ":thumb769868523:", url: "Cinnamon-Bark-769868523", quantity: "high", contraband: false},
 		//monthly birthstone
-		{name: "Aquamarine", dathumb: ":thumb732965498:", url: "Aquamarine-732965498", quantity: "high", contraband: false}
+		{name: "Emerald", dathumb: ":thumb741520567:", url: "Emerald-741520567", quantity: "high", contraband: false}
 	],
 	uncommon: [
 		{name: "Sapphire", dathumb: ":thumb760543353:", url: "Sapphire-760543353", quantity: "high", contraband: false},
@@ -241,7 +247,7 @@ var chasm = {
 		{name: "Fish Meat", dathumb: ":thumb753322990:", url: "Fish-Meat-753322990", quantity: "high", contraband: false},
 		{name: "Shrimp", dathumb: ":thumb759505741:", url: "Shrimp-759505741", quantity: "low", contraband: false},
 		//monthly birthstone
-		{name: "Aquamarine", dathumb: ":thumb732965498:", url: "Aquamarine-732965498", quantity: "high", contraband: false}
+		{name: "Emerald", dathumb: ":thumb741520567:", url: "Emerald-741520567", quantity: "high", contraband: false}
 	],
 	uncommon: [
 		{name: "Opal", dathumb: ":thumb760543398:", url: "Opal-760543398", quantity: "high", contraband: false},
@@ -263,6 +269,7 @@ var chasm = {
 		{name: "Fond Memories: B-NOMALY Labs", dathumb: ":thumb730488748:", url: "Fond-Memories-B-NOMALY-Labs-730488748", quantity: "low", contraband: false},
 		{name: "Fond Memories: the Chasm", dathumb: ":thumb731707119:", url: "Fond-Memories-the-Chasm-731707119", quantity: "low", contraband: false},
 		{name: "Mymber Companion", dathumb: ":thumb756147760:", url: "Mymber-Companion-756147760", quantity: "low", contraband: false},
+		{name: "Mymber Heart", dathumb: ":thumb793689615:", url: "Mymber-Heart-793689615", quantity: "low", contraband: true}
 	]
 };
 

@@ -327,6 +327,11 @@ function createOutput() {
 		out = out + "\n" + a;
 	}
 	
+	if(document.getElementById("catmint").checked == true) {
+		a = catmintTea();
+		out = out + "\n" + a;
+	}
+	
 	if(document.getElementById("luckycharm").checked == true && rolldata.rolltype == "mining") {
 		a = dowsing();
 		out = out + "\n" + a;
@@ -578,6 +583,19 @@ function petTreats() {
 		return "Pet treats failed!";
 	}
 }
+
+function catmintTea() {
+	var r = rng(1,100);
+	if (r <= 35) {
+		var a = rng(1,cats.length);
+		a--;
+		return "Catmint tea lured a: " + "<a href=\"https://www.deviantart.com/magmatixi/art/" +
+		cats[a].url + "\">" + cats[a].name + "</a>!";
+	} else {
+		return "Catmint tea failed!";
+	}
+}
+
 function dowsing() { 
 	var a = rng(1,drinks.length);
 	a--;
