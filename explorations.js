@@ -488,8 +488,32 @@ function rollSeasonal(si, boost = rolldata.yvanon) {
 	} else {
 		out = out + "!\n";
 	}
+	//delete this after june
+	var a = rng(1,100);
+	var extra = false;
+	if(a <= 25) {
+		extra = true;
+	}
+	if (extra == true) {
+		if (rolldata.deepearth == true && rolldata.cider == true) {
+			out = out + "As well as a <a href=\"https://www.deviantart.com/magmatixi/art/" +
+			fest[2].url + "\">" + fest[2].name + "</a> x4!\n"
+		}
+		else if (rolldata.deepearth == true || rolldata.cider == true) {
+			out = out + "As well as <a href=\"https://www.deviantart.com/magmatixi/art/" +
+			fest[2].url + "\">" + fest[2].name + "</a> x2!\n"
+		}
+		else {
+			out = out + "As well as <a href=\"https://www.deviantart.com/magmatixi/art/" +
+			fest[2].url + "\">" + fest[2].name + "</a>!\n";
+		}
+	} else {
+		out = out + "\n";
+	}
 	return out;
 }
+
+
 
 function rollSingleItem(qr, sw = rolldata.streetwise, boost = rolldata.yvanon) {
 		var rarity = rng(1, 100); //determine rarity
