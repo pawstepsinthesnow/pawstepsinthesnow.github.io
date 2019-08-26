@@ -37,8 +37,13 @@ var drinks = [
 	{name: "Choco-Mint Mocha", dathumb: ":thumb767560679:", url: "Choco-Mint-Mocha-767560679"},
 	{name: "Chocolate Strength Elixir", dathumb: ":thumb768102850:", url: "Chocolate-Strength-Elixir-768102850"}
 ];
-		
 
+var pelts = [
+	{name: "Drake Scale", dathumb: ":thumb756971959:", url: "Teeth-and-Claws-756971959"},
+	{name: "Rooter Shell Piece", dathumb: ":thumb756971959:", url: "Teeth-and-Claws-756971959"},
+	{name: "Large Chitin", dathumb: ":thumb756971959:", url: "Teeth-and-Claws-756971959"},
+	{name: "Leather", dathumb: ":thumb706194672:", url: "Leather-706194672"}
+];
 var nskanetis = {
 	common: [
 		{name: "Everburn Coal", dathumb: ":thumb760528138:", url: "Everburn-Coal-760528138", quantity: "high", contraband: false},
@@ -340,6 +345,48 @@ var livestock = {
 	],
 }
 
+var avian = {
+	common: [
+		{name: "Egg", dathumb: ":thumb731515502:", url: "Egg-731515502", quantity: "high", contraband: false},
+		{name: "Poultry", dathumb: ":thumb760273419:", url: "Poultry-760273419", quantity: "high", contraband: false},
+		{name: "Teeth and Claws", dathumb: ":thumb756971959:", url: "Teeth-and-Claws-756971959", quantity: "high", contraband: false},
+		{name: "Grains", dathumb: ":thumb704828305:", url: "Grains-704828305", quantity: "high", contraband: false},
+		{name: "Feather", dathumb: ":thumb704828305:", url: "Grains-704828305", quantity: "high", contraband: false}
+	],
+	uncommon: [
+		{name: "Leather", dathumb: ":thumb706194672:", url: "Leather-706194672", quantity: "high", contraband: false},
+		{name: "Slab of Raw Meat", dathumb: ":thumb704794080:", url: "Slab-of-Raw-Meat-704794080", quantity: "high", contraband: false},
+		{name: "Geode", dathumb: ":thumb732979097:", url: "Geode-732979097", quantity: "low", contraband: false},
+		{name: "Fish Meat", dathumb: ":thumb753322990:", url: "Fish-Meat-753322990", quantity: "high", contraband: false}
+	],
+	rare: [
+		{name: "Philosophic Mercury", dathumb: ":thumb762066479:", url: "Philosophic-Mercury-762066479", quantity: "low", contraband: true},
+		{name: "Kaurphyt Raven Companion", dathumb: ":thumb751507214:", url: "Kaurphyt-Raven-Companion-751507214"},
+		{name: "Lucky Charm", dathumb: ":thumb732982034:", url: "Lucky-Charm-732982034", quantity: "low", contraband: false}
+	]
+}
+	
+var chasmhunt = {
+	common: [
+		{name: "Teeth and Claws", dathumb: ":thumb756971959:", url: "Teeth-and-Claws-756971959", quantity: "high", contraband: false},
+		{name: "Colorpitch", dathumb: ":thumb755255159:", url: "Colorpitch-755255159", quantity: "low", contraband: false},
+		{name: "Teeth and Claws", dathumb: ":thumb756971959:", url: "Teeth-and-Claws-756971959", quantity: "high", contraband: false},
+		{name: "Fish Meat", dathumb: ":thumb753322990:", url: "Fish-Meat-753322990", quantity: "high", contraband: false}
+	],
+	uncommon: [
+		{name: "Sanguine Snare", dathumb: ":thumb756969308:", url: "Sanguine-Snare-756969308", quantity: "low", contraband: false},
+		{name: "Chasm Brick", dathumb: ":thumb756350707:", url: "Chasm-Brick-756350707", quantity: "high", contraband: false},
+		{name: "Science Kit", dathumb: ":thumb705348253:", url: "Science-Kit-705348253", quantity: "low", contraband: false}
+	],
+	rare: [
+		{name: "Mymber Companion", dathumb: ":thumb756147760:", url: "Mymber-Companion-756147760", quantity: "low", contraband: false},
+		{name: "Mymber Heart", dathumb: ":thumb793689615:", url: "Mymber-Heart-793689615", quantity: "low", contraband: true},
+		{name: "Mymber Oven", dathumb: ":thumb795412294:", url: "Mymber-Oven-795412294", quantity: "low", contraband: false},
+		{name: "Mymber Tome", dathumb: ":thumb765441461:", url: "Mymber-Tome-765441461", quantity: "low", contraband: false},
+		{name: "Mutation Station", dathumb: ":thumb711856831:", url: "Mutation-Station-711856831", quantity: "low", contraband: false}
+	]
+}
+
 var land = {
 	common: [
 		{name: "Slab of Raw Meat", dathumb: ":thumb704794080:", url: "Slab-of-Raw-Meat-704794080", quantity: "high", contraband: false},
@@ -437,7 +484,8 @@ var ungulate = {
 	],
 	rare: [
 		{name: "Apparel", dathumb: ":thumb710845511:", url: "Apparel-710845511", quantity: "low", contraband: false},
-		{name: "Tail Bags", dathumb: ":thumb745451989:", url: "Tail-Bags-745451989", quantity: "low", contraband: false}
+		{name: "Tail Bags", dathumb: ":thumb745451989:", url: "Tail-Bags-745451989", quantity: "low", contraband: false},
+		{name: "Rooter Companion", dathumb: ":thumb732979097:", url: "Geode-732979097", quantity: "low", contraband: false},
 	]
 }
 
@@ -473,6 +521,28 @@ var combat = {
 		{name: "Fond Memories: Sxriix", dathumb: ":thumb711863476:", url: "Fond-Memories-Sxriix-711863476", quantity: "low", contraband: false},
 		{name: "Fond Memories: Nskanetis", dathumb: ":thumb711862964:", url: "Fond-Memories-Nskanetis-711862964", quantity: "low", contraband: false},
 		{name: "Hearty Soup", dathumb: ":thumb705387962:", url: "Hearty-Soup-705387962", quantity: "low", contraband: false}
+	]
+}
+	
+var legend = {
+	common: [
+		{name: "Slab of Raw Meat", dathumb: ":thumb704794080:", url: "Slab-of-Raw-Meat-704794080", quantity: "high", contraband: false},
+		{name: "Leather", dathumb: ":thumb706194672:", url: "Leather-706194672", quantity: "high", contraband: false},
+		{name: "Egg", dathumb: ":thumb731515502:", url: "Egg-731515502", quantity: "high", contraband: false},
+		{name: "Teeth and Claws", dathumb: ":thumb756971959:", url: "Teeth-and-Claws-756971959", quantity: "high", contraband: false},
+		{name: "Snake Meat", dathumb: ":thumb756971959:", url: "Snake-Meat-756971959", quantity: "high", contraband: false},
+	],
+	uncommon: [
+		{name: "Rack of Ribs", dathumb: ":thumb756971959:", url: "Rack-of-Ribs-756971959", quantity: "low", contraband: false},
+		{name: "Drake Scale", dathumb: ":thumb756971959:", url: "Teeth-and-Claws-756971959", quantity: "high", contraband: false},
+		{name: "Rooter Shell Piece", dathumb: ":thumb756971959:", url: "Teeth-and-Claws-756971959", quantity: "low", contraband: false},
+		{name: "Large Chitin", dathumb: ":thumb756971959:", url: "Teeth-and-Claws-756971959", quantity: "low", contraband: false},
+		{name: "Tunneldrake Meat", dathumb: ":thumb756971959:", url: "Teeth-and-Claws-756971959", quantity: "low", contraband: false},
+		{name: "Geode", dathumb: ":thumb732979097:", url: "Geode-732979097", quantity: "low", contraband: false},
+	],
+	rare: [
+		{name: "Grand Old Rooter Companion", dathumb: ":thumb732979097:", url: "Geode-732979097", quantity: "unique", contraband: false},
+		{name: "Skydrake Companion", dathumb: ":thumb732979097:", url: "Geode-732979097", quantity: "unique", contraband: false},
 	]
 }
 	

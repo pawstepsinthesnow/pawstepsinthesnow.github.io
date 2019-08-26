@@ -11,6 +11,7 @@
 	<select id="type" onchange="updateList();">
 		<option value="explo">Exploration</option>
 		<option value="hunt">Hunting</option>
+		<option value="legend">Leg. Hunting</option>
 		<option value="mining">Mining</option>
 		<option value="combat">Combat</option>
 	</select>
@@ -29,6 +30,27 @@
 	Speed:
 	<input type="text" name="spd" id="spd" size="4" value="10">
 </form>
+<form id="legendary">
+	<p class="head">Party Stats</p>
+	<select id="partysize">
+		<option value="1">Solo</option>
+		<option value="2">2 Ixi</option>
+		<option value="3">3 Ixi</option>
+		<option value="4">4 Ixi</option>
+	</select>
+	<span id="ixi2">Ixi 2 Atk: <input type="text" name="atk2" id="atk2" size="4" value="10">
+	Def: <input type="text" name="def2" id="def2" size="4" value="10">
+	Spc: <input type="text" name="spc2" id="spc2" size="4" value="10">
+	Spd: <input type="text" name="spd2" id="spd2" size="4" value="10"></span>
+	<span id="ixi3">Ixi 3 Atk: <input type="text" name="atk3" id="atk3" size="4" value="10">
+	Def: <input type="text" name="def3" id="def3" size="4" value="10">
+	Spc: <input type="text" name="spc3" id="spc3" size="4" value="10">
+	Spd: <input type="text" name="spd3" id="spd3" size="4" value="10"></span>
+	<span id="ixi4">Ixi 4 Atk: <input type="text" name="atk4" id="atk4" size="4" value="10">
+	Def: <input type="text" name="def4" id="def4" size="4" value="10">
+	Spc: <input type="text" name="spc4" id="spc4" size="4" value="10">
+	Spd: <input type="text" name="spd4" id="spd4" size="4" value="10"></span>
+</form>
 <p class="head">Seasonal Item Boost</p>
 <form id="nom">
 	<input type="radio" name="seasonal" value="none" checked> 
@@ -44,50 +66,60 @@
 </form>
 <p class="head">Bonuses: Companions</p>
 <form>
-	<input type="checkbox" name="packcat" id="packcat">
+	<input type="checkbox" name="packcat" id="packcat" class="explo mining">
 	Pack Cat
-	<input type="checkbox" name="raven" id="raven">
+	<input type="checkbox" name="raven" id="raven" class="explo combat">
 	Kaurphyt Raven
-	<input type="checkbox" name="drake" id="drake">
+	<input type="checkbox" name="drake" id="drake" class="mining hunting">
 	Tunneldrake
-	<input type="checkbox" name="kellas" id="kellas">
+	<input type="checkbox" name="kellas" id="kellas" class="hunting combat">
 	Kellas Cat
-	<input type="checkbox" name="birb" id="birb">
+	<input type="checkbox" name="birb" id="birb" class="all">
 	Spring's Messengerbird
+	<input type="checkbox" name="rooter" id="rooter" class="explo mining">
+	Rooter
+	<input type="checkbox" name="rootette" id="rootette" class="explo mining">
+	Mini Rooter
+	<input type="checkbox" name="grandrooter" id="grandrooter" class="explo hunting">
+	Grand Old Rooter
+	<input type="checkbox" name="skydrake" id="skydrake" class="explo hunting mining">
+	Skydrake
 </form>
 <p class="head">Bonuses: NPCs</p>
 <form>
-	<input type="checkbox" name="swc" id="swc">
+	<input type="checkbox" name="swc" id="swc" class="all">
 	Streetwise Companion
-	<input type="checkbox" name="yvanon" id="yvanon">
+	<input type="checkbox" name="yvanon" id="yvanon" class="all">
 	Party Favored
-	<input type="checkbox" name="myrk" id="myrk">
+	<input type="checkbox" name="myrk" id="myrk" class="all">
 	Merchant's Eye
 </form>
 <p class="head">Bonuses: Items</p>
 <form>
-	<input type="checkbox" name="treats" id="treats">
+	<input type="checkbox" name="treats" id="treats" class="all">
 	Pet Treats
-	<input type="checkbox" name="tbags" id="tbags">
+	<input type="checkbox" name="tbags" id="tbags" class="all">
 	Tail Bags
-	<input type="checkbox" name="coffee" id="coffee">
+	<input type="checkbox" name="coffee" id="coffee" class="all">
 	Coffee
-	<input type="checkbox" name="windrink" id="windrink">
+	<input type="checkbox" name="windrink" id="windrink" class="all">
 	Deepearth Brew 
-	<input type="checkbox" name="beans" id="beans">
+	<input type="checkbox" name="beans" id="beans" class="all">
 	Espresso Beans
-	<input type="checkbox" name="sumdrink" id="sumdrink">
+	<input type="checkbox" name="sumdrink" id="sumdrink" class="all">
 	Blue Raspberry Lemonade
-	<input type="checkbox" name="falldrink" id="falldrink">
+	<input type="checkbox" name="falldrink" id="falldrink" class="all">
 	Pumpkin Spice Apple Cider
-	<input type="checkbox" name="potpourri" id="potpourri">
+	<input type="checkbox" name="potpourri" id="potpourri" class="hunting mining">
 	Trinket Jar - Potpourri
-	<input type="checkbox" name="tooth" id="tooth">
+	<input type="checkbox" name="tooth" id="tooth" class="hunting combat">
 	Trinket Jar - Fossil Tooth
-	<input type="checkbox" name="luckycharm" id="luckycharm">
+	<input type="checkbox" name="luckycharm" id="luckycharm" class="hunting mining explo">
 	Lucky Charm
-	<input type="checkbox" name="catmint" id="catmint">
+	<input type="checkbox" name="catmint" id="catmint" class="all">
 	Catmint Tea
+	<input type="checkbox" name="knife" id="knife" class="hunting">
+	Hunting Knife
 </form>
 <p class="head">Bonuses: Skills and Misc</p>
 <form>
@@ -108,12 +140,13 @@
 	<input type="button" onclick="setUp('full');" value="Roll!">
 	<input type="button" onclick="setUp('single');" value="Roll (one item)">
 	<input type="button" onclick="crackGeode();" value="Crack Geode">
+	<input type="button" value="Reset" style="visibility:hidden">
 </form>
 <textarea rows="20" cols="100" id="output">
 </textarea>
 <br>
 <p id="builddate">
-<strong>Roller:Exploration</strong> build 2.0 date 3/19/19
+<strong>Roller:Exploration</strong> build 2.1 date 8/25/19
 </p>
 <p id="credit">
 Programmed and maintained by @pawstepsinthesnow/Suzuran exclusively for @Rixixi.

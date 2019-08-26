@@ -12,7 +12,8 @@ var rolldata = {
 	cider: false,
 	beans: "none",
 	chasmjump: "none",
-	trophy: false
+	trophy: false,
+	successchance: 0,
 };
 
 function qhigh(q, boost) {
@@ -90,11 +91,20 @@ function setUp(mode) {
 		case ("ungulate"):
 			rolldata.world = ungulate;
 			break;
+		case ("chasmhunt"):
+			rolldata.world = chasmhunt;
+			break;
+		case ("avian"):
+			rolldata.world = avian;
+			break;
 		case ("mine"):
 			rolldata.world = mining;
 			break;
 		case ("fightclub"):
 			rolldata.world = combat;
+			break;
+		case ("legendary"):
+			rolldata.world = legend;
 			break;
 		default:
 			rolldata.world = nskanetis;
@@ -114,6 +124,26 @@ function setUp(mode) {
 		attack += 50;
 		if(attack > 400) {
 			attack = 400;
+		}
+	}
+	if (document.getElementById("skydrake").checked == true) {
+		speed += 100;
+		if(speed > 400) {
+			speed = 400;
+		}
+	}
+	if (document.getElementById("grandrooter").checked == true) {
+		if (rolldata.rolltype == "explo") {
+			speed += 100;
+			if(speed > 400) {
+				speed = 400;
+			}
+		}
+		if (rolldata.rolltype == "hunt") {
+			defense += 100;
+			if(defense > 400) {
+				defense = 400;
+			}
 		}
 	}
 	if (document.getElementById("tooth").checked == true) {
@@ -139,7 +169,77 @@ function setUp(mode) {
 		rolldata.qr = Math.floor(defense / 50) + Math.floor(speed / 50);
 	} else if (rolldata.rolltype == "combat") {
 		rolldata.qr = Math.floor(attack / 50) + Math.floor(special / 50);
+	} else if (rolldata.rolltype == "legend") {
+		var partysize = parseInt(document.getElementById("partysize").value);
+		switch (partysize) {
+			case(1):
+				rolldata.qr = Math.floor(attack / 50) + Math.floor(defense / 50);
+				var s = Math.floor((speed + special) / 200);
+				rolldata.successchance = 50 + s;
+				break;
+			case(2):
+				attack += parseInt(document.getElementById("atk2").value);
+				defense += parseInt(document.getElementById("def2").value);
+				if (attack >= 1500) { attack = 1500; }
+				if (defense >= 1500) { defense = 1500; }
+				rolldata.qr = Math.floor(attack / 50) + Math.floor(defense / 50);
+				speed += parseInt(document.getElementById("spd2").value);
+				special += parseInt(document.getElementById("spc2").value);
+				if (speed >= 1500) { speed = 1500; }
+				if (special >= 1500) { special = 1500; }
+				var s = Math.floor((speed + special) / 200);
+				rolldata.successchance = 55 + s;
+				break;
+			case(3):
+				attack += parseInt(document.getElementById("atk2").value);
+				defense += parseInt(document.getElementById("def2").value);
+				attack += parseInt(document.getElementById("atk3").value);
+				defense += parseInt(document.getElementById("def3").value);
+				if (attack >= 1500) { attack = 1500; }
+				if (defense >= 1500) { defense = 1500; }
+				rolldata.qr = Math.floor(attack / 50) + Math.floor(defense / 50);
+				speed += parseInt(document.getElementById("spd2").value);
+				special += parseInt(document.getElementById("spc2").value);
+				speed += parseInt(document.getElementById("spd3").value);
+				special += parseInt(document.getElementById("spc3").value);
+				if (speed >= 1500) { speed = 1500; }
+				if (special >= 1500) { special = 1500; }
+				var s = Math.floor((speed + special) / 200);
+				rolldata.successchance = 60 + s;
+				break;
+			case(4):
+				attack += parseInt(document.getElementById("atk2").value);
+				defense += parseInt(document.getElementById("def2").value);
+				attack += parseInt(document.getElementById("atk3").value);
+				defense += parseInt(document.getElementById("def3").value);
+				attack += parseInt(document.getElementById("atk4").value);
+				defense += parseInt(document.getElementById("def4").value);
+				if (attack >= 1500) { attack = 1500; }
+				if (defense >= 1500) { defense = 1500; }
+				rolldata.qr = Math.floor(attack / 50) + Math.floor(defense / 50);
+				speed += parseInt(document.getElementById("spd2").value);
+				special += parseInt(document.getElementById("spc2").value);
+				speed += parseInt(document.getElementById("spd3").value);
+				special += parseInt(document.getElementById("spc3").value);
+				speed += parseInt(document.getElementById("spd4").value);
+				special += parseInt(document.getElementById("spc4").value);
+				if (speed >= 1500) { speed = 1500; }
+				if (special >= 1500) { special = 1500; }
+				var s = Math.floor((speed + special) / 200);
+				rolldata.successchance = 65 + s;
+				break;
+			default:
+				rolldata.qr = Math.floor(attack / 50) + Math.floor(defense / 50);
+				var s = Math.floor((speed + special) / 200);
+				rolldata.successchance = 50 + s;
+				break;
+		}
+		if (document.getElementById("skydrake").checked == true) {
+			rolldata.successchance += 15;
+		}
 	}
+		
+	
 	var seasonal = document.getElementById("nom").elements.namedItem("seasonal").value;
 	//man that one's a mouthful
 	rolldata.seasonmain = false;
@@ -232,6 +332,14 @@ function setUp(mode) {
 
 function createOutput() {
 	var out = "Main return:\n";
+	
+	if (rolldata.rolltype == "legend") {
+		var r = rng(1, 100);
+		if (r >= rolldata.successchance) {
+			out = out + "Legendary hunting failed.";
+			return out;
+		}
+	}
 
 	var espresso = rolldata.yvanon; //get boost value for main roll
 	if (rolldata.beans != "none") {
@@ -272,6 +380,7 @@ function createOutput() {
 			out = out + rollSeasonal(rolldata.seasoncompanion);
 		}
 	}
+	
 	if (document.getElementById("swc").checked == true) {
 		a = roll(rolldata.qr, true); //override: streetwise
 		out = out + "\nStreetwise Companion returns:\n";
@@ -302,8 +411,33 @@ function createOutput() {
 	}
 	if(document.getElementById("drake").checked == true) {
 		a = rollSingleItem(0);
+		if (document.getElementById("skydrake").checked == true) {
+			a[1] *= 2;
+		}
 		out = out + "\nTunneldrake returns:\n"
 		out = out + formatBonusItem(a);
+	}
+	if(document.getElementById("rooter").checked == true) {
+		if(rng(1,100) % 2 == 1) {
+			a = rollSpecificRarity(0, "rare");
+			out = out + "\nRooter returns:\n"
+			out = out + formatBonusItem(a);
+		} else {
+			a = [{name: "Root Vegetables", dathumb: ":thumb732352346:", url: "Root-Vegetables-732352346", quantity: "low", contraband: false}, 1]
+			out = out + "\nRooter returns:\n"
+			out = out + formatBonusItem(a);
+		}
+	}
+	if(document.getElementById("rootette").checked == true) {
+		if(rng(1,100) <= 80) {
+			a = rollSpecificRarity(0, "uncommon");
+			out = out + "\nMini Rooter returns:\n"
+			out = out + formatBonusItem(a);
+		} else {
+			a = [{name: "Root Vegetables", dathumb: ":thumb732352346:", url: "Root-Vegetables-732352346", quantity: "low", contraband: false}, 1]
+			out = out + "\nMini Rooter returns:\n"
+			out = out + formatBonusItem(a);
+		}
 	}
 	if(document.getElementById("sumdrink").checked == true) {
 		a = rollSingleItem(0);
@@ -329,6 +463,11 @@ function createOutput() {
 	
 	if(document.getElementById("catmint").checked == true) {
 		a = catmintTea();
+		out = out + "\n" + a;
+	}
+	
+	if(document.getElementById("knife").checked == true) {
+		a = huntingKnife();
 		out = out + "\n" + a;
 	}
 	
@@ -401,10 +540,12 @@ function roll(qr, sw = rolldata.streetwise, boost = rolldata.yvanon, rare = 1) {
 		var q = list[a].quantity; //roll quantity
 		if (q == "high") {
 			num = qhigh(qr, boost);
-		} else {
+		} else if (q == "low" ) {
 			num = qlow(qr, boost);
+		} else {
+			num = 1;
 		}
-		if (rolldata.deepearth == true) {
+		if (rolldata.deepearth == true && q != "unique") {
 			num = num * 2;
 		}
 		var dupe = false;
@@ -538,10 +679,42 @@ function rollSingleItem(qr, sw = rolldata.streetwise, boost = rolldata.yvanon) {
 		var q = list[a].quantity; //roll quantity
 		if (q == "high") {
 			num = qhigh(qr, boost);
-		} else {
+		} else if (q == "low" ) {
 			num = qlow(qr, boost);
+		} else {
+			num = 1;
 		}
-		if (rolldata.deepearth == true) {
+		if (rolldata.deepearth == true&& q != "unique") {
+			num = num * 2;
+		}
+		
+		var item = [list[a], num];
+		return item;
+}
+
+function rollSpecificRarity(qr, rarity, sw = rolldata.streetwise, boost = rolldata.yvanon) { //rolls single item at specified rarity
+	var list = rolldata.world;
+	if (rarity == "common") {
+			list = list.common;
+		} else if (rarity == "uncommon") {
+			list = list.uncommon;
+		} else { 
+			list = list.rare;
+		}
+		
+		var a = rng(1,list.length); //roll item
+		a = a - 1; //decrement to get the index
+		
+		var num = 0;
+		var q = list[a].quantity; //roll quantity
+		if (q == "high") {
+			num = qhigh(qr, boost);
+		} else if (q == "low" ) {
+			num = qlow(qr, boost);
+		} else {
+			num = 1;
+		}
+		if (rolldata.deepearth == true && q != "unique") {
 			num = num * 2;
 		}
 		
@@ -628,6 +801,13 @@ function dowsing() {
 	drinks[a].url + "\">" + drinks[a].name + "</a>!";
 }	
 
+function huntingKnife() { 
+	var a = rng(1,pelts.length);
+	a--;
+	return "Hunting Knife returns: " + "<a href=\"https://www.deviantart.com/magmatixi/art/" +
+	pelts[a].url + "\">" + pelts[a].name + "</a>!";
+}
+
 function updateList() {
 	var type = document.getElementById("type").value;
 	if (type == "explo") {
@@ -643,7 +823,9 @@ function updateList() {
 		<option value="land">Land Animal</option>\n \
 		<option value="plant">Plant Creature</option>\n \
 		<option value="sea">Sea Creature</option>\n \
-		<option value="ungulate">Ungulate</option>';
+		<option value="ungulate">Ungulate</option>\n \
+		<option value="avian">Avian</option>\n \
+		<option value="chasmhunt">Chasm</option>';
 		document.getElementById("world").disabled = false;
 	} else if (type == "mining") {
    		document.getElementById("world").innerHTML =
@@ -652,6 +834,11 @@ function updateList() {
 	} else if (type == "combat") {
 		document.getElementById("world").innerHTML =
 		'<option value="fightclub">Combat</option>';
+		document.getElementById("world").disabled = true;
+	}
+	else if (type == "legend") {
+		document.getElementById("world").innerHTML =
+		'<option value="legendary">L. Hunting</option>';
 		document.getElementById("world").disabled = true;
 	}
 }
