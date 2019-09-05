@@ -39,9 +39,9 @@ var drinks = [
 ];
 
 var pelts = [
-	{name: "Drake Scale", dathumb: ":thumb756971959:", url: "Teeth-and-Claws-756971959"},
-	{name: "Rooter Shell Piece", dathumb: ":thumb756971959:", url: "Teeth-and-Claws-756971959"},
-	{name: "Large Chitin", dathumb: ":thumb756971959:", url: "Teeth-and-Claws-756971959"},
+	{name: "Drake Scale", dathumb: ":thumb809486888:", url: "Drake-Scale-809486888"},
+	{name: "Rooter Shell Piece", dathumb: ":thumb793689558:", url: "Rooter-Shell-Piece-793689558"},
+	{name: "Large Chitin", dathumb: ":thumb810573754:", url: "Large-Chitin-810573754"},
 	{name: "Leather", dathumb: ":thumb706194672:", url: "Leather-706194672"}
 ];
 var nskanetis = {
