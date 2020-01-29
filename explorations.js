@@ -462,7 +462,12 @@ function createOutput() {
 	}
 	
 	if(document.getElementById("catmint").checked == true) {
-		a = catmintTea();
+		a = catmintTea("tea");
+		out = out + "\n" + a;
+	}
+	
+	if(document.getElementById("catcollar").checked == true) {
+		a = catmintTea("collar");
 		out = out + "\n" + a;
 	}
 	
@@ -782,15 +787,22 @@ function petTreats() {
 	}
 }
 
-function catmintTea() {
+function catmintTea(type) {
 	var r = rng(1,100);
+	var msg = "Glitch cat"; //this should be overriden
+	if (type == "tea") {
+		msg = "Catmint tea";
+	}
+	else if (type == "collar") {
+		msg = "Catmint collar";
+	}
 	if (r <= 35) {
 		var a = rng(1,cats.length);
 		a--;
-		return "Catmint tea lured a: " + "<a href=\"https://www.deviantart.com/magmatixi/art/" +
+		return msg + " lured a: " + "<a href=\"https://www.deviantart.com/magmatixi/art/" +
 		cats[a].url + "\">" + cats[a].name + "</a>!";
 	} else {
-		return "Catmint tea failed!";
+		return msg + " failed!";
 	}
 }
 
