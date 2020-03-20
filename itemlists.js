@@ -1,6 +1,6 @@
 var fest = [
-	{name: "Winter Sweets", dathumb: ":thumb718169327:", url: "Winter-Sweets-718169327"},
-	{name: "Snowball", dathumb: ":thumb719326937:", url: "Snowball-719326937"},
+	{name: "Spring Shortcake", dathumb: ":thumb734910909:", url: "Spring-Shortcake-734910909"},
+	{name: "Cherry Blossom", dathumb: ":thumb734115289:", url: "Cherry-Blossom-734115289"},
 	];
 	
 var companions = [
