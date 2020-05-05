@@ -139,7 +139,15 @@ function setUp(mode) {
 				speed = 400;
 			}
 		}
-		if (rolldata.rolltype == "hunt") {
+		if (rolldata.rolltype == "hunt" || rolldata.rolltype == "legend") {
+			defense += 100;
+			if(defense > 400) {
+				defense = 400;
+			}
+		}
+	}
+	if (document.getElementById("caverndrake").checked == true) {
+		if (rolldata.rolltype == "hunt" || rolldata.rolltype == "mining" || rolldata.rolltype == "legend") {
 			defense += 100;
 			if(defense > 400) {
 				defense = 400;
@@ -151,7 +159,7 @@ function setUp(mode) {
 		if(attack > 400) {
 			attack = 400;
 		}
-		if (rolldata.rolltype == "hunt") {
+		if (rolldata.rolltype == "hunt" || rolldata.rolltype == "legend") {
 			rolldata.minboost = true;
 		}
 	}
@@ -235,6 +243,9 @@ function setUp(mode) {
 				break;
 		}
 		if (document.getElementById("skydrake").checked == true) {
+			rolldata.successchance += 15;
+		}
+		if (document.getElementById("caverndrake").checked == true) {
 			rolldata.successchance += 15;
 		}
 	}
@@ -351,6 +362,9 @@ function createOutput() {
 	} else {
 		var a = roll(rolldata.qr, rolldata.streetwise, espresso);
 	}
+	if (document.getElementById("warscythe").checked == true && (rolldata.rolltype == "hunt" || rolldata.rolltype == "legend") ){
+		a = slaughterhouse(a);
+	}
 	out = out + formatThumbs(a);
 	if (rolldata.chasmjump == "none") {
 		out = out + rollSeasonal(rolldata.seasonmain, espresso);
@@ -387,6 +401,15 @@ function createOutput() {
 		out = out + formatLinks(a);
 		if (rolldata.chasmjump == "none") {
 			out = out + rollSeasonal(rolldata.seasonnpc);
+		}
+	}
+	
+	if (document.getElementById("holo").checked == true) {
+		a = roll(rolldata.qr, true); //override: streetwise
+		out = out + "\nHolo Helper/Hacker returns:\n";
+		out = out + formatLinks(a);
+		if (rolldata.chasmjump == "none") {
+			out = out + rollSeasonal(rolldata.seasoncompanion);
 		}
 	}
 	
@@ -456,7 +479,7 @@ function createOutput() {
 		out = out + formatBonusItem(a);
 	}
 	
-	if(document.getElementById("treats").checked == true) {
+	if(document.getElementById("treats").checked == true || (document.getElementById("caverndrake").checked == true && rolldata.rolltype == "legend")) {
 		a = petTreats();
 		out = out + "\n" + a;
 	}
@@ -479,6 +502,12 @@ function createOutput() {
 	if(document.getElementById("luckycharm").checked == true && rolldata.rolltype == "mining") {
 		a = dowsing();
 		out = out + "\n" + a;
+	}
+	
+	if (document.getElementById("warscythe").checked == true && rolldata.rolltype == "explo") {
+		a = rollSpecificItem(rolldata.qr, grains);
+		a = formatBonusItem(a);
+		out = out + "Warscythe returns:\n" + a;
 	}
 	
 	return out;
@@ -697,6 +726,27 @@ function rollSingleItem(qr, sw = rolldata.streetwise, boost = rolldata.yvanon) {
 		return item;
 }
 
+function rollSpecificItem(qr, specifiedItem, boost = rolldata.yvanon)
+{ //please note that this function expects an item in object format
+//reccomend, if you don't wish to hardcode a lengthy object
+//preassigning it to a variable in itemlists.js
+	var num = 0;
+	var q = specifiedItem.quantity; //roll quantity
+	if (q == "high") {
+		num = qhigh(qr, boost);
+	} else if (q == "low" ) {
+		num = qlow(qr, boost);
+	} else {
+		num = 1;
+	}
+	if (rolldata.deepearth == true && q != "unique") {
+		num = num * 2;
+	}
+	
+	var item = [specifiedItem, num];
+	return item;
+}
+
 function rollSpecificRarity(qr, rarity, sw = rolldata.streetwise, boost = rolldata.yvanon) { //rolls single item at specified rarity
 	var list = rolldata.world;
 	if (rarity == "common") {
@@ -818,6 +868,24 @@ function huntingKnife() {
 	a--;
 	return "Hunting Knife returns: " + "<a href=\"https://www.deviantart.com/magmatixi/art/" +
 	pelts[a].url + "\">" + pelts[a].name + "</a>!";
+}
+
+function slaughterhouse(items) {
+	for (i = 0; i < items.length; i++) {
+		for (j = 0; j < pelts.length; j++) {
+			if (items[i][0].dathumb == pelts[j].dathumb) {
+				console.log("Item matched");
+				items[i][1] *= 2;
+			}
+		}
+		for (j = 0; j < meats.length; j++) {
+			if (items[i][0].dathumb == meats[j].dathumb) {
+				console.log("Item matched");
+				items[i][1] *= 2;
+			}
+		}
+	}
+	return items;
 }
 
 function updateList() {

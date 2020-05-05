@@ -44,6 +44,23 @@ var pelts = [
 	{name: "Large Chitin", dathumb: ":thumb810573754:", url: "Large-Chitin-810573754"},
 	{name: "Leather", dathumb: ":thumb706194672:", url: "Leather-706194672"}
 ];
+
+var grains = {name: "Grains", dathumb: ":thumb704828305:", url: "Grains-704828305", quantity: "high", contraband: false};
+
+var meats = [
+	{name: "Slab of Raw Meat", dathumb: ":thumb704794080:", url: "Slab-of-Raw-Meat-704794080", quantity: "high", contraband: false},
+	{name: "Fish Meat", dathumb: ":thumb753322990:", url: "Fish-Meat-753322990", quantity: "high", contraband: false},
+	{name: "Poultry", dathumb: ":thumb760273419:", url: "Poultry-760273419", quantity: "high", contraband: false},
+	{name: "Flesh Slab", dathumb: ":thumb756159680:", url: "Flesh-Slab-756159680", quantity: "high", contraband: false},
+	{name: "Snake Meat", dathumb: ":thumb809612893:", url: "Snake-Meat-809612893", quantity: "high", contraband: false},
+	{name: "Rack of Ribs", dathumb: ":thumb791293664:", url: "Rack-Of-Ribs-791293664", quantity: "low", contraband: false},
+	{name: "Tunneldrake Meat", dathumb: ":thumb810914498:", url: "Tunneldrake-Meat-810914498", quantity: "low", contraband: false},
+	{name: "Shrimp", dathumb: ":thumb759505741:", url: "Shrimp-759505741", quantity: "low", contraband: false},
+	{name: "Squid", dathumb: ":thumb739760540:", url: "Squid-739760540", quantity: "low", contraband: false},
+	{name: "Southern Vyldes Shovelnose Prawn", dathumb: ":thumb759505729:", url: "Southern-Vyldes-Shovelnose-Prawn-759505729", quantity: "low", contraband: false}
+	
+];
+
 var nskanetis = {
 	common: [
 		{name: "Everburn Coal", dathumb: ":thumb760528138:", url: "Everburn-Coal-760528138", quantity: "high", contraband: false},
