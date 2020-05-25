@@ -365,7 +365,7 @@ function createOutput() {
 	if (document.getElementById("warscythe").checked == true && (rolldata.rolltype == "hunt" || rolldata.rolltype == "legend") ){
 		a = slaughterhouse(a);
 	}
-	out = out + formatThumbs(a);
+	out = out + formatItems(a);
 	if (rolldata.chasmjump == "none") {
 		out = out + rollSeasonal(rolldata.seasonmain, espresso);
 	}
@@ -373,7 +373,7 @@ function createOutput() {
 	if (document.getElementById("tbags").checked == true) {
 		a = roll(0);
 		out = out + "\nTail Bags returns:\n";
-		out = out + formatLinks(a);
+		out = out + formatItems(a);
 		if (rolldata.chasmjump == "none") {
 			out = out + rollSeasonal(rolldata.seasonmain);
 		}
@@ -381,7 +381,7 @@ function createOutput() {
 	if (document.getElementById("packcat").checked == true) {
 		a = roll(0);
 		out = out + "\nPack Cat returns:\n";
-		out = out + formatLinks(a);
+		out = out + formatItems(a);
 		if (rolldata.chasmjump == "none") {
 			out = out + rollSeasonal(rolldata.seasoncompanion);
 		}
@@ -389,7 +389,7 @@ function createOutput() {
 	if (document.getElementById("birb").checked == true) {
 		a = roll(0);
 		out = out + "\nSpring Messengerbird returns:\n";
-		out = out + formatLinks(a);
+		out = out + formatItems(a);
 		if (rolldata.chasmjump == "none") {
 			out = out + rollSeasonal(rolldata.seasoncompanion);
 		}
@@ -398,7 +398,7 @@ function createOutput() {
 	if (document.getElementById("swc").checked == true) {
 		a = roll(rolldata.qr, true); //override: streetwise
 		out = out + "\nStreetwise Companion returns:\n";
-		out = out + formatLinks(a);
+		out = out + formatItems(a);
 		if (rolldata.chasmjump == "none") {
 			out = out + rollSeasonal(rolldata.seasonnpc);
 		}
@@ -407,7 +407,7 @@ function createOutput() {
 	if (document.getElementById("holo").checked == true) {
 		a = roll(rolldata.qr, true); //override: streetwise
 		out = out + "\nHolo Helper/Hacker returns:\n";
-		out = out + formatLinks(a);
+		out = out + formatItems(a);
 		if (rolldata.chasmjump == "none") {
 			out = out + rollSeasonal(rolldata.seasoncompanion);
 		}
@@ -780,13 +780,12 @@ function rollSpecificRarity(qr, rarity, sw = rolldata.streetwise, boost = rollda
 function formatSingleItem() {
 	//simplified the format here, so item shouldn't need double array refs anymore
 	var item = rollSingleItem(rolldata.qr, rolldata.streetwise);
-	var out = item[0].dathumb + "\n" + item[0].name + " x" + item[1] +
-		      "\n\n <a href=\"https://www.deviantart.com/magmatixi/art/" + item[0].url +
-			  "\"> " + item[0].name + "</a>" + " x" + item[1] + "\n";
+	var out = item[0].name + " x" + item[1] + "\n";
 	document.getElementById("output").value = out;
 }
 
 function formatThumbs(items) {
+	//depreciated, DO NOT USE
 	var out = "";
 	//man these array references are ugly but.
 	//roll returns are a two-dimensional array. 
@@ -799,7 +798,16 @@ function formatThumbs(items) {
 	return out;
 }
 
+function formatItems(items) {
+	var out = "";
+	for (i = 0; i < items.length; i++) {
+		out = out + items[i][0].name + " x" + items[i][1] + "\n";
+	}
+	return out; 
+}
+
 function formatLinks(items) {
+	//depreciated, DO NOT USE
 	var out = "";
 	//help
 	for (i = 0; i < items.length; i++) {
@@ -811,8 +819,7 @@ function formatLinks(items) {
 
 function formatBonusItem(item) {
 	var out = "";
-	out = out + "<a href=\"https://www.deviantart.com/magmatixi/art/" +
-		item[0].url + "\">" + item[0].name + "</a>" + " x" + item[1] + "\n";
+	out = out + item[0].name + " x" + item[1] + "\n";
 	return out;
 }
 	
