@@ -644,21 +644,16 @@ function rollSeasonal(si, boost = rolldata.yvanon) {
 	if(a <= 25) {
 		extra = true;
 	}
-	var out = "They also find (seasonal):\n" + 
-	"<a href=\"https://www.deviantart.com/magmatixi/art/" + fest[0].url +
-	"\">" + fest[0].name + "</a>" + " x" + q;
+	var out = "They also find (seasonal):\n" + fest[0].name + " x" + q;
 	if (extra == true) {
 		if (rolldata.deepearth == true && rolldata.cider == true) {
-			out = out + " and <a href=\"https://www.deviantart.com/magmatixi/art/" +
-			fest[1].url + "\">" + fest[1].name + "</a> x4!\n"
+			out = out + " and " + fest[1].name + "</a> x4!\n"
 		}
 		else if (rolldata.deepearth == true || rolldata.cider == true) {
-			out = out + " and <a href=\"https://www.deviantart.com/magmatixi/art/" +
-			fest[1].url + "\">" + fest[1].name + "</a> x2!\n"
+			out = out + " and " + fest[1].name + "</a> x2!\n"
 		}
 		else {
-			out = out + " and a <a href=\"https://www.deviantart.com/magmatixi/art/" +
-			fest[1].url + "\">" + fest[1].name + "</a>!\n";
+			out = out + " and a " + fest[1].name + "</a>!\n";
 		}
 	} else {
 		out = out + "!\n";
