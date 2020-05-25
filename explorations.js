@@ -647,13 +647,13 @@ function rollSeasonal(si, boost = rolldata.yvanon) {
 	var out = "They also find (seasonal):\n" + fest[0].name + " x" + q;
 	if (extra == true) {
 		if (rolldata.deepearth == true && rolldata.cider == true) {
-			out = out + " and " + fest[1].name + "</a> x4!\n"
+			out = out + " and " + fest[1].name + " x4!\n"
 		}
 		else if (rolldata.deepearth == true || rolldata.cider == true) {
-			out = out + " and " + fest[1].name + "</a> x2!\n"
+			out = out + " and " + fest[1].name + " x2!\n"
 		}
 		else {
-			out = out + " and a " + fest[1].name + "</a>!\n";
+			out = out + " and a " + fest[1].name + "!\n";
 		}
 	} else {
 		out = out + "!\n";
