@@ -643,7 +643,7 @@ function rollSeasonal(si, boost = rolldata.yvanon) {
 	var extra = false;
 	if(a <= 25) {
 		extra = true;
-	}
+	}/*
 	var out = "They also find (seasonal):\n" + fest[0].name + " x" + q;
 	if (extra == true) {
 		if (rolldata.deepearth == true && rolldata.cider == true) {
@@ -657,9 +657,9 @@ function rollSeasonal(si, boost = rolldata.yvanon) {
 		}
 	} else {
 		out = out + "!\n";
-	}
+	}*/
 	//for june
-	/*
+	
 	var a = rng(1,100);
 	var extra = false;
 	if(a <= 25) {
@@ -680,7 +680,7 @@ function rollSeasonal(si, boost = rolldata.yvanon) {
 		}
 	} else {
 		out = out + "\n";
-	}*/
+	}
 	return out;
 }
 
