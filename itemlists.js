@@ -9,7 +9,7 @@ var companions = [
 	{name: "Kaurphyt Raven Companion", dathumb: ":thumb751507214:", url: "Kaurphyt-Raven-Companion-751507214"},
 	{name: "Tunneldrake Companion", dathumb: ":thumb747809073:", url: "Tunneldrake-Companion-747809073"},
 	{name: "Mymber Companion", dathumb: ":thumb756147760:", url: "Mymber-Companion-756147760"},
-	{name: "Kellas Cat Companion", dathumb: ":thumb768254398:", url: "Kellas-Cat-Companion-768254398"}
+	{name: "Kellas Cat Companion", dathumb: ":thumb768254398:", url: "Kellas-Cat-Companion-768254398"},
 	{name: "Rooter Companion", dathumb: ":thumb787307888:", url: "Rooter-Companion-787307888", quantity: "low", contraband: false}
 ];
 
