@@ -822,8 +822,8 @@ function formatBonusItem(item) {
 function crackGeode() {
 	rolldata.world = geode; //override item list
 	var first = rollSingleItem(0, true); //roll two single items
-	var second = rollSingleItem(0, true); //output their thumbs only
-	out = first[0].dathumb + second[0].dathumb;
+	var second = rollSingleItem(0, true); //output their names only
+	out = first[0].name + "\n" + second[0].name;
 	document.getElementById("output").value = out;
 }
 
