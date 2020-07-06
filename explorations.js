@@ -659,7 +659,7 @@ function rollSeasonal(si, boost = rolldata.yvanon) {
 		out = out + "!\n";
 	}
 	//for june
-	
+	/*
 	var a = rng(1,100);
 	var extra = false;
 	if(a <= 25) {
@@ -680,7 +680,7 @@ function rollSeasonal(si, boost = rolldata.yvanon) {
 		}
 	} else {
 		out = out + "\n";
-	}
+	}*/
 	return out;
 }
 
@@ -832,8 +832,7 @@ function petTreats() {
 	if (r <= 35) {
 		var a = rng(1,companions.length);
 		a--;
-		return "Pet treats lured a: " + "<a href=\"https://www.deviantart.com/magmatixi/art/" +
-		companions[a].url + "\">" + companions[a].name + "</a>!";
+		return "Pet treats lured a: " + companions[a].name + "\n";
 	} else {
 		return "Pet treats failed!";
 	}
@@ -851,8 +850,7 @@ function catmintTea(type) {
 	if (r <= 35) {
 		var a = rng(1,cats.length);
 		a--;
-		return msg + " lured a: " + "<a href=\"https://www.deviantart.com/magmatixi/art/" +
-		cats[a].url + "\">" + cats[a].name + "</a>!";
+		return msg + " lured a: " + cats[a].name + "!\n";
 	} else {
 		return msg + " failed!";
 	}
@@ -861,15 +859,13 @@ function catmintTea(type) {
 function dowsing() { 
 	var a = rng(1,drinks.length);
 	a--;
-	return "Dowsing Rod returns: " + "<a href=\"https://www.deviantart.com/magmatixi/art/" +
-	drinks[a].url + "\">" + drinks[a].name + "</a>!";
+	return "Dowsing Rod returns: " + drinks[a].name + "!\n";
 }	
 
 function huntingKnife() { 
 	var a = rng(1,pelts.length);
 	a--;
-	return "Hunting Knife returns: " + "<a href=\"https://www.deviantart.com/magmatixi/art/" +
-	pelts[a].url + "\">" + pelts[a].name + "</a>!";
+	return "Hunting Knife returns: " + pelts[a].name + "!\n";
 }
 
 function slaughterhouse(items) {
