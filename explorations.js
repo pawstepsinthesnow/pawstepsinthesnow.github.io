@@ -405,7 +405,7 @@ function createOutput() {
 	}
 	
 	if (document.getElementById("holo").checked == true) {
-		a = roll(rolldata.qr, true); //override: streetwise
+		a = roll(0, true); //override: streetwise
 		out = out + "\nHolo Helper/Hacker returns:\n";
 		out = out + formatItems(a);
 		if (rolldata.chasmjump == "none") {
