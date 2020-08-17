@@ -124,6 +124,7 @@ var nskanetis = {
 		{name: "Clay", dathumb: ":thumb756976397:", url: "Clay-756976397", quantity: "high", contraband: false},
 		{name: "Squash", dathumb: ":thumb766941749:", url: "Squash-766941749", quantity: "low", contraband: false},
 		{name: "Snake Meat", dathumb: ":thumb809612893:", url: "Snake-Meat-809612893", quantity: "high", contraband: false},
+		{name: "Incendiary Witchcraft", dathumb: ":thumb809612893:", url: "Incendiary-Witchcraft-747807971", quantity: "low", contraband: false},
 	],
 	rare: [
 		{name: "Fond Memories: Nskanetis", dathumb: ":thumb711862964:", url: "Fond-Memories-Nskanetis-711862964", quantity: "low", contraband: false},
@@ -179,6 +180,7 @@ var sxriix = {
 		{name: "Cinnamon Bark", dathumb: ":thumb769868523:", url: "Cinnamon-Bark-769868523", quantity: "high", contraband: false},
 		{name: "Clay", dathumb: ":thumb756976397:", url: "Clay-756976397", quantity: "high", contraband: false},
 		{name: "Tunneldrake Meat", dathumb: ":thumb810914498:", url: "Tunneldrake-Meat-810914498", quantity: "low", contraband: false},
+		{name: "Magmatic Spitfire", dathumb: ":thumb810914498:", url: "Magmatic-Spitfire-746694902", quantity: "low", contraband: false},
 	],
 	rare: [
 		{name: "Fond Memories: Sxriix", dathumb: ":thumb711863476:", url: "Fond-Memories-Sxriix-711863476", quantity: "low", contraband: false},
@@ -253,6 +255,7 @@ var earth = {
 		{name: "Topaz", dathumb: ":thumb762536432:", url: "Topaz-762536432", quantity: "high", contraband: false},
 		{name: "Citrus Fruit", dathumb: ":thumb758899247:", url: "Citrus-Fruit-758899247", quantity: "high", contraband: false},
 		{name: "Snake Meat", dathumb: ":thumb809612893:", url: "Snake-Meat-809612893", quantity: "high", contraband: false},
+		{name: "Bhut Jolokia", dathumb: ":thumb809612893:", url: "Bhut-Jolokia-746694831", quantity: "low", contraband: false},
 	],
 	rare: [
 		{name: "Fond Memories: Earth", dathumb: ":thumb711859788:", url: "Fond-Memories-Earth-711859788", quantity: "low", contraband: false},
@@ -578,6 +581,8 @@ var legend = {
 	rare: [
 		{name: "Grand Old Rooter Companion", dathumb: ":thumb788819625:", url: "Grand-Old-Rooter-Companion-788819625", quantity: "unique", contraband: false},
 		{name: "Skydrake Companion", dathumb: ":thumb798740744:", url: "Skydrake-Companion-798740744", quantity: "unique", contraband: false},
+		{name: "Kyaine Companion", dathumb: ":thumb798740744:", url: "Kyaine-Companion-851858373", quantity: "unique", contraband: false},
+		{name: "Taranan Companion", dathumb: ":thumb798740744:", url: "Taranan-Companion-851857999", quantity: "unique", contraband: false},
 	]
 }
 	
