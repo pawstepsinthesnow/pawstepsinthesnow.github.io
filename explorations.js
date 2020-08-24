@@ -926,13 +926,20 @@ function rollTempCondition(type) {
 
 function isResisted(immunity) {
 	switch(immunity) {
-		case("mechanix"):
+		case("mechhalf"):
 			var a = rng(1,100);
 			if (a <= 50 && document.getElementById("mechanix").checked) {
 				return true;
 			} else {
 				return false;
 			} 
+			break;
+		case("mechfull"):
+			if (document.getElementById("mechanix").checked) {
+				return true;
+			} else {
+				return false;
+			}
 			break;
 		case("valve"):
 			var a = rng(1,100);

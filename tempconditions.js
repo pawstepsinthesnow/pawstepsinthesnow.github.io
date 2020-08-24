@@ -1,6 +1,6 @@
 var explo = {
 	uncommon: [
-	{name: "Skin Irritation", immunity: "mechanix"}
+	{name: "Skin Irritation", immunity: "mechhalf"}
 	],
 	rare:[
 	{name: "Radiation Poisoning", immunity: "chasm"},
@@ -9,7 +9,7 @@ var explo = {
 };
 var hunt = {
 	uncommon: [
-	{name: "Skin Irritation", immunity: "mechanix"}
+	{name: "Skin Irritation", immunity: "mechhalf"}
 	],
 	rare: [
 	{name: "Vent Smog", immunity: "valve"},
