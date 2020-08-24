@@ -348,6 +348,7 @@ function createOutput() {
 		var r = rng(1, 100);
 		if (r >= rolldata.successchance) {
 			out = out + "Legendary hunting failed.";
+			out = out + rollTempCondition("legfail");
 			return out;
 		}
 	}
@@ -509,6 +510,8 @@ function createOutput() {
 		a = formatBonusItem(a);
 		out = out + "Warscythe returns:\n" + a;
 	}
+	
+	out = out + rollTempCondition(rolldata.rolltype);
 	
 	return out;
 }	
@@ -886,6 +889,85 @@ function slaughterhouse(items) {
 	return items;
 }
 
+function rollTempCondition(type) {
+	var list
+	if (type == "explo") {
+		list = explo;
+	} else if (type == "hunt") {
+		list = hunt;
+	} else if (type == "mining") {
+		list = mine;
+	} else if (type == "combat") {
+		list = fight;
+	} else if (type == "legendary") {
+		list = legendary;
+	} else {
+		list = legfail;
+	}
+	var rarity = rng (1, 100);
+	if (rarity <= 50) {
+			return "No condition rolled.";
+		} else if (rarity <= 85) {
+			list = list.uncommon;
+		} else {
+			list = list.rare;			
+		}
+	var a = rng(1,list.length); //roll item
+		a = a - 1; //decrement to get the index
+	resist = isResisted(list[a].immunity);
+	if (resist == true) {
+		console.log(list[a].name + " resisted!");
+		return "";
+	}
+	if (resist == false) {
+		return list[a].name + " rolled!";
+	}
+}
+
+function isResisted(immunity) {
+	switch(immunity) {
+		case("mechanix"):
+			var a = rng(1,100);
+			if (a <= 50 && document.getElementById("mechanix").checked) {
+				return true;
+			} else {
+				return false;
+			} 
+			break;
+		case("valve"):
+			var a = rng(1,100);
+			if (a <= 30 && document.getElementById("heart").checked) {
+				return true;
+			} else {
+				return false;
+			} 
+			break;
+		case("chasm"):
+			//this is special cased to hell and back
+			if((document.getElementById("jump").checked == true || rolldata.chasmjump != "none"))
+			{ //CONDITION 1: If this roll is a chasmjump (checking both the "is a jump" box
+			//and the Teleportation boxes, roll mymber heart valve.
+				return (isResisted("valve") || (document.getElementById("mechanix").checked));
+			} //Negate roll if ixi is a Mechanix.
+			else if((rolldata.world == chasm || rolldata.world == chasmhunt || rolldata.world == mining))
+			{ //CONDITION 2: Is the roll list is set to the Chasm, Chasm Creature, or Mining?
+			//If yes, then roll as above.
+				return (isResisted("valve") || (document.getElementById("mechanix").checked));
+			} else {
+				return true; //If neither of the above conditions come up true, it is always resisted.
+			}
+			break;
+		case("none"):
+			return false; //This case never resists.
+			break;
+		case("dummy"):
+			return true; //This case always resists. For placeholders only.
+			break;
+		default:
+			return true; //Always resist undefined immunities.
+			break;
+	}
+}
 function updateList() {
 	var type = document.getElementById("type").value;
 	if (type == "explo") {
@@ -918,5 +1000,43 @@ function updateList() {
 		document.getElementById("world").innerHTML =
 		'<option value="legendary">L. Hunting</option>';
 		document.getElementById("world").disabled = true;
+	}
+}
+function hideParty() {
+	var size = document.getElementById("partysize").value;
+	if (size == "1") {
+		document.getElementById("ixi2").innerHTML = "";
+		document.getElementById("ixi3").innerHTML = "";
+		document.getElementById("ixi4").innerHTML = "";
+	} else if (size == "2") {
+		document.getElementById("ixi2").innerHTML = 'Ixi 2 Atk: <input type="text" name="atk2" id="atk2" size="4" value="10"> \
+		Def: <input type="text" name="def2" id="def2" size="4" value="10"> \
+		Spc: <input type="text" name="spc2" id="spc2" size="4" value="10"> \
+		Spd: <input type="text" name="spd2" id="spd2" size="4" value="10"><br>';
+		document.getElementById("ixi3").innerHTML = "";
+		document.getElementById("ixi4").innerHTML = "";
+	} else if (size == "3") {
+		document.getElementById("ixi2").innerHTML = 'Ixi 2 Atk: <input type="text" name="atk2" id="atk2" size="4" value="10"> \
+		Def: <input type="text" name="def2" id="def2" size="4" value="10"> \
+		Spc: <input type="text" name="spc2" id="spc2" size="4" value="10"> \
+		Spd: <input type="text" name="spd2" id="spd2" size="4" value="10"><br>';
+		document.getElementById("ixi3").innerHTML = 'Ixi 3 Atk: <input type="text" name="atk3"  id="atk3" size="4" value="10"> \
+	Def: <input type="text" name="def3" id="def3" size="4" value="10"> \
+	Spc: <input type="text" name="spc3" id="spc3" size="4" value="10"> \
+	Spd: <input type="text" name="spd3" id="spd3" size="4" value="10"><br> ';
+		document.getElementById("ixi4").innerHTML = "";
+	} else {
+		document.getElementById("ixi2").innerHTML = 'Ixi 2 Atk: <input type="text" name="atk2" id="atk2" size="4" value="10"> \
+		Def: <input type="text" name="def2" id="def2" size="4" value="10"> \
+		Spc: <input type="text" name="spc2" id="spc2" size="4" value="10"> \
+		Spd: <input type="text" name="spd2" id="spd2" size="4" value="10"><br>';
+		document.getElementById("ixi3").innerHTML = 'Ixi 3 Atk: <input type="text" name="atk3"  id="atk3" size="4" value="10"> \
+	Def: <input type="text" name="def3" id="def3" size="4" value="10"> \
+	Spc: <input type="text" name="spc3" id="spc3" size="4" value="10"> \
+	Spd: <input type="text" name="spd3" id="spd3" size="4" value="10"><br> ';
+		document.getElementById("ixi4").innerHTML = 'Ixi 4 Atk: <input type="text" name="atk4" id="atk4" size="4" value="10"> \
+	Def: <input type="text" name="def4" id="def4" size="4" value="10"> \
+	Spc: <input type="text" name="spc4" id="spc4" size="4" value="10"> \
+	Spd: <input type="text" name="spd4" id="spd4" size="4" value="10"><br>';
 	}
 }
