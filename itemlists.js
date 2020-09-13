@@ -37,6 +37,8 @@ var drinks = [
 	{name: "Dark Chocolate Cinnamon Mocha", dathumb: ":thumb767560673:", url: "Dark-Chocolate-Cinnamon-Mocha-767560673"},
 	{name: "Choco-Mint Mocha", dathumb: ":thumb767560679:", url: "Choco-Mint-Mocha-767560679"},
 	{name: "Chocolate Strength Elixir", dathumb: ":thumb768102850:", url: "Chocolate-Strength-Elixir-768102850"}
+	{name: "Mulled Cider", dathumb: ":thumb768102850:", url: "Mulled-Cider-855008589"}
+	{name: "Hard Cider", dathumb: ":thumb768102850:", url: "Chocolate-Strength-Elixir-768102850"}
 ];
 
 var pelts = [
@@ -95,6 +97,7 @@ var nskanetis = {
 		{name: "Sugar Cane", dathumb: ":thumb769868508:", url: "Sugar-Cane-769868508", quantity: "high", contraband: false},
 		{name: "Feather", dathumb: ":thumb810444062:", url: "Feather-810444062", quantity: "high", contraband: false},
 		{name: "Legumes", dathumb: ":thumb815763639:", url: "Legumes-815763639", quantity: "high", contraband: false},
+		{name: "Aloe", dathumb: ":thumb759505741:", url: "Shrimp-759505741", quantity: "high", contraband: false},
 		//monthly birthstone
 		{name: "Sapphire", dathumb: ":thumb760543353:", url: "Sapphire-760543353", quantity: "high", contraband: false},
 	],
@@ -158,6 +161,7 @@ var sxriix = {
 		{name: "Prickly Fruit", dathumb: ":thumb760279504:", url: "Prickly-Fruit-760279504", quantity: "high", contraband: false},
 		{name: "Peppers", dathumb: ":thumb759631082:", url: "Peppers-759631082", quantity: "high", contraband: false},
 		{name: "Feather", dathumb: ":thumb810444062:", url: "Feather-810444062", quantity: "high", contraband: false},
+		{name: "Velvet Cactus", dathumb: ":thumb759505741:", url: "Shrimp-759505741", quantity: "high", contraband: false},
 		//monthly birthstone
 		{name: "Sapphire", dathumb: ":thumb760543353:", url: "Sapphire-760543353", quantity: "high", contraband: false},
 	],
@@ -226,6 +230,7 @@ var earth = {
 		{name: "Cinnamon Bark", dathumb: ":thumb769868523:", url: "Cinnamon-Bark-769868523", quantity: "high", contraband: false},
 		{name: "Feather", dathumb: ":thumb810444062:", url: "Feather-810444062", quantity: "high", contraband: false},
 		{name: "Legumes", dathumb: ":thumb815763639:", url: "Legumes-815763639", quantity: "high", contraband: false},
+		{name: "Aloe", dathumb: ":thumb759505741:", url: "Shrimp-759505741", quantity: "high", contraband: false},
 		//monthly birthstone
 		{name: "Sapphire", dathumb: ":thumb760543353:", url: "Sapphire-760543353", quantity: "high", contraband: false},
 	],
@@ -281,6 +286,8 @@ var chasm = {
 		{name: "Twine", dathumb: ":thumb706195251:", url: "Twine-706195251", quantity: "high", contraband: false},
 		{name: "Fish Meat", dathumb: ":thumb753322990:", url: "Fish-Meat-753322990", quantity: "high", contraband: false},
 		{name: "Shrimp", dathumb: ":thumb759505741:", url: "Shrimp-759505741", quantity: "low", contraband: false},
+		{name: "Aloe", dathumb: ":thumb759505741:", url: "Shrimp-759505741", quantity: "high", contraband: false},
+		{name: "Velvet Cactus", dathumb: ":thumb759505741:", url: "Shrimp-759505741", quantity: "high", contraband: false},
 		//monthly birthstone
 		{name: "Sapphire", dathumb: ":thumb760543353:", url: "Sapphire-760543353", quantity: "high", contraband: false},
 	],
@@ -298,7 +305,8 @@ var chasm = {
 		{name: "Clay", dathumb: ":thumb756976397:", url: "Clay-756976397", quantity: "high", contraband: false},
 		{name: "Cinnamon Bark", dathumb: ":thumb769868523:", url: "Cinnamon-Bark-769868523", quantity: "high", contraband: false},
 		{name: "Southern Vyldes Shovelnose Prawn", dathumb: ":thumb759505729:", url: "Southern-Vyldes-Shovelnose-Prawn-759505729", quantity: "low", contraband: false},
-		{name: "Stone", dathumb: ":thumb756350686:", url: "Stone-756350686", quantity: "high", contraband: false}
+		{name: "Stone", dathumb: ":thumb756350686:", url: "Stone-756350686", quantity: "high", contraband: false},
+		{name: "Wall Crawler", dathumb: ":thumb756350686:", url: "Wall-Crawler-855001453", quantity: "low", contraband: false},
 	],
 	rare: [
 		{name: "Fond Memories: B-NOMALY Labs", dathumb: ":thumb730488748:", url: "Fond-Memories-B-NOMALY-Labs-730488748", quantity: "low", contraband: false},
