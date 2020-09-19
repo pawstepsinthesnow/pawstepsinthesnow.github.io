@@ -465,6 +465,8 @@ var plant = {
 		{name: "Leafy Greens", dathumb: ":thumb758899310:", url: "Leafy-Greens-758899310", quantity: "high", contraband: false},
 		{name: "Citrus Fruit", dathumb: ":thumb758899247:", url: "Citrus-Fruit-758899247", quantity: "high", contraband: false},
 		{name: "Legumes", dathumb: ":thumb815763639:", url: "Legumes-815763639", quantity: "high", contraband: false},
+		{name: "Aloe", dathumb: ":thumb759505741:", url: "Aloe-854924068", quantity: "high", contraband: false},
+		{name: "Velvet Cactus", dathumb: ":thumb759505741:", url: "Velvet-Cactus-855001468", quantity: "high", contraband: false},
 	],
 	uncommon: [
 		{name: "Herbs", dathumb: ":thumb705237203:", url: "Herbs-705237203", quantity: "high", contraband: false},

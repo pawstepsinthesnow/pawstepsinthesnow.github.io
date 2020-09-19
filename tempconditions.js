@@ -1,34 +1,37 @@
 var explo = {
 	uncommon: [
-	{name: "Skin Irritation", immunity: "mechhalf"}
+	{name: "Dummy", immunity: "dummy"}
 	],
 	rare:[
+	{name: "Skin Irritation", immunity: "mechhalf"},
 	{name: "Radiation Poisoning", immunity: "chasm"},
 	{name: "Vent Smog", immunity: "valve"}
 	]
 };
 var hunt = {
 	uncommon: [
-	{name: "Skin Irritation", immunity: "mechhalf"}
+	{name: "Dummy", immunity: "dummy"}
 	],
 	rare: [
+	{name: "Skin Irritation", immunity: "mechhalf"},
 	{name: "Vent Smog", immunity: "valve"},
 	{name: "Radiation Poisoning", immunity: "chasm"}
 	],
 };
 var mine = {
 	uncommon: [
-	{name: "Vent Smog", immunity: "valve"}
+	{name: "Dummy", immunity: "dummy"}
 	],
 	rare:[
-	{name: "Dummy", immunity: "dummy"}
+	{name: "Vent Smog", immunity: "valve"}
 	],
 };
 var legendary = {
 	uncommon: [
-	{name: "Radiation Poisoning", immunity: "chasm"}
+	{name: "Dummy", immunity: "dummy"}
 	],
 	rare:[
+	{name: "Radiation Poisoning", immunity: "chasm"},
 	{name: "Broken Bones", immunity: "none"}
 	],
 };
@@ -43,9 +46,10 @@ var fight = {
 };
 var legfail = {
 	uncommon: [
-	{name: "Legendary Agony", immunity: "none"}
+	{name: "Dummy", immunity: "dummy"}
 	],
 	rare:[
+	{name: "Legendary Agony", immunity: "none"},
 	{name: "Broken Bones", immunity: "none"}
 	],
 };
