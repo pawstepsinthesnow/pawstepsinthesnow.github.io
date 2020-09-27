@@ -21,7 +21,13 @@
 		<option value="nskanetis">Nskanetis</option>
 		<option value="earth">Earth</option>
 		<option value="chasm">The Chasm</option>
-	<select>
+	</select>
+	<select id="level">
+		<option value="newfound">Newfound/Rising</option>
+		<option value="active">Active/Critical</option>
+		<option value="irradiated">Irradiated</option>
+		<option value="omnipotent">Omnipotent</option>
+	</select>
 	Attack:
 	<input type="text" name="atk" id="atk" size="4" value="10">
 	Defense:
@@ -144,6 +150,8 @@
 	Mechanix
 	<input type="checkbox" name="heart" id="heart">
 	Mymber Heart Valve
+	<input type="checkbox" name="placeholder" id="placeholder">
+	Unimplemented
 </form>
 <form>
 	<input type="button" onclick="setUp('full');" value="Roll!">

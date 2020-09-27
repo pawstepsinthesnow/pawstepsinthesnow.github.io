@@ -925,10 +925,35 @@ function rollTempCondition(type) {
 }
 
 function isResisted(immunity) {
+	var l = 0 //levelup resist value
+	var level = document.getElementById("level").value;
+	switch(level) {
+		case("newfound"):
+			break;
+		case("active"):
+			l = 30;
+			break;
+		case("irradiated"):
+			l = 70;
+			break;
+		case("omnipotent"):
+			l = 100;
+			break;
+		default:
+			break;
+	}
+	if(document.getElementById("placeholder").checked) {
+		//Works on everything immunity
+		l += 0; //Change this to desired value
+	}
+		
 	switch(immunity) {
 		case("mechhalf"):
 			var a = rng(1,100);
+			a = a - l;
 			if (a <= 50 && document.getElementById("mechanix").checked) {
+				return true;
+			} else if (a <= 0) {
 				return true;
 			} else {
 				return false;
@@ -943,7 +968,10 @@ function isResisted(immunity) {
 			break;
 		case("valve"):
 			var a = rng(1,100);
+			a = a - l;
 			if (a <= 30 && document.getElementById("heart").checked) {
+				return true;
+			} else if (a <= 0) {
 				return true;
 			} else {
 				return false;
@@ -965,10 +993,16 @@ function isResisted(immunity) {
 			}
 			break;
 		case("none"):
-			return false; //This case never resists.
+			var a = rng(1,100);
+			a = a - l;
+			if (a <= 0) {
+				return true;
+			} else {
+				return false; //This case only considers level related resists.
+			} 
 			break;
-		case("dummy"):
-			return true; //This case always resists. For placeholders only.
+		case("always"):
+			return true; //This case always resists. 
 			break;
 		default:
 			return true; //Always resist undefined immunities.
