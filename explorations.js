@@ -942,9 +942,9 @@ function isResisted(immunity) {
 		default:
 			break;
 	}
-	if(document.getElementById("placeholder").checked) {
+	if(document.getElementById("fieldmedic").checked) {
 		//Works on everything immunity
-		l += 0; //Change this to desired value
+		l += 30; //Change this to desired value
 	}
 		
 	switch(immunity) {
