@@ -99,7 +99,7 @@ var nskanetis = {
 		{name: "Legumes", dathumb: ":thumb815763639:", url: "Legumes-815763639", quantity: "high", contraband: false},
 		{name: "Aloe", dathumb: ":thumb759505741:", url: "Aloe-854924068", quantity: "high", contraband: false},
 		//monthly birthstone
-		{name: "Opal", dathumb: ":thumb760543398:", url: "Opal-760543398", quantity: "high", contraband: false},
+		{name: "Topaz", dathumb: ":thumb762536432:", url: "Topaz-762536432", quantity: "high", contraband: false},
 	],
 	uncommon: [
 		{name: "Opal", dathumb: ":thumb760543398:", url: "Opal-760543398", quantity: "high", contraband: false},
@@ -163,7 +163,7 @@ var sxriix = {
 		{name: "Feather", dathumb: ":thumb810444062:", url: "Feather-810444062", quantity: "high", contraband: false},
 		{name: "Velvet Cactus", dathumb: ":thumb759505741:", url: "Velvet-Cactus-855001468", quantity: "high", contraband: false},
 		//monthly birthstone
-		{name: "Opal", dathumb: ":thumb760543398:", url: "Opal-760543398", quantity: "high", contraband: false},
+		{name: "Topaz", dathumb: ":thumb762536432:", url: "Topaz-762536432", quantity: "high", contraband: false},
 	],
 	uncommon: [
 		{name: "Berries", dathumb: ":thumb705018877:", url: "Berries-705018877", quantity: "high", contraband: false},
@@ -232,7 +232,7 @@ var earth = {
 		{name: "Legumes", dathumb: ":thumb815763639:", url: "Legumes-815763639", quantity: "high", contraband: false},
 		{name: "Aloe", dathumb: ":thumb759505741:", url: "Aloe-854924068", quantity: "high", contraband: false},
 		//monthly birthstone
-		{name: "Opal", dathumb: ":thumb760543398:", url: "Opal-760543398", quantity: "high", contraband: false},
+		{name: "Topaz", dathumb: ":thumb762536432:", url: "Topaz-762536432", quantity: "high", contraband: false},
 	],
 	uncommon: [
 		{name: "Sapphire", dathumb: ":thumb760543353:", url: "Sapphire-760543353", quantity: "high", contraband: false},
@@ -289,7 +289,7 @@ var chasm = {
 		{name: "Aloe", dathumb: ":thumb759505741:", url: "Aloe-854924068", quantity: "high", contraband: false},
 		{name: "Velvet Cactus", dathumb: ":thumb759505741:", url: "Velvet-Cactus-855001468", quantity: "high", contraband: false},
 		//monthly birthstone
-		{name: "Opal", dathumb: ":thumb760543398:", url: "Opal-760543398", quantity: "high", contraband: false},
+		{name: "Topaz", dathumb: ":thumb762536432:", url: "Topaz-762536432", quantity: "high", contraband: false},
 	],
 	uncommon: [
 		{name: "Opal", dathumb: ":thumb760543398:", url: "Opal-760543398", quantity: "high", contraband: false},
