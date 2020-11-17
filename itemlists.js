@@ -128,6 +128,7 @@ var nskanetis = {
 		{name: "Squash", dathumb: ":thumb766941749:", url: "Squash-766941749", quantity: "low", contraband: false},
 		{name: "Snake Meat", dathumb: ":thumb809612893:", url: "Snake-Meat-809612893", quantity: "high", contraband: false},
 		{name: "Incendiary Witchcraft", dathumb: ":thumb809612893:", url: "Incendiary-Witchcraft-747807971", quantity: "low", contraband: false},
+		{name: "Ananas", dathumb: ":thumb809612893:", url: "Ananas-861334949", quantity: "low", contraband: false},
 	],
 	rare: [
 		{name: "Fond Memories: Nskanetis", dathumb: ":thumb711862964:", url: "Fond-Memories-Nskanetis-711862964", quantity: "low", contraband: false},
@@ -231,6 +232,7 @@ var earth = {
 		{name: "Feather", dathumb: ":thumb810444062:", url: "Feather-810444062", quantity: "high", contraband: false},
 		{name: "Legumes", dathumb: ":thumb815763639:", url: "Legumes-815763639", quantity: "high", contraband: false},
 		{name: "Aloe", dathumb: ":thumb759505741:", url: "Aloe-854924068", quantity: "high", contraband: false},
+		{name: "Ananas", dathumb: ":thumb809612893:", url: "Ananas-861334949", quantity: "low", contraband: false},
 		//monthly birthstone
 		{name: "Topaz", dathumb: ":thumb762536432:", url: "Topaz-762536432", quantity: "high", contraband: false},
 	],
@@ -477,7 +479,8 @@ var plant = {
 		{name: "Seaweed", dathumb: ":thumb745411718:", url: "Seaweed-745411718", quantity: "low", contraband: false},
 		{name: "Avocado", dathumb: ":thumb756348390:", url: "Avocado-756348390", quantity: "low", contraband: false},
 		{name: "Prickly Fruit", dathumb: ":thumb760279504:", url: "Prickly-Fruit-760279504", quantity: "high", contraband: false},
-		{name: "Sanguine Snare", dathumb: ":thumb756969308:", url: "Sanguine-Snare-756969308", quantity: "low", contraband: false}
+		{name: "Sanguine Snare", dathumb: ":thumb756969308:", url: "Sanguine-Snare-756969308", quantity: "low", contraband: false},
+		{name: "Ananas", dathumb: ":thumb809612893:", url: "Ananas-861334949", quantity: "low", contraband: false},
 	],
 	rare: [
 		{name: "Cosmetics", dathumb: ":thumb711218257:", url: "Cosmetics-711218257", quantity: "low", contraband: false},
