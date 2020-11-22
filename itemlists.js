@@ -564,6 +564,9 @@ var combat = {
 		{name: "VitAvella Smoothie", dathumb: ":thumb755255243:", url: "VitAvella-Smoothie-755255243", quantity: "low", contraband: false},
 		{name: "Shish-Kebab", dathumb: ":thumb758739855:", url: "Shish-Kebab-758739855", quantity: "low", contraband: false},
 		{name: "Battle Sword", dathumb: ":thumb787944014:", url: "Battle-Sword-787944014", quantity: "low", contraband: false}
+		{name: "Mushroom Soup", dathumb: ":thumb787944014:", url: "Mushroom-Soup-760136876", quantity: "low", contraband: false}
+		{name: "Chicken Noodle Soup", dathumb: ":thumb787944014:", url: "Chicken-Noodle-Soup-795768739", quantity: "low", contraband: false}
+		{name: "Stone Soup To Go", dathumb: ":thumb787944014:", url: "Stone-Soup-To-Go-795774619", quantity: "low", contraband: false}
 	],
 	rare: [
 		{name: "Fond Memories: B-NOMALY Labs", dathumb: ":thumb730488748:", url: "Fond-Memories-B-NOMALY-Labs-730488748", quantity: "low", contraband: false},
@@ -572,6 +575,12 @@ var combat = {
 		{name: "Fond Memories: Sxriix", dathumb: ":thumb711863476:", url: "Fond-Memories-Sxriix-711863476", quantity: "low", contraband: false},
 		{name: "Fond Memories: Nskanetis", dathumb: ":thumb711862964:", url: "Fond-Memories-Nskanetis-711862964", quantity: "low", contraband: false},
 		{name: "Hearty Soup", dathumb: ":thumb705387962:", url: "Hearty-Soup-705387962", quantity: "low", contraband: false}
+		{name: "Nabeyaki Udon", dathumb: ":thumb705387962:", url: "Nabeyaki-Udon-767700688", quantity: "low", contraband: false}
+		{name: "Mushroom Soup (Large)", dathumb: ":thumb705387962:", url: "Mushroom-Soup-Large-767700708", quantity: "low", contraband: false}
+		{name: "Chicken Noodle Soup (Large)", dathumb: ":thumb705387962:", url: "Chicken-Noodle-Soup-large-795768864", quantity: "low", contraband: false}
+		{name: "Stone Soup", dathumb: ":thumb705387962:", url: "Stone-Soup-795788773", quantity: "low", contraband: false}
+		{name: "Irish Stew", dathumb: ":thumb705387962:", url: "Irish-Stew-843060835", quantity: "low", contraband: false}
+		{name: "BBQ Platter", dathumb: ":thumb705387962:", url: "Hearty-Soup-705387962", quantity: "low", contraband: false}
 	]
 }
 	
