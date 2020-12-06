@@ -271,7 +271,8 @@ var earth = {
 		{name: "Pack Cat Companion", dathumb: ":thumb734153299:", url: "Pack-Cat-Companion-734153299", quantity: "low", contraband: false},
 		{name: "Kellas Cat Companion", dathumb: ":thumb768254398:", url: "Kellas-Cat-Companion-768254398", quantity: "low", contraband: false},
 		{name: "Philosophic Mercury", dathumb: ":thumb762066479:", url: "Philosophic-Mercury-762066479", quantity: "low", contraband: true},
-		{name: "B-NOMALY Greymatter Sample", dathumb: ":thumb728112339:", url: "B-NOMALY-Greymatter-Sample-728112339", quantity: "low", contraband: true}
+		{name: "B-NOMALY Greymatter Sample", dathumb: ":thumb728112339:", url: "B-NOMALY-Greymatter-Sample-728112339", quantity: "low", contraband: true},
+		{name: "Barghest Companion", dathumb: ":thumb706216253:", url: "Barghest-Companion-863248667", quantity: "low", contraband: false},
 	]
 };
 var chasm = {
@@ -447,7 +448,8 @@ var land = {
 	],
 	rare: [
 		{name: "Lucky Charm", dathumb: ":thumb732982034:", url: "Lucky-Charm-732982034", quantity: "low", contraband: false},
-		{name: "Scarification Kit", dathumb: ":thumb706216253:", url: "Scarification-Kit-706216253", quantity: "low", contraband: false}
+		{name: "Scarification Kit", dathumb: ":thumb706216253:", url: "Scarification-Kit-706216253", quantity: "low", contraband: false},
+		{name: "Barghest Companion", dathumb: ":thumb706216253:", url: "Barghest-Companion-863248667", quantity: "low", contraband: false},
 	],
 }
 
