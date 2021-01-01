@@ -462,6 +462,19 @@ function createOutput() {
 			out = out + "\nMini Rooter returns:\n"
 			out = out + formatBonusItem(a);
 		}
+		
+	}
+	if(document.getElementById("rootlemon").checked == true) {
+		if(rng(1,100) <= 80) {
+			a = rollSpecificRarity(0, "uncommon");
+			out = out + "\nLemon Pig returns:\n"
+			out = out + formatBonusItem(a);
+		} else {
+			a = [{name: "Citrus Fruit", dathumb: ":thumb758899247:", url: "Citrus-Fruit-758899247", quantity: "low", contraband: false}, 1]
+			out = out + "\nLemon Pig returns:\n"
+			out = out + formatBonusItem(a);
+		}
+		
 	}
 	if(document.getElementById("sumdrink").checked == true) {
 		a = rollSingleItem(0);
