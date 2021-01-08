@@ -1,6 +1,6 @@
 var explo = {
 	uncommon: [
-	{name: "Dummy", immunity: "dummy"}
+	{name: "Cursed", immunity: "leyline"}
 	],
 	rare:[
 	{name: "Skin Irritation", immunity: "mechhalf"},

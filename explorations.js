@@ -1017,6 +1017,19 @@ function isResisted(immunity) {
 				return false; //This case only considers level related resists.
 			} 
 			break;
+		case("leyline"):
+			var a = rng(1,100);
+			a = a - l;
+			if(rolldata.world == leyline) {
+				if (a <= 0) {
+					return true;
+				} else {
+					return false;
+				}
+			} else {
+				return true;
+			}
+			break;
 		case("always"):
 			return true; //This case always resists. 
 			break;
