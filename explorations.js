@@ -76,6 +76,9 @@ function setUp(mode) {
 		case ("chasm"):
 			rolldata.world = chasm;
 			break;
+		case ("leyline"):
+			rolldata.world = leyline;
+			break;
 		case ("livestock"):
 			rolldata.world = livestock;
 			break;
