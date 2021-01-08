@@ -361,7 +361,7 @@ var leyline = {
 		{name: "Eel", dathumb: ":thumb759505729:", url: "Southern-Vyldes-Shovelnose-Prawn-759505729", quantity: "low", contraband: false},
 		{name: "Hagfish", dathumb: ":thumb759505729:", url: "Southern-Vyldes-Shovelnose-Prawn-759505729", quantity: "low", contraband: false},
 		{name: "Leystone", dathumb: ":thumb761468490:", url: "Gilded-Broken-Shard-761468490", quantity: "high", contraband: false},
-		{name: "Leywine", dathumb: ":thumb768102850:", url: "Chocolate-Strength-Elixir-768102850" quantity: "low", contraband: false},
+		{name: "Leywine", dathumb: ":thumb768102850:", url: "Chocolate-Strength-Elixir-768102850", quantity: "low", contraband: false}
 	],
 	rare: [
 		{name: "Fond Memories: B-NOMALY Labs", dathumb: ":thumb730488748:", url: "Fond-Memories-B-NOMALY-Labs-730488748", quantity: "low", contraband: false},
