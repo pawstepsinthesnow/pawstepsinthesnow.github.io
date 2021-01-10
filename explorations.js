@@ -1021,7 +1021,7 @@ function isResisted(immunity) {
 			var a = rng(1,100);
 			a = a - l;
 			if(rolldata.world == leyline) {
-				if (a <= 0) {
+				if (a <= 0 || document.getElementById("ghost").checked) {
 					return true;
 				} else {
 					return false;
