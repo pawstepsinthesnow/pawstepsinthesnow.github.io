@@ -74,7 +74,7 @@ var leyrooter = [
 	{name: "Leather", dathumb: ":thumb706194672:", url: "Leather-706194672", quantity: "high", contraband: false},
 	{name: "Teeth and Claws", dathumb: ":thumb756971959:", url: "Teeth-and-Claws-756971959", quantity: "high", contraband: false},
 	{name: "Death-Charged Fogshard", dathumb: ":thumb763775489:", url: "Death-Charged-Fogshard-817191952", quantity: "low", contraband: true},
-	{name: "Mymber Heart", dathumb: ":thumb793689615:", url: "Mymber-Heart-793689615", quantity: "low", contraband: true}
+	{name: "Mymber Heart", dathumb: ":thumb793689615:", url: "Mymber-Heart-793689615", quantity: "low", contraband: true},
 	{name: "B-NOMALY Greymatter Sample", dathumb: ":thumb728112339:", url: "B-NOMALY-Greymatter-Sample-728112339", quantity: "low", contraband: true},
 	
 ];
