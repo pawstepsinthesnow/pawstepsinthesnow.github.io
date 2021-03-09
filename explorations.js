@@ -515,7 +515,10 @@ function createOutput() {
 		a = huntingKnife();
 		out = out + "\n" + a;
 	}
-	
+	if(document.getElementById("lrooter").checked == true) {
+		a = leyRooter();
+		out = out + "\n" + a;
+	}
 	if(document.getElementById("luckycharm").checked == true && rolldata.rolltype == "mining") {
 		a = dowsing();
 		out = out + "\n" + a;
@@ -885,6 +888,19 @@ function huntingKnife() {
 	var a = rng(1,pelts.length);
 	a--;
 	return "Hunting Knife returns: " + pelts[a].name + "!\n";
+}
+
+function leyRooter() { 
+	var i = false;
+	while (i != true) {
+		var a = rng(1,leyrooter.length);
+		a--;
+		if (leyrooter[a].contraband != true || rolldata.streetwise == true) {
+			//if it's NOT contraband OR streetwise is checked, break loop
+			i = true;
+		}
+	}
+	return "Ley Rooter returns: " + leyrooter[a].name + "!\n";
 }
 
 function slaughterhouse(items) {
