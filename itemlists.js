@@ -329,11 +329,13 @@ var chasm = {
 		{name: "Stone", dathumb: ":thumb756350686:", url: "Stone-756350686", quantity: "high", contraband: false},
 		{name: "Wall Crawler", dathumb: ":thumb756350686:", url: "Wall-Crawler-855001453", quantity: "low", contraband: false},
 		{name: "Hagfish", dathumb: ":thumb759505729:", url: "Southern-Vyldes-Shovelnose-Prawn-759505729", quantity: "low", contraband: false},
+		{name: "Rhodochrosite", dathumb: ":thumb759505729:", url: "Southern-Vyldes-Shovelnose-Prawn-759505729", quantity: "high", contraband: false},
 	],
 	rare: [
 		{name: "Fond Memories: B-NOMALY Labs", dathumb: ":thumb730488748:", url: "Fond-Memories-B-NOMALY-Labs-730488748", quantity: "low", contraband: false},
 		{name: "Fond Memories: the Chasm", dathumb: ":thumb731707119:", url: "Fond-Memories-the-Chasm-731707119", quantity: "low", contraband: false},
 		{name: "Mymber Companion", dathumb: ":thumb756147760:", url: "Mymber-Companion-756147760", quantity: "low", contraband: false},
+		{name: "Illusion Glass", dathumb: ":thumb759505729:", url: "Southern-Vyldes-Shovelnose-Prawn-759505729", quantity: "low", contraband: false},
 		{name: "Mymber Heart", dathumb: ":thumb793689615:", url: "Mymber-Heart-793689615", quantity: "low", contraband: true}
 	]
 };
@@ -423,6 +425,7 @@ var mining = {
 		{name: "Drake Scale", dathumb: ":thumb809486888:", url: "Drake-Scale-809486888", quantity: "high", contraband: false},
 		{name: "Tunneldrake Meat", dathumb: ":thumb810914498:", url: "Tunneldrake-Meat-810914498", quantity: "low", contraband: false},
 		{name: "Leystone", dathumb: ":thumb761468490:", url: "Gilded-Broken-Shard-761468490", quantity: "high", contraband: false},
+		{name: "Rhodochrosite", dathumb: ":thumb759505729:", url: "Southern-Vyldes-Shovelnose-Prawn-759505729", quantity: "high", contraband: false},
 	],
 	rare: [
 		{name: "Charged Fogshard Piece - Chrono", dathumb: ":thumb719305560:", url: "Charged-Fogshard-Piece-Chrono-719305560", quantity: "low", contraband: false},
@@ -431,6 +434,7 @@ var mining = {
 		{name: "Supercharged Fogshard Piece - Swap", dathumb: ":thumb732691396:", url: "Supercharged-Fogshard-Piece-Swap-732691396", quantity: "low", contraband: false},
 		{name: "Charged Fogshard Piece - Alchemy", dathumb: ":thumb761464031:", url: "Charged-Fogshard-Piece-Alchemy-761464031", quantity: "low", contraband: false},
 		{name: "Supercharged Fogshard Piece - Alchemy", dathumb: ":thumb761464077:", url: "Supercharged-Fogshard-Piece-Alchemy-761464077", quantity: "low", contraband: false},
+		{name: "Illusion Glass", dathumb: ":thumb759505729:", url: "Southern-Vyldes-Shovelnose-Prawn-759505729", quantity: "low", contraband: false},
 		{name: "Death's Dust", dathumb: ":thumb726736769:", url: "Death-s-Dust-726736769", quantity: "low", contraband: true},
 		{name: "Philosophic Mercury", dathumb: ":thumb762066479:", url: "Philosophic-Mercury-762066479", quantity: "low", contraband: true},
 		{name: "Unrefined Liquid Diamond", dathumb: ":thumb726736815:", url: "Unrefined-Liquid-Diamond-726736815", quantity: "low", contraband: true}
@@ -499,6 +503,7 @@ var chasmhunt = {
 		{name: "Mymber Oven", dathumb: ":thumb795412294:", url: "Mymber-Oven-795412294", quantity: "low", contraband: false},
 		{name: "Mymber Tome", dathumb: ":thumb765441461:", url: "Mymber-Tome-765441461", quantity: "low", contraband: false},
 		{name: "Mutation Station", dathumb: ":thumb711856831:", url: "Mutation-Station-711856831", quantity: "low", contraband: false},
+		{name: "Illusion Glass", dathumb: ":thumb759505729:", url: "Southern-Vyldes-Shovelnose-Prawn-759505729", quantity: "low", contraband: false},
 	]
 };
 
