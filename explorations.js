@@ -381,9 +381,10 @@ function createOutput() {
 		if (rolldata.chasmjump == "none") {
 			out = out + rollSeasonal(rolldata.seasonmain);
 		}
+	}
 	if (document.getElementById("bonusroll").checked == true) {
 		a = roll(0);
-		out = out + "\nBonus Roll returns:\n";
+		out = out + "\nBonus Roll at Base Stats returns:\n";
 		out = out + formatItems(a);
 		if (rolldata.chasmjump == "none") {
 			out = out + rollSeasonal(rolldata.seasonmain);
