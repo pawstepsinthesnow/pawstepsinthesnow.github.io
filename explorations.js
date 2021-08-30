@@ -8,6 +8,7 @@ var rolldata = {
 	seasonnpc: false,
 	streetwise: false,
 	minboost: false,
+	bonusroll: false,
 	deepearth: false,
 	cider: false,
 	beans: "none",
@@ -382,6 +383,7 @@ function createOutput() {
 			out = out + rollSeasonal(rolldata.seasonmain);
 		}
 	}
+	
 	if (document.getElementById("bonusroll").checked == true) {
 		a = roll(0);
 		out = out + "\nBonus Roll at Base Stats returns:\n";
@@ -390,6 +392,7 @@ function createOutput() {
 			out = out + rollSeasonal(rolldata.seasonmain);
 		}
 	}
+	
 	if (document.getElementById("packcat").checked == true) {
 		a = roll(0);
 		out = out + "\nPack Cat returns:\n";
@@ -398,6 +401,7 @@ function createOutput() {
 			out = out + rollSeasonal(rolldata.seasoncompanion);
 		}
 	}
+	
 	if (document.getElementById("birb").checked == true) {
 		a = roll(0);
 		out = out + "\nSpring Messengerbird returns:\n";
