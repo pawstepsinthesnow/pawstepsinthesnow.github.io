@@ -183,27 +183,21 @@ function setUp(mode) {
 		rolldata.qr = Math.floor(attack / 50) + Math.floor(special / 50);
 	} else if (rolldata.rolltype == "legend") {
 		var partysize = parseInt(document.getElementById("partysize").value);
-		if (document.getElementById("pig").checked == true) {
-			partysize = 4;
-		}
 		switch (partysize) {
 			case(1):
 				rolldata.qr = Math.floor(attack / 50) + Math.floor(defense / 50);
 				var s = Math.floor((speed + special) / 200);
-				rolldata.successchance = 50 + s;
 				break;
 			case(2):
 				attack += parseInt(document.getElementById("atk2").value);
 				defense += parseInt(document.getElementById("def2").value);
 				if (attack >= 1500) { attack = 1500; }
 				if (defense >= 1500) { defense = 1500; }
-				rolldata.qr = Math.floor(attack / 50) + Math.floor(defense / 50);
 				speed += parseInt(document.getElementById("spd2").value);
 				special += parseInt(document.getElementById("spc2").value);
 				if (speed >= 1500) { speed = 1500; }
 				if (special >= 1500) { special = 1500; }
 				var s = Math.floor((speed + special) / 200);
-				rolldata.successchance = 55 + s;
 				break;
 			case(3):
 				attack += parseInt(document.getElementById("atk2").value);
@@ -212,7 +206,6 @@ function setUp(mode) {
 				defense += parseInt(document.getElementById("def3").value);
 				if (attack >= 1500) { attack = 1500; }
 				if (defense >= 1500) { defense = 1500; }
-				rolldata.qr = Math.floor(attack / 50) + Math.floor(defense / 50);
 				speed += parseInt(document.getElementById("spd2").value);
 				special += parseInt(document.getElementById("spc2").value);
 				speed += parseInt(document.getElementById("spd3").value);
@@ -220,7 +213,6 @@ function setUp(mode) {
 				if (speed >= 1500) { speed = 1500; }
 				if (special >= 1500) { special = 1500; }
 				var s = Math.floor((speed + special) / 200);
-				rolldata.successchance = 60 + s;
 				break;
 			case(4):
 				attack += parseInt(document.getElementById("atk2").value);
@@ -231,7 +223,6 @@ function setUp(mode) {
 				defense += parseInt(document.getElementById("def4").value);
 				if (attack >= 1500) { attack = 1500; }
 				if (defense >= 1500) { defense = 1500; }
-				rolldata.qr = Math.floor(attack / 50) + Math.floor(defense / 50);
 				speed += parseInt(document.getElementById("spd2").value);
 				special += parseInt(document.getElementById("spc2").value);
 				speed += parseInt(document.getElementById("spd3").value);
@@ -240,21 +231,21 @@ function setUp(mode) {
 				special += parseInt(document.getElementById("spc4").value);
 				if (speed >= 1500) { speed = 1500; }
 				if (special >= 1500) { special = 1500; }
-				if (document.getElementById("pig").checked == true) {
+				var s = Math.floor((speed + special) / 200);
+				break;
+			default:
+				var s = Math.floor((speed + special) / 200);
+				break;
+		}
+		if (document.getElementById("pig").checked == true) {
+					partysize = 4;
 					attack += 400;
 					defense += 550;
 					special += 350;
 					speed += 200;
-					}
-				var s = Math.floor((speed + special) / 200);
-				rolldata.successchance = 65 + s;
-				break;
-			default:
-				rolldata.qr = Math.floor(attack / 50) + Math.floor(defense / 50);
-				var s = Math.floor((speed + special) / 200);
-				rolldata.successchance = 50 + s;
-				break;
-		}
+				}
+		rolldata.qr = Math.floor(attack / 50) + Math.floor(defense / 50);
+		rolldata.successchance = (45 + (partysize * 5) + s);
 		if (document.getElementById("skydrake").checked == true) {
 			rolldata.successchance += 15;
 		}
