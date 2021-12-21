@@ -183,6 +183,9 @@ function setUp(mode) {
 		rolldata.qr = Math.floor(attack / 50) + Math.floor(special / 50);
 	} else if (rolldata.rolltype == "legend") {
 		var partysize = parseInt(document.getElementById("partysize").value);
+		if (document.getElementById("pig").checked == true) {
+			partysize = 4;
+		}
 		switch (partysize) {
 			case(1):
 				rolldata.qr = Math.floor(attack / 50) + Math.floor(defense / 50);
@@ -237,6 +240,12 @@ function setUp(mode) {
 				special += parseInt(document.getElementById("spc4").value);
 				if (speed >= 1500) { speed = 1500; }
 				if (special >= 1500) { special = 1500; }
+				if (document.getElementById("pig").checked == true) {
+					attack += 400;
+					defense += 550;
+					special += 350;
+					speed += 200;
+					}
 				var s = Math.floor((speed + special) / 200);
 				rolldata.successchance = 65 + s;
 				break;
@@ -1070,7 +1079,8 @@ function updateList() {
 		'<option value="sxriix">Sxriix</option>\n \
 		<option value="nsk">Nskanetis</option>\n \
 		<option value="earth">Earth</option>\n \
-		<option value="chasm">The Chasm</option>';
+		<option value="chasm">The Chasm</option>\n \
+		<option value="leyline">The Leyline</option>';
 		document.getElementById("world").disabled = false;
 	} else if (type == "hunt") {
 		document.getElementById("world").innerHTML =
