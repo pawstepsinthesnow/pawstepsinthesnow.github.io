@@ -710,6 +710,7 @@ function rollSeasonal(si, boost = rolldata.yvanon) {
 		}
 	} else {
 		out = out + "\n";
+	}
 	return out;
 }
 
