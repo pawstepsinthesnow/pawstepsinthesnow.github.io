@@ -1,6 +1,6 @@
 var fest = [
-	{name: "Winter Sweet", dathumb: ":thumb734910909:", url: "Spring-Shortcake-734910909"},
-	{name: "Snowball", dathumb: ":thumb734115289:", url: "Cherry-Blossom-734115289"},
+	{name: "Spring Shortcake", dathumb: ":thumb734910909:", url: "Spring-Shortcake-734910909"},
+	{name: "Cherry Blossom", dathumb: ":thumb734115289:", url: "Cherry-Blossom-734115289"},
 	{name: "Pride Blend", dathumb: ":thumb734115289:", url: "Cherry-Blossom-734115289"},
 	];
 	
@@ -117,7 +117,7 @@ var nskanetis = {
 		{name: "Tropical Fruit", dathumb: ":thumb759505741:", url: "Aloe-854924068", quantity: "low", contraband: false},
 		{name: "Drupe", dathumb: ":thumb759505741:", url: "Aloe-854924068", quantity: "high", contraband: false},
 		//monthly birthstone
-		{name: "Amethyst", dathumb: ":thumb732963019:", url: "Amethyst-732963019", quantity: "high", contraband: false},
+		{name: "Aquamarine", dathumb: ":thumb732965498:", url: "Aquamarine-732965498", quantity: "high", contraband: false},
 	],
 	uncommon: [
 		{name: "Opal", dathumb: ":thumb760543398:", url: "Opal-760543398", quantity: "high", contraband: false},
@@ -183,7 +183,7 @@ var sxriix = {
 		{name: "Feather", dathumb: ":thumb810444062:", url: "Feather-810444062", quantity: "high", contraband: false},
 		{name: "Velvet Cactus", dathumb: ":thumb759505741:", url: "Velvet-Cactus-855001468", quantity: "high", contraband: false},
 		//monthly birthstone
-		{name: "Amethyst", dathumb: ":thumb732963019:", url: "Amethyst-732963019", quantity: "high", contraband: false},
+		{name: "Aquamarine", dathumb: ":thumb732965498:", url: "Aquamarine-732965498", quantity: "high", contraband: false},
 	],
 	uncommon: [
 		{name: "Berries", dathumb: ":thumb705018877:", url: "Berries-705018877", quantity: "high", contraband: false},
@@ -254,7 +254,7 @@ var earth = {
 		{name: "Ananas", dathumb: ":thumb809612893:", url: "Ananas-861334949", quantity: "low", contraband: false},
 		{name: "Drupe", dathumb: ":thumb759505741:", url: "Aloe-854924068", quantity: "high", contraband: false},
 		//monthly birthstone
-		{name: "Amethyst", dathumb: ":thumb732963019:", url: "Amethyst-732963019", quantity: "high", contraband: false},
+		{name: "Aquamarine", dathumb: ":thumb732965498:", url: "Aquamarine-732965498", quantity: "high", contraband: false},
 	],
 	uncommon: [
 		{name: "Sapphire", dathumb: ":thumb760543353:", url: "Sapphire-760543353", quantity: "high", contraband: false},
@@ -314,7 +314,7 @@ var chasm = {
 		{name: "Aloe", dathumb: ":thumb759505741:", url: "Aloe-854924068", quantity: "high", contraband: false},
 		{name: "Velvet Cactus", dathumb: ":thumb759505741:", url: "Velvet-Cactus-855001468", quantity: "high", contraband: false},
 		//monthly birthstone
-		{name: "Amethyst", dathumb: ":thumb732963019:", url: "Amethyst-732963019", quantity: "high", contraband: false},
+		{name: "Aquamarine", dathumb: ":thumb732965498:", url: "Aquamarine-732965498", quantity: "high", contraband: false},
 	],
 	uncommon: [
 		{name: "Opal", dathumb: ":thumb760543398:", url: "Opal-760543398", quantity: "high", contraband: false},
@@ -359,7 +359,7 @@ var leyline = {
 		{name: "Teeth and Claws", dathumb: ":thumb756971959:", url: "Teeth-and-Claws-756971959", quantity: "high", contraband: false},
 		{name: "Shuck's Bushel", dathumb: ":thumb705237203:", url: "Herbs-705237203", quantity: "high", contraband: false},
 		//monthly birthstone
-		{name: "Amethyst", dathumb: ":thumb732963019:", url: "Amethyst-732963019", quantity: "high", contraband: false},
+		{name: "Aquamarine", dathumb: ":thumb732965498:", url: "Aquamarine-732965498", quantity: "high", contraband: false},
 	],
 	uncommon: [
 		{name: "Squid", dathumb: ":thumb739760540:", url: "Squid-739760540", quantity: "low", contraband: false},
