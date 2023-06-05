@@ -693,7 +693,7 @@ function rollSeasonal(si, boost = rolldata.yvanon) {
 		out = out + "!\n";
 	}
 	//for june
-	/*var a = rng(1,100);
+	var a = rng(1,100);
 	var extra = false;
 	if(a <= 25) {
 		extra = true;
@@ -710,7 +710,7 @@ function rollSeasonal(si, boost = rolldata.yvanon) {
 		}
 	} else {
 		out = out + "\n";
-	}*/
+	}
 	return out;
 }
 
