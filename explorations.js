@@ -8,6 +8,8 @@ var rolldata = {
 	seasonnpc: false,
 	streetwise: false,
 	minboost: false,
+	minthree: false,
+	minfour: false,
 	bonusroll: false,
 	deepearth: false,
 	cider: false,
@@ -79,6 +81,9 @@ function setUp(mode) {
 			break;
 		case ("leyline"):
 			rolldata.world = leyline;
+			break;
+		case ("couloir"):
+			rolldata.world = couloir;
 			break;
 		case ("livestock"):
 			rolldata.world = livestock;
@@ -328,6 +333,16 @@ function setUp(mode) {
 	} else {
 		rolldata.minboost = false;
 	}
+	if (document.getElementById("minthree").checked == true) {
+		rolldata.minthree = true;
+	} else {
+		rolldata.minthree = false;
+	}
+	if (document.getElementById("minfour").checked == true) {
+		rolldata.minfour = true;
+	} else {
+		rolldata.minfour = false;
+	}
 	if (document.getElementById("pathway").checked == true) {
 		rolldata.chasmjump = "pathway";
 	}
@@ -567,7 +582,10 @@ function roll(qr, sw = rolldata.streetwise, boost = rolldata.yvanon, rare = 1) {
 	} else {
 		itemCount = 4;
 	}
-	if (boost == true) {
+	if (rolldata.minthree == true && itemCount < 3) {
+		itemCount = 3;
+	}
+	if (boost == true || rolldata.minfour == true) {
 		itemCount = 4;
 	}
 	if (rolldata.beans == "crash") {
@@ -693,7 +711,7 @@ function rollSeasonal(si, boost = rolldata.yvanon) {
 		out = out + "!\n";
 	}
 	//for june
-	var a = rng(1,100);
+	/*var a = rng(1,100);
 	var extra = false;
 	if(a <= 25) {
 		extra = true;
@@ -710,7 +728,7 @@ function rollSeasonal(si, boost = rolldata.yvanon) {
 		}
 	} else {
 		out = out + "\n";
-	}
+	}*/
 	return out;
 }
 
@@ -1070,7 +1088,8 @@ function updateList() {
 		<option value="nsk">Nskanetis</option>\n \
 		<option value="earth">Earth</option>\n \
 		<option value="chasm">The Chasm</option>\n \
-		<option value="leyline">The Leyline</option>';
+		<option value="leyline">The Leyline</option>\n \
+		<option value="couloir">The Couloir</option>';
 		document.getElementById("world").disabled = false;
 	} else if (type == "hunt") {
 		document.getElementById("world").innerHTML =
