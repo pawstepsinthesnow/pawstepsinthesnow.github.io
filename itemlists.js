@@ -149,7 +149,7 @@ var nskanetis = {
 		{name: "Incendiary Witchcraft", dathumb: ":thumb809612893:", url: "Incendiary-Witchcraft-747807971", quantity: "low", contraband: false},
 		{name: "Ananas", dathumb: ":thumb809612893:", url: "Ananas-861334949", quantity: "low", contraband: false},
 		{name: "Eel", dathumb: ":thumb759505729:", url: "Southern-Vyldes-Shovelnose-Prawn-759505729", quantity: "low", contraband: false},
-		{name: "Fabric", dathumb: ":thumb710845511:", url: "Apparel-710845511", quantity: "low", contraband: false},
+		{name: "Fabric", dathumb: ":thumb710845511:", url: "Apparel-710845511", quantity: "high", contraband: false},
 	],
 	rare: [
 		{name: "Fond Memories: Nskanetis", dathumb: ":thumb711862964:", url: "Fond-Memories-Nskanetis-711862964", quantity: "low", contraband: false},
@@ -288,7 +288,7 @@ var earth = {
 		{name: "Bhut Jolokia", dathumb: ":thumb809612893:", url: "Bhut-Jolokia-746694831", quantity: "low", contraband: false},
 		{name: "Tropical Fruit", dathumb: ":thumb759505741:", url: "Aloe-854924068", quantity: "low", contraband: false},
 		{name: "Eel", dathumb: ":thumb759505729:", url: "Southern-Vyldes-Shovelnose-Prawn-759505729", quantity: "low", contraband: false},
-		{name: "Fabric", dathumb: ":thumb710845511:", url: "Apparel-710845511", quantity: "low", contraband: false},
+		{name: "Fabric", dathumb: ":thumb710845511:", url: "Apparel-710845511", quantity: "high", contraband: false},
 	],
 	rare: [
 		{name: "Fond Memories: Earth", dathumb: ":thumb711859788:", url: "Fond-Memories-Earth-711859788", quantity: "low", contraband: false},
@@ -440,19 +440,19 @@ var couloir = {
 		{name: "Scarification Kit", dathumb: ":thumb706216253:", url: "Scarification-Kit-706216253", quantity: "low", contraband: false},
 		{name: "Accessory", dathumb: ":thumb710845511:", url: "Accessory-711856216", quantity: "low", contraband: false},
 		{name: "Apparel", dathumb: ":thumb710845511:", url: "Apparel-710845511", quantity: "low", contraband: false},
-		{name: "Sand-Dusted Coin", dathumb: ":thumb710845511:", url: "Apparel-710845511", quantity: "low", contraband: false},
+		{name: "Sand-Dusted Coin", dathumb: ":thumb710845511:", url: "Apparel-710845511", quantity: "high", contraband: false},
 		{name: "Mymber & Couler Dolls", dathumb: ":thumb710845511:", url: "Apparel-710845511", quantity: "low", contraband: false},
 		{name: "Discarded PPE", dathumb: ":thumb710845511:", url: "Apparel-710845511", quantity: "low", contraband: false},
-		{name: "Meat Fruit", dathumb: ":thumb710845511:", url: "Apparel-710845511", quantity: "low", contraband: false},
+		{name: "Meat Fruit", dathumb: ":thumb710845511:", url: "Apparel-710845511", quantity: "high", contraband: false},
 		{name: "Anti-Rad Patch", dathumb: ":thumb710845511:", url: "Apparel-710845511", quantity: "low", contraband: false},
-		{name: "Fabric", dathumb: ":thumb710845511:", url: "Apparel-710845511", quantity: "low", contraband: false},
+		{name: "Fabric", dathumb: ":thumb710845511:", url: "Apparel-710845511", quantity: "high", contraband: false},
 	],
 	rare: [
 		{name: "Fond Memories: B-NOMALY Labs", dathumb: ":thumb730488748:", url: "Fond-Memories-B-NOMALY-Labs-730488748", quantity: "low", contraband: false},
 		{name: "Fond Memories: the Chasm", dathumb: ":thumb731707119:", url: "Fond-Memories-the-Chasm-731707119", quantity: "low", contraband: false},
-		{name: "Pack Cat Companion", dathumb: ":thumb734153299:", url: "Pack-Cat-Companion-734153299"},
-		{name: "Couler Companion", dathumb: ":thumb734153299:", url: "Pack-Cat-Companion-734153299"},
-		{name: "Mismi Companion", dathumb: ":thumb734153299:", url: "Pack-Cat-Companion-734153299"},
+		{name: "Pack Cat Companion", dathumb: ":thumb734153299:", url: "Pack-Cat-Companion-734153299", quantity: "low", contraband: false},
+		{name: "Couler Companion", dathumb: ":thumb734153299:", url: "Pack-Cat-Companion-734153299", quantity: "low", contraband: false},
+		{name: "Mismi Companion", dathumb: ":thumb734153299:", url: "Pack-Cat-Companion-734153299", quantity: "low", contraband: false},
 	]
 };
 var mining = {
