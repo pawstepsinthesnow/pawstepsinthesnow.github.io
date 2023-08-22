@@ -410,7 +410,7 @@ function createOutput() {
 	
 	if (document.getElementById("packcat").checked == true) {
 		a = roll(0);
-		out = out + "\nPack Cat returns:\n";
+		out = out + "\nPack Cat\\Mechanix returns:\n";
 		out = out + formatItems(a);
 		if (rolldata.chasmjump == "none") {
 			out = out + rollSeasonal(rolldata.seasoncompanion);
