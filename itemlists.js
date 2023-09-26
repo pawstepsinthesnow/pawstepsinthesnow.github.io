@@ -66,6 +66,7 @@ var meats = [
 	{name: "Southern Vyldes Shovelnose Prawn", dathumb: ":thumb759505729:", url: "Southern-Vyldes-Shovelnose-Prawn-759505729", quantity: "low", contraband: false},
 	{name: "Hagfish", dathumb: ":thumb759505729:", url: "Southern-Vyldes-Shovelnose-Prawn-759505729", quantity: "low", contraband: false},
 	{name: "Eel", dathumb: ":thumb759505729:", url: "Southern-Vyldes-Shovelnose-Prawn-759505729", quantity: "low", contraband: false},
+	{name: "Meat Fruit", dathumb: ":thumb710845511:", url: "Apparel-710845511", quantity: "high", contraband: false},
 	
 ];
 
