@@ -748,9 +748,16 @@ function rollSingleItem(qr, sw = rolldata.streetwise, boost = rolldata.yvanon) {
 				list = list.rare;
 			}
 		}
-		
-		var a = rng(1,list.length); //roll item
-		a = a - 1; //decrement to get the index
+		var done = false;
+		while(done != true) {
+			var a = rng(1,list.length); //roll item
+			a = a - 1; //decrement to get the index
+			console.log("Item genned: " + list[a].name);
+			if(list[a].contraband == false || sw == true) {
+				done = true;
+				console.log("Item pushed: " + list[a].name);
+			}
+		}
 		
 		var num = 0;
 		var q = list[a].quantity; //roll quantity
