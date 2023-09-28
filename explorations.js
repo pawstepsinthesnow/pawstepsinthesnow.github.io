@@ -969,9 +969,17 @@ function rollTempCondition(type) {
 	} else {
 		list = legfail;
 	}
+	if (type == "explo" && rolldata.world == couloir) {
+		if(document.getElementById("coulres").checked) {
+			return "";
+		} else {
+			return "Rad Poisoning (double strength) rolled!";
+		}
+	}
 	var rarity = rng (1, 100);
 	if (rarity <= 50) {
-			return "No condition rolled.";
+			console.log("No condition rolled.")
+			return "";
 		} else if (rarity <= 85) {
 			list = list.uncommon;
 		} else {
