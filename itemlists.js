@@ -1,6 +1,6 @@
 var fest = [
-	{name: "Fall Cupcake", dathumb: ":thumb734910909:", url: "Spring-Shortcake-734910909"},
-	{name: "Fallen Leaf", dathumb: ":thumb734115289:", url: "Cherry-Blossom-734115289"},
+	{name: "Winter Sweet", dathumb: ":thumb734910909:", url: "Spring-Shortcake-734910909"},
+	{name: "Snowball", dathumb: ":thumb734115289:", url: "Cherry-Blossom-734115289"},
 	{name: "Pride Blend", dathumb: ":thumb734115289:", url: "Cherry-Blossom-734115289"},
 	];
 	
