@@ -1,0 +1,192 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<script src="battles.js" type="text/javascript"></script>
+<script src="skills.js" type="text/javascript"><script>
+<script src="fauna.js" type="text/javascript"></script>
+<title>Ketucari Battle Roller</title>
+</head>
+<body>
+<form id="setup">
+	<div>
+	<label for="mode">Mode:</label>
+	<select name="mode" id="mode" onchange="managemode();">
+		<option value="KvE">KvE (vs. Fauna)</option>
+		<option value="KvK">KvK (vs. Ketucari)</option>
+		<option value="Raid">Raid (vs. DG)</option>
+	</select>
+	</div>
+	<div>
+	<label for="alpha">Ketucari 1:</label>
+	<input type="text" name="alpha" id="alpha" size="100" value="">
+	</div>
+	<div id="kve">
+	<div>
+	<label for="fauna">Fauna:</label>
+	<input list="faunapicker" name="fauna" id="fauna" placeholder="Start typing...">
+	<datalist id="faunapicker">
+		<option value="Bunnini">
+		<option value="Keerop">
+		<option value="Seerop">
+		<option value="Zolkanis Hogflier">
+		<option value="Portabadga">
+		<option value="Verdant Theermunk">
+		<option value="Roro">
+		<option value="Pavu">
+		<option value="Kinrak">
+		<option value="Chicheep">
+		<option value="Lantern Betta">
+		<option value="Tinder Jeeka">
+		<option value="Mutant Mandrake">
+		<option value="Boil Baby">
+		<option value="Short-horned Leivris">
+		<option value="Quagha">
+		<option value="Gorcwehr">
+		<option value="Greater Anta">
+		<option value="Sand Manta">
+		<option value="Leptin">
+		<option value="Anwask">
+		<option value="Aconix">
+		<option value="Troldeeren">
+		<option value="Bauble Griffin">
+		<option value="Uthornie">
+		<option value="Vazoi">
+		<option value="Grub">
+		<option value="Tullewyrm Moth">
+		<option value="Tide Buzzard">
+		<option value="Shirko">
+		<option value="Softshell Rippleback">
+		<option value="Plainstalker">
+		<option value="Feroraptor">
+		<option value="Cliffshriek">
+		<option value="Tawny Imp">
+		<option value="Star-Nosed Yeru">
+		<option value="Plicilope">
+		<option value="Pinchypollie">
+		<option value="Giant Pinchiepollie">
+		<option value="Quald">
+		<option value="Armatherium">
+		<option value="Ground Streak">
+		<option value="Kanibar Lythersnitch">
+		<option value="Dellafin">
+		<option value="Striped Tiag">
+		<option value="Moorstalker">
+		<option value="Uise">
+		<option value="Atrimott">
+		<option value="Qarilope">
+		<option value="Naku">
+		<option value="Rockboar">
+		<option value="Gorgot">
+		<option value="Bristled Anta">
+		<option value="Scaled Tapir">
+		<option value="Feathered Raziq">
+		<option value="Grounded Squalm">
+		<option value="Vanttor">
+		<option value="Spadetail">
+		<option value="Red-throated Quilldog">
+		<option value="Mad Betta">
+		<option value="Cephiathus">
+		<option value="Wallow">
+		<option value="Burrowbat">
+		<option value="Cave Spider">
+		<option value="Quillfisher">
+		<option value="Dynok">
+		<option value="Giant Set">
+		<option value="Westsea Luta">
+		<option value="Aharabos">
+		<option value="Swamp Diceros">
+		<option value="Mireghast">
+		<option value="Armored Cermi">
+		<option value="Raynen">
+		<option value="Dwarf Qirnin">
+		<option value="Hoary Warg">
+		<option value="Bald Imp">
+		<option value="Moss Coon">
+		<option value="Riptide Dalavash">
+		<option value="Sea Leivris">
+		<option value="Raktaphage">
+		<option value="Cleaver">
+		<option value="Hogshorne">
+		<option value="Quilled Hogflier">
+		<option value="Agninek">
+		<option value="Ilahaesa Armatherium">
+		<option value="Spiny Nesha">
+		<option value="Rynack">
+		<option value="Nimfie">
+		<option value="Tangle Lythersnitch">
+		<option value="Orchid Raptor">
+		<option value="Davrar">
+		<option value="Sandelve">
+		<option value="Dusky Imp">
+		<option value="Perasyte">
+		<option value="Banshee Hantu">
+		<option value="Arctic Touskox">
+		<option value="Rasuji">
+		<option value="Undarbir">
+		<option value="Mountain Glider">
+		<option value="Forged Elemental">
+		<option value="Dyness">
+		<option value="Alseer">
+		<option value="Revenant">
+		<option value="Greater Armored Raaksavar">
+		<option value="Snoot">
+		<option value="Salamander Hantu">
+		<option value="Kovombe">
+		<option value="Howling Wight">
+		<option value="Combustive Sheerstrike">
+		<option value="Vipertooth Leviathan">
+		<option value="Caped Wyvern">
+		<option value="Zigzori">
+		<option value="Rayne">
+		<option value="Artscirict">
+		<option value="Ghost Eater">
+		<option value="Ahrial">
+		<option value="Bullchomp">
+		<option value="Royal Qirnin">
+		<option value="Sylphshriek">
+		<option value="Lurg">
+		<option value="Searstalker">
+		<option value="Taskish">
+		<option value="Hyba">
+		<option value="Kaishie">
+		<option value="Solitary Murkhound">
+		<option value="Deepsea Dalavash">
+		<option value="Great Nyki">
+		<option value="Gravidon">
+		<option value="Algae Thrasher">
+		<option value="Jade Kisa">
+		<option value="Thunderhead">
+		<option value="Golden Eshei">
+		<option value="Crater Hog">
+		<option value="Crowned Stalker">
+		<option value="Maned Qirnin">
+		<option value="Shuvi">
+		<option value="Gaurus">
+		<option value="Plains Biroru">
+		<option value="Plains Lythersnitch">
+		<option value="Solavis">
+		<option value="Flot">
+	</datalist>
+	<span id="identifier"></span>
+	</div>
+	<div>
+	<label for="bait">Bait/Forage/Totem?</label>
+	<select name="bait" id="bait">
+		<option value="none">None</option>
+		<option value="low">Low</option>
+		<option value="med">Medium</option>
+		<option value="high">High</option>
+		<option value="leg">Legendary</option>
+	</select>
+	<label for="cage">Cage?</label>
+	<select name="cage" id="cage">
+		<option value="none">None</option>
+		<option value="low">Low</option>
+		<option value="med">Medium</option>
+		<option value="high">High</option>
+		<option value="leg">Legendary</option>
+	</select>
+	<label for="edisplay">Endearing Display?</label>
+	<input type="checkbox" name="edisplay" id="edisplay">
+	</div>
+	</div>
